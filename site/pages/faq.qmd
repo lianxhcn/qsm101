@@ -30,6 +30,10 @@ $H_{i}$ 表示同质住房服务的有效面积，由工资、人口、租金和
 
 如果现有 Python 或 Conda 环境能安装依赖并通过运行检查，可以直接使用。仓库只保留 `requirements.txt`，不会提交 `.venv/`。希望兼顾复现和磁盘空间时，可以使用已有的 `dml050` 环境，或把虚拟环境建在仓库外的统一环境目录中。删除虚拟环境不会删除源代码和结果，但下次运行需要重新安装依赖。
 
+## Notebook 必须下载数据才能运行吗？
+
+不必。Notebook 会先查找仓库路径、当前目录和 data 子目录中的固定 CSV；找不到时直接读取 GitHub 的公开原始文件。需要离线运行时，把两个 CSV 放到 Notebook 同目录的 data 文件夹即可。Notebook 顶部保留在线章节、网站首页和课程主页链接，单独转发后仍能找到对应讲义。
+
 ## 字体、编码或 Codex 工具出错怎么办？
 
 缺少中文字体时，在运行命令后加 `--no-figures`，先核验数值。Windows 安装依赖若出现 GBK 解码错误，使用 `python -X utf8 -m pip install -r articles/p04-minimal-qsm/requirements.txt`。Codex CLI 或沙箱在开始计算前报错，应先排除入口与权限问题，再判断模型实现。实际试跑见[练习记录](https://github.com/lianxhcn/qsm101/blob/main/docs/agent-workflow.md)。

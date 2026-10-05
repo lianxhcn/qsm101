@@ -80,3 +80,17 @@ table { font-size: .96rem; }
   .qsm-button, .qsm-card { transition: none; }
   .qsm-button:hover, .qsm-card:hover { transform: none; }
 }
+
+.chapter-lead {
+  margin: 1rem 0 2rem;
+  padding: 1rem 1.2rem;
+  border-left: 4px solid var(--qsm-teal);
+  background: #eef5f3;
+  color: #314b58;
+}
+.cell-output { max-width: 100%; overflow-x: auto; }
+div.sourceCode { border-radius: .55rem; }
+.jp-RenderedHTMLCommon table, .cell-output table { display: block; max-width: 100%; overflow-x: auto; }
+
+#quarto-document-content { min-width: 0; max-width: 100%; overflow-x: clip; }
+#quarto-document-content section, #quarto-document-content .cell { min-width: 0; }

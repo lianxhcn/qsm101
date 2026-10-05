@@ -12,6 +12,7 @@ DESTINATIONS = {
     "articles/p02-qsm-mechanisms/article.html": "site/pages/evidence.html",
     "articles/p03-learning-roadmap/article.html": "site/pages/reading.html",
     "articles/p04-minimal-qsm/article.html": "site/pages/laboratory.html",
+    "site/pages/counterfactual.html": "site/pages/laboratory.html",
     "articles/p04-minimal-qsm/README.html": "site/pages/laboratory.html",
     "articles/p04-minimal-qsm/model.html": "site/pages/laboratory.html",
     "articles/p04-minimal-qsm/prompts/README.html": "site/pages/laboratory.html",

@@ -6,12 +6,12 @@ project:
     - site/pages/foundations.qmd
     - site/pages/reading.qmd
     - site/pages/laboratory.qmd
-    - site/pages/counterfactual.qmd
     - site/pages/evidence.qmd
     - site/pages/faq.qmd
     - site/pages/updates.qmd
     - site/pages/about.qmd
   resources:
+    - site/pages/laboratory.ipynb
     - figs/raw/*
     - articles/**/figures/*
     - articles/p04-minimal-qsm/code/*.py
@@ -36,11 +36,7 @@ website:
       - text: "学习路线"
         href: site/pages/reading.qmd
       - text: "两地区模型"
-        menu:
-          - text: "从问题到方程"
-            href: site/pages/laboratory.qmd
-          - text: "从校准到反事实"
-            href: site/pages/counterfactual.qmd
+        href: site/pages/laboratory.qmd
       - text: "顶刊案例"
         href: site/pages/evidence.qmd
       - text: "常见问题"
@@ -64,10 +60,8 @@ website:
             href: site/pages/reading.qmd
       - section: "两地区模型"
         contents:
-          - text: "从问题到方程"
+          - text: "搭建、校准与求解"
             href: site/pages/laboratory.qmd
-          - text: "从校准到反事实"
-            href: site/pages/counterfactual.qmd
           - text: "通勤扩展（准备中）"
       - section: "进入论文"
         contents:
