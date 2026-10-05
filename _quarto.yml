@@ -1,0 +1,112 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - index.qmd
+    - articles/p01-qsm-introduction/article.md
+    - articles/p02-qsm-mechanisms/article.md
+    - articles/p03-learning-roadmap/article.md
+    - articles/p04-minimal-qsm/article.md
+    - articles/p04-minimal-qsm/README.md
+    - articles/p04-minimal-qsm/model.md
+    - articles/p04-minimal-qsm/prompts/README.md
+    - articles/p04-minimal-qsm/results/reference/README.md
+    - docs/setup.md
+    - docs/faq.md
+    - docs/agent-workflow.md
+    - docs/repository-map.md
+    - course/README.md
+    - references/README.md
+  resources:
+    - articles/**/figures/*
+    - articles/p04-minimal-qsm/code/*.py
+    - articles/p04-minimal-qsm/data/*.csv
+    - articles/p04-minimal-qsm/results/reference/*
+    - articles/p04-minimal-qsm/prompts/*.txt
+    - articles/p04-minimal-qsm/prompts/model-input.md
+
+website:
+  title: "QSM 入门"
+  site-url: https://lianxhcn.github.io/qsm101/
+  page-navigation: true
+  search: true
+  navbar:
+    left:
+      - text: "学习路线"
+        href: index.qmd
+      - text: "P01"
+        href: articles/p01-qsm-introduction/article.md
+      - text: "P02"
+        href: articles/p02-qsm-mechanisms/article.md
+      - text: "P03"
+        href: articles/p03-learning-roadmap/article.md
+      - text: "P04"
+        href: articles/p04-minimal-qsm/article.md
+      - text: "复现与 FAQ"
+        menu:
+          - text: "P04 运行说明"
+            href: articles/p04-minimal-qsm/README.md
+          - text: "环境配置"
+            href: docs/setup.md
+          - text: "Codex 练习"
+            href: docs/agent-workflow.md
+          - text: "常见问题"
+            href: docs/faq.md
+    right:
+      - text: "GitHub 仓库"
+        href: https://github.com/lianxhcn/qsm101
+  sidebar:
+    style: docked
+    contents:
+      - text: "从这里开始"
+        href: index.qmd
+      - section: "系列文章"
+        contents:
+          - text: "P01 · QSM 直觉"
+            href: articles/p01-qsm-introduction/article.md
+          - text: "P02 · 柏林墙研究"
+            href: articles/p02-qsm-mechanisms/article.md
+          - text: "P03 · 学习路线"
+            href: articles/p03-learning-roadmap/article.md
+          - text: "P04 · 两地区模型"
+            href: articles/p04-minimal-qsm/article.md
+      - section: "动手复现"
+        contents:
+          - text: "P04 运行说明"
+            href: articles/p04-minimal-qsm/README.md
+          - text: "模型约定"
+            href: articles/p04-minimal-qsm/model.md
+          - text: "原始提示词"
+            href: articles/p04-minimal-qsm/prompts/README.md
+          - text: "环境配置"
+            href: docs/setup.md
+          - text: "Codex 练习记录"
+            href: docs/agent-workflow.md
+          - text: "常见问题"
+            href: docs/faq.md
+      - section: "其他资料"
+        contents:
+          - text: "课程入口"
+            href: course/README.md
+          - text: "仓库目录"
+            href: docs/repository-map.md
+          - text: "文献入口"
+            href: references/README.md
+  page-footer:
+    left: "连享会 · QSM 系列"
+    right: "代码 MIT；有权授权的原创图文 CC BY 4.0。第三方素材依来源说明。"
+
+format:
+  html:
+    theme: cosmo
+    css: site/styles.css
+    toc: true
+    toc-depth: 3
+    html-math-method: mathjax
+    lang: zh-CN
+
+execute:
+  enabled: false
+
+filters:
+  - site/strip-toc.lua

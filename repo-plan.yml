@@ -1,0 +1,34 @@
+project_title: "qsm101：QSM 系列推文阅读站"
+repository_mode: series
+recommendation: series
+decision_reason: "P01–P04 共用一个系列入口、代码和复现资料；沿用现有 qsm101 仓库发布轻量阅读站。"
+confidence: high
+
+local_root: "D:/github_lianxh"
+project_path: "D:/github_lianxh/qsm101"
+work_scope: "网站配置、首页、站点样式与构建流程；README 和文章索引中的网站入口"
+series_key: qsm101
+
+repository_name: qsm101
+remote_owner: lianxhcn
+visibility: public
+license: "代码 MIT；有权授权的原创图文 CC BY 4.0；第三方素材按来源说明"
+
+github_pages:
+  required: true
+  source: "GitHub Actions 构建 _site"
+  expected_url: "https://lianxhcn.github.io/qsm101/"
+
+preflight:
+  readme_required: true
+  ignore_checked: true
+  sensitive_content_checked: true
+  large_files_checked: true
+  minimal_verification: "quarto render；检查页面、公式、图片及站内链接"
+
+approval:
+  create_remote: false
+  commit: true
+  push: true
+
+notes: "远程仓库已存在；用户本轮同意开始制作并发布网站。P01–P03 正文保留原稿。"

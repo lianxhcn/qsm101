@@ -1,0 +1,16 @@
+:root {
+  --bs-body-font-family: "Noto Sans CJK SC", "Microsoft YaHei", "PingFang SC", sans-serif;
+}
+#quarto-content {
+  line-height: 1.75;
+}
+.navbar-title {
+  font-weight: 700;
+}
+img {
+  max-height: 38rem;
+  object-fit: contain;
+}
+table {
+  font-size: 0.96rem;
+}

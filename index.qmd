@@ -1,0 +1,19 @@
+# 从第一个模型开始学习 QSM
+
+定量空间模型 (Quantitative Spatial Model, QSM) 把地区之间的选择和市场调整放在同一个框架中。本系列按“建立直觉—阅读研究—选择工具—自己动手”的顺序编排。第一次接触 QSM，可以先读 P01，再直接运行 P04 的两地区示例；P02、P03 帮助你把这个最小模型放回论文和学习路径中。
+
+| 顺序 | 阅读内容 | 读完以后试着回答 |
+|---|---|---|
+| P01 | [一文读懂 QSM](articles/p01-qsm-introduction/article.md) | 一个地区的变化为什么会影响其他地区？ |
+| P02 | [从 DID 到 QSM：柏林墙研究](articles/p02-qsm-mechanisms/article.md) | 识别结果怎样进入结构模型？ |
+| P03 | [QSM 怎么学](articles/p03-learning-roadmap/article.md) | 该从哪些综述、论文和工具包开始？ |
+| P04 | [第一次动手做 QSM](articles/p04-minimal-qsm/article.md) | 怎样估计参数、校准基准并求解反事实？ |
+| P05 | 通勤引力扩展 (规划中) | 居住地与工作地分开后，模型需要增加什么？ |
+
+## 先跑通 P04
+
+P04 的居民住在哪里就在哪里工作，总人口固定。教学样本和政策结果均为模拟，不对应真实城市估计。请先阅读[环境配置](docs/setup.md)和[P04 运行说明](articles/p04-minimal-qsm/README.md)，再用[模型约定](articles/p04-minimal-qsm/model.md)核对计算。想练习让 Codex 独立实现，可从[原始提示词](articles/p04-minimal-qsm/prompts/README.md)开始；遇到环境或模型问题可查[常见问题](docs/faq.md)。
+
+## 课程与资料
+
+[课程入口](course/README.md)说明学习目标。[仓库目录](docs/repository-map.md)列出代码、固定输入和参考结果；[GitHub 仓库](https://github.com/lianxhcn/qsm101)保留完整文件与版本历史。文章各自保留署名，P01–P03 原稿不因建站改写。代码采用 MIT 许可；有权授权的原创图文采用 CC BY 4.0。P02 论文图等第三方素材不在原创图文许可范围内，来源见各图目录。
