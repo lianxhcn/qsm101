@@ -1,0 +1,40 @@
+---
+title: "两地区模型实验室"
+---
+
+这个实验把住房政策缩小到两个地区：B 地区有效住房服务存量增加 20%，A 地区保持不变。目标是完成参数估计、基准校准、反事实均衡求解和结果核验。全部输入与结果均为教学构造，不对应真实城市。
+
+## 分清输入的性质
+
+总劳动人口为 100,000 人，其中 A 地区 60,000 人，B 地区 40,000 人。基准月工资分别为 10,000 元和 8,000 元，单位房租分别为每平方米 100 元和 80 元。住房支出份额 $\alpha=0.25$、生产函数劳动弹性 $\beta=0.90$ 是教学设定。
+
+程序另生成 8,000 条模拟二选一任务，用极大似然估计居民对地区吸引力的选择敏感度。本次固定样本得到 $\widehat\theta\approx3.9242$。这不是实际城市调查；两行地区汇总数据也不能单独识别 $\theta$ 或 $\beta$。
+
+## 从基准走到政策结果
+
+生产端设 $Y_{i}=Z_{i}N_{i}^{\beta}$，竞争性工资为 $w_{i}=\beta Z_{i}N_{i}^{\beta-1}$。住房市场满足 $r_{i}H_{i}=\alpha w_{i}N_{i}$。给定行为参数后，用基准人口、工资和租金反演有效住房服务 $H_{i}$、生产率复合项 $Z_{i}$ 与相对便利度 $B_{i}$：
+
+$$
+H_{i}=\frac{\alpha w_{i}^{0}N_{i}^{0}}{r_{i}^{0}},
+\qquad
+Z_{i}=\frac{w_{i}^{0}(N_{i}^{0})^{1-\beta}}{\beta}.
+$$
+
+随后只把 B 地区的 $H_{B}$ 乘以 $1.20$；总人口、行为参数、生产率和便利度保持不变。程序重新求解两地人口，再由生产和住房条件计算工资、租金。
+
+参考运行中，B 地区人口约为 41,901 人，月工资约 7,963 元，单位月租金约 69.51 元/平方米。工人事前福利指数提高约 1.88%；该指标没有扣除建设成本，也不代表每个居民收入都提高 1.88%。
+
+核验时要检查总人口守恒、居民份额与选择概率一致、工资满足边际产出条件、住房市场出清，以及零冲击恢复基准。敏感性比较改变 $\theta$ 或 $\beta$ 时，先按新参数重新校准同一基准。
+
+## 自己运行与独立实现
+
+先阅读[环境说明](https://github.com/lianxhcn/qsm101/blob/main/docs/setup.md)。已有可用 Python 环境即可使用，无须为了阅读网站新建仓库内虚拟环境。在仓库根目录执行：
+
+```powershell
+python -X utf8 -m pip install -r articles/p04-minimal-qsm/requirements.txt
+python articles/p04-minimal-qsm/code/qsm_demo.py --output runs/housing-demo
+```
+
+缺少中文字体时，在第二条命令末尾加 `--no-figures`，先核对数值。个人输出写入 `runs/`；[参考结果](https://github.com/lianxhcn/qsm101/tree/main/articles/p04-minimal-qsm/results/reference)用于对照。
+
+让 Codex 独立实现时，应只提供[模型约定与固定输入](https://github.com/lianxhcn/qsm101/tree/main/articles/p04-minimal-qsm/prompts)，首次实现结束前不读取参考程序。参考程序能运行，不等于独立实现已经通过测试。实际环境问题见[常见问题](faq.qmd)与[练习记录](https://github.com/lianxhcn/qsm101/blob/main/docs/agent-workflow.md)。

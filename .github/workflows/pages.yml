@@ -7,6 +7,7 @@ on:
       - '_quarto.yml'
       - 'index.qmd'
       - 'site/**'
+      - 'figs/**'
       - 'articles/**'
       - 'docs/**'
       - 'course/**'
@@ -36,7 +37,9 @@ jobs:
           version: 1.6.39
       - name: Render website
         run: quarto render
-      - name: Check local links, figures, and equations
+      - name: Preserve old public URLs
+        run: python3 site/build_legacy.py
+      - name: Check pages, links, figures, and course entry
         run: python3 site/check_site.py
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

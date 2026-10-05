@@ -1,4 +1,4 @@
-project_title: "qsm101：QSM 系列推文阅读站"
+project_title: "qsm101：QSM 课程预习站"
 repository_mode: series
 recommendation: series
 decision_reason: "P01–P04 共用一个系列入口、代码和复现资料；沿用现有 qsm101 仓库发布轻量阅读站。"
@@ -6,7 +6,7 @@ confidence: high
 
 local_root: "D:/github_lianxh"
 project_path: "D:/github_lianxh/qsm101"
-work_scope: "网站配置、首页、站点样式与构建流程；README 和文章索引中的网站入口"
+work_scope: "主题化课程预习网站、首页封面与 logo、旧网址跳转、课程主页入口及质量检查"
 series_key: qsm101
 
 repository_name: qsm101

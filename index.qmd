@@ -1,19 +1,77 @@
-# 从第一个模型开始学习 QSM
+---
+page-layout: full
+toc: false
+sidebar: false
+---
 
-定量空间模型 (Quantitative Spatial Model, QSM) 把地区之间的选择和市场调整放在同一个框架中。本系列按“建立直觉—阅读研究—选择工具—自己动手”的顺序编排。第一次接触 QSM，可以先读 P01，再直接运行 P04 的两地区示例；P02、P03 帮助你把这个最小模型放回论文和学习路径中。
+```{=html}
+<section class="qsm-hero" aria-labelledby="qsm-hero-title">
+  <div class="qsm-hero__content">
+    <p class="qsm-eyebrow">连享会 · 课程预习站</p>
+    <h1 id="qsm-hero-title">从空间联系<br>走向可计算的均衡</h1>
+    <p>用一个两地区模型，弄清地区冲击怎样改变人口、工资和房租，再把这套思路放回实证研究与论文阅读中。</p>
+    <div class="qsm-actions">
+      <a class="qsm-button qsm-button--primary" href="site/pages/foundations.html">开始学习</a>
+      <a class="qsm-button qsm-button--outline" href="https://www.lianxh.cn/qsm.html">查看课程主页 ↗</a>
+    </div>
+  </div>
+</section>
+```
 
-| 顺序 | 阅读内容 | 读完以后试着回答 |
-|---|---|---|
-| P01 | [一文读懂 QSM](articles/p01-qsm-introduction/article.md) | 一个地区的变化为什么会影响其他地区？ |
-| P02 | [从 DID 到 QSM：柏林墙研究](articles/p02-qsm-mechanisms/article.md) | 识别结果怎样进入结构模型？ |
-| P03 | [QSM 怎么学](articles/p03-learning-roadmap/article.md) | 该从哪些综述、论文和工具包开始？ |
-| P04 | [第一次动手做 QSM](articles/p04-minimal-qsm/article.md) | 怎样估计参数、校准基准并求解反事实？ |
-| P05 | 通勤引力扩展 (规划中) | 居住地与工作地分开后，模型需要增加什么？ |
+<div class="qsm-intro">
 
-## 先跑通 P04
+课前学习路线
 
-P04 的居民住在哪里就在哪里工作，总人口固定。教学样本和政策结果均为模拟，不对应真实城市估计。请先阅读[环境配置](docs/setup.md)和[P04 运行说明](articles/p04-minimal-qsm/README.md)，再用[模型约定](articles/p04-minimal-qsm/model.md)核对计算。想练习让 Codex 独立实现，可从[原始提示词](articles/p04-minimal-qsm/prompts/README.md)开始；遇到环境或模型问题可查[常见问题](docs/faq.md)。
+## 先看懂调整过程，再亲手算一次
 
-## 课程与资料
+本站面向准备参加 QSM 课程的学员，也适合第一次接触定量空间模型的研究者。按下面的顺序阅读，能够把经济问题、研究设计和计算步骤连成一条线。课程安排与报名信息以[课程主页](https://www.lianxh.cn/qsm.html)为准。
 
-[课程入口](course/README.md)说明学习目标。[仓库目录](docs/repository-map.md)列出代码、固定输入和参考结果；[GitHub 仓库](https://github.com/lianxhcn/qsm101)保留完整文件与版本历史。文章各自保留署名，P01–P03 原稿不因建站改写。代码采用 MIT 许可；有权授权的原创图文采用 CC BY 4.0。P02 论文图等第三方素材不在原创图文许可范围内，来源见各图目录。
+</div>
+
+```{=html}
+<div class="qsm-card-grid">
+  <a class="qsm-card" href="site/pages/foundations.html">
+    <span class="qsm-card__number">建立直觉</span>
+    <h3>一个地方变化，其他地方会怎样？</h3>
+    <p>从开发区和住房政策出发，追踪居民选择、人口重新配置与价格反馈。</p>
+    <span class="qsm-card__link">阅读空间均衡 →</span>
+  </a>
+  <a class="qsm-card" href="site/pages/evidence.html">
+    <span class="qsm-card__number">读懂研究</span>
+    <h3>因果证据怎样进入结构模型？</h3>
+    <p>借柏林墙研究区分可识别的经验事实、机制参数和模型反事实。</p>
+    <span class="qsm-card__link">阅读研究实例 →</span>
+  </a>
+  <a class="qsm-card" href="site/pages/laboratory.html">
+    <span class="qsm-card__number">自己动手</span>
+    <h3>让两地区模型真正跑起来</h3>
+    <p>从模拟数据、基准校准走到住房扩建后的新均衡，并核对经济条件。</p>
+    <span class="qsm-card__link">进入模型实验室 →</span>
+  </a>
+</div>
+```
+
+## 学习时抓住这一条线
+
+```{=html}
+<div class="qsm-flow" role="list" aria-label="从数据到政策反事实的学习流程">
+  <span role="listitem">观察与设定</span><span aria-hidden="true">→</span>
+  <span role="listitem">行为参数</span><span aria-hidden="true">→</span>
+  <span role="listitem">基准校准</span><span aria-hidden="true">→</span>
+  <span role="listitem">均衡求解</span><span aria-hidden="true">→</span>
+  <span role="listitem">结果核验</span>
+</div>
+```
+
+模型能匹配用于校准的基准数据，只说明校准步骤完成；研究中的识别、样本外验证和福利边界仍需单独判断。完成实验室后，可用[论文与工具路线](site/pages/reading.qmd)选择下一步材料。
+
+```{=html}
+<div class="qsm-course-panel">
+  <div>
+    <p class="qsm-kicker">与课程衔接</p>
+    <h2>把本站作为课前准备，也作为课后的回查入口</h2>
+    <p>开课后，本站会沿授课进度增加公开的模型说明、练习和阅读线索。新增内容记录在<a href="site/pages/updates.html">更新记录</a>；课程时间和报名信息始终以连享会课程主页为准。</p>
+  </div>
+  <a class="qsm-button qsm-button--light" href="https://www.lianxh.cn/qsm.html">返回课程主页 ↗</a>
+</div>
+```

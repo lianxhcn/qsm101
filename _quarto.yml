@@ -3,98 +3,77 @@ project:
   output-dir: _site
   render:
     - index.qmd
-    - articles/p01-qsm-introduction/article.md
-    - articles/p02-qsm-mechanisms/article.md
-    - articles/p03-learning-roadmap/article.md
-    - articles/p04-minimal-qsm/article.md
-    - articles/p04-minimal-qsm/README.md
-    - articles/p04-minimal-qsm/model.md
-    - articles/p04-minimal-qsm/prompts/README.md
-    - articles/p04-minimal-qsm/results/reference/README.md
-    - docs/setup.md
-    - docs/faq.md
-    - docs/agent-workflow.md
-    - docs/repository-map.md
-    - course/README.md
-    - references/README.md
+    - site/pages/foundations.qmd
+    - site/pages/evidence.qmd
+    - site/pages/laboratory.qmd
+    - site/pages/reading.qmd
+    - site/pages/faq.qmd
+    - site/pages/updates.qmd
+    - site/pages/about.qmd
   resources:
+    - figs/raw/*
     - articles/**/figures/*
     - articles/p04-minimal-qsm/code/*.py
     - articles/p04-minimal-qsm/data/*.csv
     - articles/p04-minimal-qsm/results/reference/*
     - articles/p04-minimal-qsm/prompts/*.txt
-    - articles/p04-minimal-qsm/prompts/model-input.md
 
 website:
-  title: "QSM 入门"
+  title: "QSM 基础"
   site-url: https://lianxhcn.github.io/qsm101/
+  favicon: figs/raw/qsm-course-fig01-logo-20261005-152554.ico
   page-navigation: true
   search: true
   navbar:
+    logo: figs/raw/qsm-course-fig01-logo-20261005-152554.svg
+    logo-alt: "QSM 基础"
     left:
-      - text: "学习路线"
+      - text: "从这里开始"
         href: index.qmd
-      - text: "P01"
-        href: articles/p01-qsm-introduction/article.md
-      - text: "P02"
-        href: articles/p02-qsm-mechanisms/article.md
-      - text: "P03"
-        href: articles/p03-learning-roadmap/article.md
-      - text: "P04"
-        href: articles/p04-minimal-qsm/article.md
-      - text: "复现与 FAQ"
-        menu:
-          - text: "P04 运行说明"
-            href: articles/p04-minimal-qsm/README.md
-          - text: "环境配置"
-            href: docs/setup.md
-          - text: "Codex 练习"
-            href: docs/agent-workflow.md
-          - text: "常见问题"
-            href: docs/faq.md
+      - text: "空间均衡"
+        href: site/pages/foundations.qmd
+      - text: "研究实例"
+        href: site/pages/evidence.qmd
+      - text: "模型实验室"
+        href: site/pages/laboratory.qmd
+      - text: "继续学习"
+        href: site/pages/reading.qmd
+      - text: "常见问题"
+        href: site/pages/faq.qmd
     right:
-      - text: "GitHub 仓库"
+      - text: "课程主页 ↗"
+        href: https://www.lianxh.cn/qsm.html
+      - icon: github
         href: https://github.com/lianxhcn/qsm101
+        aria-label: "GitHub 仓库"
   sidebar:
     style: docked
     contents:
-      - text: "从这里开始"
+      - text: "学习起点"
         href: index.qmd
-      - section: "系列文章"
+      - section: "理解模型"
         contents:
-          - text: "P01 · QSM 直觉"
-            href: articles/p01-qsm-introduction/article.md
-          - text: "P02 · 柏林墙研究"
-            href: articles/p02-qsm-mechanisms/article.md
-          - text: "P03 · 学习路线"
-            href: articles/p03-learning-roadmap/article.md
-          - text: "P04 · 两地区模型"
-            href: articles/p04-minimal-qsm/article.md
-      - section: "动手复现"
+          - text: "空间均衡如何运作"
+            href: site/pages/foundations.qmd
+          - text: "从因果证据到机制"
+            href: site/pages/evidence.qmd
+      - section: "自己动手"
         contents:
-          - text: "P04 运行说明"
-            href: articles/p04-minimal-qsm/README.md
-          - text: "模型约定"
-            href: articles/p04-minimal-qsm/model.md
-          - text: "原始提示词"
-            href: articles/p04-minimal-qsm/prompts/README.md
-          - text: "环境配置"
-            href: docs/setup.md
-          - text: "Codex 练习记录"
-            href: docs/agent-workflow.md
+          - text: "两地区模型实验室"
+            href: site/pages/laboratory.qmd
+          - text: "论文与工具路线"
+            href: site/pages/reading.qmd
+      - section: "使用本站"
+        contents:
           - text: "常见问题"
-            href: docs/faq.md
-      - section: "其他资料"
-        contents:
-          - text: "课程入口"
-            href: course/README.md
-          - text: "仓库目录"
-            href: docs/repository-map.md
-          - text: "文献入口"
-            href: references/README.md
+            href: site/pages/faq.qmd
+          - text: "更新记录"
+            href: site/pages/updates.qmd
+          - text: "关于本站"
+            href: site/pages/about.qmd
   page-footer:
-    left: "连享会 · QSM 系列"
-    right: "代码 MIT；有权授权的原创图文 CC BY 4.0。第三方素材依来源说明。"
+    left: "QSM 基础 · 连享会"
+    right: "[课程主页](https://www.lianxh.cn/qsm.html) · [关于本站](https://lianxhcn.github.io/qsm101/site/pages/about.html)"
 
 format:
   html:
@@ -107,6 +86,3 @@ format:
 
 execute:
   enabled: false
-
-filters:
-  - site/strip-toc.lua
