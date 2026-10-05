@@ -4,9 +4,10 @@ project:
   render:
     - index.qmd
     - site/pages/foundations.qmd
-    - site/pages/evidence.qmd
-    - site/pages/laboratory.qmd
     - site/pages/reading.qmd
+    - site/pages/laboratory.qmd
+    - site/pages/counterfactual.qmd
+    - site/pages/evidence.qmd
     - site/pages/faq.qmd
     - site/pages/updates.qmd
     - site/pages/about.qmd
@@ -30,14 +31,18 @@ website:
     left:
       - text: "从这里开始"
         href: index.qmd
-      - text: "空间均衡"
+      - text: "QSM 基础"
         href: site/pages/foundations.qmd
-      - text: "研究实例"
-        href: site/pages/evidence.qmd
-      - text: "模型实验室"
-        href: site/pages/laboratory.qmd
-      - text: "继续学习"
+      - text: "学习路线"
         href: site/pages/reading.qmd
+      - text: "两地区模型"
+        menu:
+          - text: "从问题到方程"
+            href: site/pages/laboratory.qmd
+          - text: "从校准到反事实"
+            href: site/pages/counterfactual.qmd
+      - text: "顶刊案例"
+        href: site/pages/evidence.qmd
       - text: "常见问题"
         href: site/pages/faq.qmd
     right:
@@ -51,18 +56,23 @@ website:
     contents:
       - text: "学习起点"
         href: index.qmd
-      - section: "理解模型"
+      - section: "建立基础"
         contents:
-          - text: "空间均衡如何运作"
+          - text: "什么是 QSM"
             href: site/pages/foundations.qmd
-          - text: "从因果证据到机制"
-            href: site/pages/evidence.qmd
-      - section: "自己动手"
-        contents:
-          - text: "两地区模型实验室"
-            href: site/pages/laboratory.qmd
-          - text: "论文与工具路线"
+          - text: "文献、工具与学习路线"
             href: site/pages/reading.qmd
+      - section: "两地区模型"
+        contents:
+          - text: "从问题到方程"
+            href: site/pages/laboratory.qmd
+          - text: "从校准到反事实"
+            href: site/pages/counterfactual.qmd
+          - text: "通勤扩展（准备中）"
+      - section: "进入论文"
+        contents:
+          - text: "柏林墙研究"
+            href: site/pages/evidence.qmd
       - section: "使用本站"
         contents:
           - text: "常见问题"

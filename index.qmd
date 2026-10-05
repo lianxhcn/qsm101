@@ -7,9 +7,9 @@ sidebar: false
 ```{=html}
 <section class="qsm-hero" aria-labelledby="qsm-hero-title">
   <div class="qsm-hero__content">
-    <p class="qsm-eyebrow">连享会 · 课程预习站</p>
+    <p class="qsm-eyebrow">连享会 · QSM 入门在线讲义</p>
     <h1 id="qsm-hero-title">从空间联系<br>走向可计算的均衡</h1>
-    <p>用一个两地区模型，弄清地区冲击怎样改变人口、工资和房租，再把这套思路放回实证研究与论文阅读中。</p>
+    <p>从一个地方的变化为何影响别处开始，亲手搭建两地区模型，再读懂顶刊论文怎样把因果证据、经济机制和政策反事实连接起来。</p>
     <div class="qsm-actions">
       <a class="qsm-button qsm-button--primary" href="site/pages/foundations.html">开始学习</a>
       <a class="qsm-button qsm-button--outline" href="https://www.lianxh.cn/qsm.html">查看课程主页 ↗</a>
@@ -20,57 +20,76 @@ sidebar: false
 
 <div class="qsm-intro">
 
-课前学习路线
+课前预习与课后回查
 
-## 先看懂调整过程，再亲手算一次
+## 六步建立 QSM 的完整认识
 
-本站面向准备参加 QSM 课程的学员，也适合第一次接触定量空间模型的研究者。按下面的顺序阅读，能够把经济问题、研究设计和计算步骤连成一条线。课程安排与报名信息以[课程主页](https://www.lianxh.cn/qsm.html)为准。
+本站面向第一次接触或刚开始学习 QSM 的读者。主线从经济直觉和学习资料出发，用两个连续章节完成最小模型的设定、校准与反事实，再增加通勤机制，最后回到柏林墙研究。当前通勤扩展正在准备，其他章节已经可以独立阅读。课程时间与报名信息以[课程主页](https://www.lianxh.cn/qsm.html)为准。
 
 </div>
 
 ```{=html}
-<div class="qsm-card-grid">
+<div class="qsm-card-grid qsm-card-grid--lessons">
   <a class="qsm-card" href="site/pages/foundations.html">
-    <span class="qsm-card__number">建立直觉</span>
-    <h3>一个地方变化，其他地方会怎样？</h3>
-    <p>从开发区和住房政策出发，追踪居民选择、人口重新配置与价格反馈。</p>
-    <span class="qsm-card__link">阅读空间均衡 →</span>
+    <span class="qsm-card__number">第 1 章 · 建立直觉</span>
+    <h3>什么是 QSM</h3>
+    <p>从地区冲击、主体选择和价格反馈理解空间均衡，分清数据、参数、反演和反事实。</p>
+    <span class="qsm-card__link">开始阅读 →</span>
   </a>
-  <a class="qsm-card" href="site/pages/evidence.html">
-    <span class="qsm-card__number">读懂研究</span>
-    <h3>因果证据怎样进入结构模型？</h3>
-    <p>借柏林墙研究区分可识别的经验事实、机制参数和模型反事实。</p>
-    <span class="qsm-card__link">阅读研究实例 →</span>
+  <a class="qsm-card" href="site/pages/reading.html">
+    <span class="qsm-card__number">第 2 章 · 规划路线</span>
+    <h3>文献、工具和学习顺序</h3>
+    <p>选择入门综述、专题论文与教学工具包，理解教学代码和论文复现材料的区别。</p>
+    <span class="qsm-card__link">查看学习路线 →</span>
   </a>
   <a class="qsm-card" href="site/pages/laboratory.html">
-    <span class="qsm-card__number">自己动手</span>
-    <h3>让两地区模型真正跑起来</h3>
-    <p>从模拟数据、基准校准走到住房扩建后的新均衡，并核对经济条件。</p>
-    <span class="qsm-card__link">进入模型实验室 →</span>
+    <span class="qsm-card__number">第 3 章 · 写出模型</span>
+    <h3>从政策问题到均衡方程</h3>
+    <p>把居民、企业和住房市场连接起来，明确两地区模型中的变量、单位与闭合条件。</p>
+    <span class="qsm-card__link">搭建模型 →</span>
+  </a>
+  <a class="qsm-card" href="site/pages/counterfactual.html">
+    <span class="qsm-card__number">第 4 章 · 完成计算</span>
+    <h3>从校准到政策反事实</h3>
+    <p>估计选择参数、反演地区特征，求解住房扩建后的均衡，并逐项检查经济条件。</p>
+    <span class="qsm-card__link">进入计算 →</span>
+  </a>
+  <div class="qsm-card qsm-card--planned" aria-label="通勤扩展正在准备">
+    <span class="qsm-card__number">第 5 章 · 后续更新</span>
+    <h3>把居住地和工作地分开</h3>
+    <p>将加入通勤流量与成本，比较同一住房政策在有无通勤时如何改变居住、就业和房租。</p>
+    <span class="qsm-card__status">正在准备</span>
+  </div>
+  <a class="qsm-card" href="site/pages/evidence.html">
+    <span class="qsm-card__number">第 6 章 · 阅读顶刊</span>
+    <h3>柏林墙、历史冲击与结构模型</h3>
+    <p>理解经验设计、通勤与集聚参数、模型反演和未发生政策的反事实如何衔接。</p>
+    <span class="qsm-card__link">阅读研究案例 →</span>
   </a>
 </div>
 ```
 
-## 学习时抓住这一条线
+## 学习时反复核对这条链
 
 ```{=html}
-<div class="qsm-flow" role="list" aria-label="从数据到政策反事实的学习流程">
-  <span role="listitem">观察与设定</span><span aria-hidden="true">→</span>
+<div class="qsm-flow" role="list" aria-label="从问题到政策反事实的学习流程">
+  <span role="listitem">问题与数据</span><span aria-hidden="true">→</span>
   <span role="listitem">行为参数</span><span aria-hidden="true">→</span>
-  <span role="listitem">基准校准</span><span aria-hidden="true">→</span>
+  <span role="listitem">基准反演</span><span aria-hidden="true">→</span>
   <span role="listitem">均衡求解</span><span aria-hidden="true">→</span>
-  <span role="listitem">结果核验</span>
+  <span role="listitem">结果核验</span><span aria-hidden="true">→</span>
+  <span role="listitem">政策解释</span>
 </div>
 ```
 
-模型能匹配用于校准的基准数据，只说明校准步骤完成；研究中的识别、样本外验证和福利边界仍需单独判断。完成实验室后，可用[论文与工具路线](site/pages/reading.qmd)选择下一步材料。
+模型匹配用于校准的基准数据，只说明相应反演和求解步骤完成。真实研究还要说明参数来自什么外生变化，检查未参与校准的事实，并明确福利对象和政策成本。参考程序在本机跑通，也不等于只拿模型说明的新会话已经完成独立实现。
 
 ```{=html}
 <div class="qsm-course-panel">
   <div>
-    <p class="qsm-kicker">与课程衔接</p>
-    <h2>把本站作为课前准备，也作为课后的回查入口</h2>
-    <p>开课后，本站会沿授课进度增加公开的模型说明、练习和阅读线索。新增内容记录在<a href="site/pages/updates.html">更新记录</a>；课程时间和报名信息始终以连享会课程主页为准。</p>
+    <p class="qsm-kicker">与 12 月课程衔接</p>
+    <h2>课前建立共同语言，开课后按进度继续补充</h2>
+    <p>本站会逐步增加通勤扩展、课堂练习和常见错误，并在<a href="site/pages/updates.html">更新记录</a>说明变化。课程安排、报名与后续通知始终以连享会课程主页为准。</p>
   </div>
   <a class="qsm-button qsm-button--light" href="https://www.lianxh.cn/qsm.html">返回课程主页 ↗</a>
 </div>

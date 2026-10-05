@@ -15,9 +15,10 @@ SITE = ROOT / "_site"
 COURSE_URL = "https://www.lianxh.cn/qsm.html"
 LESSONS = [
     "site/pages/foundations.html",
-    "site/pages/evidence.html",
-    "site/pages/laboratory.html",
     "site/pages/reading.html",
+    "site/pages/laboratory.html",
+    "site/pages/counterfactual.html",
+    "site/pages/evidence.html",
     "site/pages/faq.html",
     "site/pages/updates.html",
     "site/pages/about.html",
@@ -65,7 +66,7 @@ def check() -> list[str]:
         visible = re.sub(r"<[^>]+>", " ", text)
         if re.search(r"\bP0[1-9]\b", visible):
             errors.append(f"{relative}: 公开页面仍显示内部编号。")
-    for relative in ["site/pages/foundations.html", "site/pages/laboratory.html"]:
+    for relative in ["site/pages/foundations.html", "site/pages/laboratory.html", "site/pages/counterfactual.html", "site/pages/evidence.html"]:
         if 'class="math display"' not in (SITE / relative).read_text(encoding="utf-8"):
             errors.append(f"{relative}: 教学公式未渲染。")
     if not (SITE / "figs/raw/qsm-course-fig01-logo-20261005-152554.ico").is_file():

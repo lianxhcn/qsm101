@@ -1,5 +1,7 @@
 # QSM 课程预习站维护说明
 
+改版前先读[网站内容与更新台账](../docs/site-content-ledger.md)：其中记录网站定位、原稿对应关系、P05 的插入位置和发布前核对项。
+
 网站用 Quarto 构建。公开页面是 `index.qmd` 与 `site/pages/*.qmd`，按学习主题组织；`articles/*/article.md` 保留原始推文，不直接作为网站章节渲染。新增内容先核对模型与数据性质，再加入对应主题，并在 `site/pages/updates.qmd` 记录变化。
 
 课程主页固定入口配置在 `_quarto.yml` 的导航和页脚，首页另有显要按钮。课程日期、报名和费用以 <https://www.lianxh.cn/qsm.html> 为准，不在本网站复制易变信息。

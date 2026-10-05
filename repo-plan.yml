@@ -6,7 +6,7 @@ confidence: high
 
 local_root: "D:/github_lianxh"
 project_path: "D:/github_lianxh/qsm101"
-work_scope: "主题化课程预习网站、首页封面与 logo、旧网址跳转、课程主页入口及质量检查"
+work_scope: "完整课程预习讲义、内容台账、两地区模型分章、通勤扩展接口、顶刊案例、FAQ、图片清单与质量检查"
 series_key: qsm101
 
 repository_name: qsm101
@@ -31,4 +31,4 @@ approval:
   commit: true
   push: true
 
-notes: "远程仓库已存在；用户本轮同意开始制作并发布网站。P01–P03 正文保留原稿。"
+notes: "远程仓库已存在；用户同意更新并发布网站。原稿继续保留，公开网页按学习任务整合，不显示管理编号；通勤扩展完成前只保留接口规划。"
