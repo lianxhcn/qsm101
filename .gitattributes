@@ -1,0 +1,3 @@
+
+# Preserve exact fixed-input bytes used by Notebook SHA256 checks.
+/articles/p05-commuting-qsm/data/*.csv -text
