@@ -1,5 +1,7 @@
-> **作者：** 待确认  
-> **邮箱：** <lianxhcn@163.com>
+# 第一次动手做 QSM：用 Codex 搭建、校准与求解两地区模型
+
+> **作者：** 茅靓化 (连享会)  
+> **邮箱：** [lianxhcn@163.com](mailto:lianxhcn@163.com)
 
 &emsp;
 

@@ -37,6 +37,6 @@ python articles/p04-minimal-qsm/code/qsm_demo.py --output runs/p04-first-run
 
 每篇文章的正文、代码、数据和结果放在同一个文章目录。资料入口见 [目录说明](docs/repository-map.md) 和 [文献入口](references/README.md)。项目规则在 [AGENTS.md](AGENTS.md)，后续改动通过 Git 历史与 [CHANGELOG](CHANGELOG.md) 记录。
 
-文章保留各自署名，第三方资料保留来源说明。首次授权方案由作者确认后补充；当前文件中没有为第三方素材设定统一许可。
+文章保留各自署名。Python 代码采用 [MIT 许可](LICENSE-CODE)；有权授权的原创图文采用 [CC BY 4.0](LICENSE-CONTENT.md)。九张原配图可随仓库公开再分发；P02 论文图及其他第三方素材不纳入原创内容许可，来源见各图目录的 `SOURCES.md`。
 
 联系：连享会，<lianxhcn@163.com>。
