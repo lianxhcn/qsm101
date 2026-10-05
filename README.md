@@ -12,7 +12,7 @@
 | P02 | [从 DID 到 QSM：柏林墙研究](articles/p02-qsm-mechanisms/article.md) | 理解因果识别与结构反事实的联系 |
 | P03 | [QSM 怎么学](articles/p03-learning-roadmap/article.md) | 选择综述、讲义和适合的工具包 |
 | P04 | [第一次动手做 QSM](articles/p04-minimal-qsm/article.md) | 运行参考代码，再用 Codex 按提示词实现 |
-| P05 | 通勤引力扩展 (规划中) | 未来区分居住地与工作地，并重新校准求解 |
+| P05 | [两地区 QSM：加入通勤](articles/p05-commuting-qsm/article.md) | [完整 Notebook](site/pages/commuting.ipynb)：区分居民、就业与通勤，估计、校准并求解住房政策 |
 
 完整目录见 [文章索引](articles/INDEX.md)。P01–P03 为作者确认稿；P04 参考程序与原始提示词的独立实现均已完成数值和经济条件核验；实际环境问题及处理见 [试跑记录](docs/agent-workflow.md)。
 

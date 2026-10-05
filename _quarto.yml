@@ -6,12 +6,22 @@ project:
     - site/pages/foundations.qmd
     - site/pages/reading.qmd
     - site/pages/laboratory.qmd
+    - site/pages/commuting.ipynb
     - site/pages/evidence.qmd
     - site/pages/faq.qmd
     - site/pages/updates.qmd
     - site/pages/about.qmd
   resources:
     - site/pages/laboratory.ipynb
+    - site/pages/commuting.ipynb
+    - articles/p05-commuting-qsm/code/*.py
+    - articles/p05-commuting-qsm/data/*.csv
+    - articles/p05-commuting-qsm/results/reference/*
+    - articles/p05-commuting-qsm/prompts/*.md
+    - articles/p05-commuting-qsm/*.md
+    - articles/p05-commuting-qsm/requirements.txt
+    - articles/p05-commuting-qsm/downloads/*.zip
+    - articles/p05-commuting-qsm/downloads/*.ipynb
     - figs/raw/*
     - articles/**/figures/*
     - articles/p04-minimal-qsm/code/*.py
@@ -62,7 +72,8 @@ website:
         contents:
           - text: "搭建、校准与求解"
             href: site/pages/laboratory.qmd
-          - text: "通勤扩展（准备中）"
+          - text: "居住与就业的通勤扩展"
+            href: site/pages/commuting.ipynb
       - section: "进入论文"
         contents:
           - text: "柏林墙研究"
@@ -83,6 +94,7 @@ format:
   html:
     theme: cosmo
     css: site/styles.css
+    include-after-body: site/callout-copy.html
     toc: true
     toc-depth: 3
     html-math-method: mathjax

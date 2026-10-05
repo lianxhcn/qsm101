@@ -17,3 +17,10 @@ python site/check_site.py
 ```
 
 GitHub Actions 在推送到 main 后执行同样的构建与检查，再发布 `_site/`。实验室的模拟结果不代表真实城市估计；通勤等后续机制应另写模型约定和核验，不直接改动现有两地区参考结果。
+
+
+通勤章节以 `site/pages/commuting.ipynb` 为唯一网页与下载源，直接由 Quarto 渲染已执行输出，不另维护手写 qmd。离线包在 `articles/p05-commuting-qsm/downloads/commuting-workbook.zip`，包含 Notebook、两份固定 CSV、依赖说明和许可。修改后从头执行 Notebook、与参考 CSV 对照，再重新打包和渲染。所有网页与下载 Notebook 均不署名，也不显示邮箱；用户许可的远程发布另行执行。
+
+通勤 Notebook 下载副本位于 `articles/p05-commuting-qsm/downloads/commuting.ipynb`，仅从已执行的网页源文件逐字节复制。重新执行后须同步该副本及 ZIP；站点检查会阻止不同步的下载文件。
+
+Callout 采用 Quarto 原生 note/tip/warning 三类，提示词额外使用 agent-prompt 类。site/callout-copy.html 为纯文本提示词增加复制按钮，site/styles.css 管理手机换行与按钮焦点。只改 Markdown 排版时核对代码单元及已有输出保持不变即可，不必重复计算模型。

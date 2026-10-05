@@ -24,7 +24,7 @@ sidebar: false
 
 ## 五章建立 QSM 的完整认识
 
-本站面向第一次接触或刚开始学习 QSM 的读者。主线从经济直觉和学习资料出发，用一个连续章节完成最小模型的设定、校准、求解与核验，再增加通勤机制，最后回到柏林墙研究。当前通勤扩展正在准备，其他章节已经可以独立阅读。课程时间与报名信息以[课程主页](https://www.lianxh.cn/qsm.html)为准。
+本站面向第一次接触或刚开始学习 QSM 的读者。主线从经济直觉和学习资料出发，用一个连续章节完成最小模型的设定、校准、求解与核验，再增加通勤机制，最后回到柏林墙研究。两地区模型和通勤扩展均提供可下载、可独立运行的 Notebook。课程时间与报名信息以[课程主页](https://www.lianxh.cn/qsm.html)为准。
 
 </div>
 
@@ -44,16 +44,16 @@ sidebar: false
   </a>
   <a class="qsm-card" href="site/pages/laboratory.html">
     <span class="qsm-card__number">第 3 章 · 完成一次计算</span>
-    <h3>搭建、校准与求解两地区模型</h3>
+    <h3>两地区 QSM：校准与求解</h3>
     <p>从住房政策问题进入居民、企业和住房市场，边写设定边估计参数、反演地区特征、求解均衡并核验结果。网页直接呈现可执行 Notebook，也提供下载。</p>
     <span class="qsm-card__link">进入在线 Notebook →</span>
   </a>
-  <div class="qsm-card qsm-card--planned" aria-label="通勤扩展正在准备">
-    <span class="qsm-card__number">第 4 章 · 后续更新</span>
-    <h3>把居住地和工作地分开</h3>
-    <p>将加入通勤流量与成本，沿用同样的讲义与 Notebook 一体化形式，重新校准、求解并比较就业、居住和房租。</p>
-    <span class="qsm-card__status">正在准备</span>
-  </div>
+  <a class="qsm-card" href="site/pages/commuting.html">
+    <span class="qsm-card__number">第 4 章 · 区分居住与就业</span>
+    <h3>两地区 QSM：加入通勤</h3>
+    <p>用四种居住与工作组合形成通勤流量，估计、校准并求解住房政策，比较居民与就业的不同调整。提供可独立运行的 Notebook 与离线练习包。</p>
+    <span class="qsm-card__link">进入通勤扩展 →</span>
+  </a>
   <a class="qsm-card" href="site/pages/evidence.html">
     <span class="qsm-card__number">第 5 章 · 阅读顶刊</span>
     <h3>柏林墙、历史冲击与结构模型</h3>
@@ -83,7 +83,7 @@ sidebar: false
   <div>
     <p class="qsm-kicker">与 12 月课程衔接</p>
     <h2>课前建立共同语言，开课后按进度继续补充</h2>
-    <p>本站会逐步增加通勤扩展、课堂练习和常见错误，并在<a href="site/pages/updates.html">更新记录</a>说明变化。课程安排、报名与后续通知始终以连享会课程主页为准。</p>
+    <p>本站会逐步增加模型扩展、课堂练习和常见错误，并在<a href="site/pages/updates.html">更新记录</a>说明变化。课程安排、报名与后续通知始终以连享会课程主页为准。</p>
   </div>
   <a class="qsm-button qsm-button--light" href="https://www.lianxh.cn/qsm.html">返回课程主页 ↗</a>
 </div>

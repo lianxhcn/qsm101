@@ -1,0 +1,5 @@
+﻿home_region,work_region,commuters,residents,employment,monthly_wage,monthly_rent_per_m2,alpha,beta,theta,tau,total_workers,data_origin
+A,A,54000,60000,60000,9600,120,0.25,0.9,4,0,120000,constructed_teaching_baseline
+A,B,6000,60000,60000,9600,120,0.25,0.9,4,0.5493061443340549,120000,constructed_teaching_baseline
+B,A,6000,60000,60000,9600,120,0.25,0.9,4,0.5493061443340549,120000,constructed_teaching_baseline
+B,B,54000,60000,60000,9600,120,0.25,0.9,4,0,120000,constructed_teaching_baseline

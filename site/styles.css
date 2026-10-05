@@ -94,3 +94,37 @@ div.sourceCode { border-radius: .55rem; }
 
 #quarto-document-content { min-width: 0; max-width: 100%; overflow-x: clip; }
 #quarto-document-content section, #quarto-document-content .cell { min-width: 0; }
+
+/* 教学 callout：类型由标题与颜色共同表达；长提示词可在手机上阅读。 */
+.callout { margin-block: 1.4rem; }
+.callout .callout-body { font-size: 1rem; line-height: 1.75; }
+.callout .callout-title-container { font-weight: 700; }
+.callout.agent-prompt pre, .callout.agent-prompt pre code {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+.callout.agent-prompt pre { padding-right: 2.4rem; }
+.callout.agent-prompt .code-copy-button { min-width: 36px; min-height: 36px; }
+@media (max-width: 640px) {
+  .callout .callout-body { font-size: .97rem; }
+  .callout.agent-prompt pre { font-size: .85rem; line-height: 1.7; }
+  .callout.agent-prompt .code-copy-button { opacity: 1; }
+}
+
+.agent-prompt .callout-header { flex-wrap: wrap; gap: .4rem; align-items: center; }
+.agent-prompt .callout-title-container { min-width: 0; }
+.prompt-copy-button {
+  flex-shrink: 0;
+  min-height: 44px;
+  padding: .35rem .65rem;
+  border: 1px solid #276b8e;
+  border-radius: .35rem;
+  background: white;
+  color: #174a74;
+  font-size: .85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.prompt-copy-button:hover { background: #eef5fa; }
+.prompt-copy-button:focus-visible { outline: 3px solid #276b8e; outline-offset: 2px; }

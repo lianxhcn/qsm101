@@ -1,0 +1,24 @@
+{
+  "success": true,
+  "status": 0,
+  "message": "Optimization terminated successfully.",
+  "mean_score_max": 1.7206719272501448e-11,
+  "design_rank": 2,
+  "information_eigenvalues": [
+    240.73571416401015,
+    1636.8325395385846
+  ],
+  "covariance": [
+    [
+      0.0041537234811026506,
+      2.7237446691716755e-05
+    ],
+    [
+      2.723744669171675e-05,
+      0.0006111454515120486
+    ]
+  ],
+  "seed": 20261005,
+  "choice_sets": 20000,
+  "rows": 80000
+}

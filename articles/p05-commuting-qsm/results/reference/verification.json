@@ -1,0 +1,2440 @@
+{
+  "all_passed": true,
+  "checks": {
+    "baseline/total_population": {
+      "error": 1.3322676295501878e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "baseline/row_residents": {
+      "error": 4.24430860827367e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "baseline/column_employment": {
+      "error": 3.880510727564499e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "baseline/joint_choices": {
+      "error": 6.661338147750939e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "baseline/housing_market": {
+      "error": 4.553132587008992e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "baseline/marginal_product": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "baseline/goods_resource": {
+      "error": 6.661338147750939e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "baseline/wage_bill": {
+      "error": 3.725290298461918e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "baseline/root_residual": {
+      "error": 9.094947017729283e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "baseline/initial_spread": {
+      "error": 1.9698950426468074e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "B_housing_plus20/total_population": {
+      "error": 9.992007221626409e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "B_housing_plus20/row_residents": {
+      "error": 2.405136550491397e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "B_housing_plus20/column_employment": {
+      "error": 2.7486266396495928e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "B_housing_plus20/joint_choices": {
+      "error": 4.440892098500626e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "B_housing_plus20/housing_market": {
+      "error": 2.3707263577344483e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "B_housing_plus20/marginal_product": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "B_housing_plus20/goods_resource": {
+      "error": 5.551115123125783e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "B_housing_plus20/wage_bill": {
+      "error": 2.5511007285858397e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "B_housing_plus20/root_residual": {
+      "error": 4.8506384094556175e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "B_housing_plus20/initial_spread": {
+      "error": 4.919675777870225e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "zero_shock/total_population": {
+      "error": 1.3322676295501878e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "zero_shock/row_residents": {
+      "error": 4.24430860827367e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "zero_shock/column_employment": {
+      "error": 3.880510727564499e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "zero_shock/joint_choices": {
+      "error": 6.661338147750939e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "zero_shock/housing_market": {
+      "error": 4.553132587008992e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "zero_shock/marginal_product": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "zero_shock/goods_resource": {
+      "error": 6.661338147750939e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "zero_shock/wage_bill": {
+      "error": 3.725290298461918e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "zero_shock/root_residual": {
+      "error": 9.094947017729283e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "zero_shock/initial_spread": {
+      "error": 1.9698950426468074e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "common_housing_plus20/total_population": {
+      "error": 3.1086244689504383e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "common_housing_plus20/row_residents": {
+      "error": 4.7293724492192345e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "common_housing_plus20/column_employment": {
+      "error": 4.7293724492192345e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "common_housing_plus20/joint_choices": {
+      "error": 1.3877787807814457e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "common_housing_plus20/housing_market": {
+      "error": 4.967053731282536e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "common_housing_plus20/marginal_product": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "common_housing_plus20/goods_resource": {
+      "error": 1.7763568394002505e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "common_housing_plus20/wage_bill": {
+      "error": 4.760093159145786e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "common_housing_plus20/root_residual": {
+      "error": 6.063298011819521e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "common_housing_plus20/initial_spread": {
+      "error": 1.227933269674432e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "common_productivity_plus10/total_population": {
+      "error": 3.1086244689504383e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "common_productivity_plus10/row_residents": {
+      "error": 3.1529149661461515e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "common_productivity_plus10/column_employment": {
+      "error": 3.3954468866189332e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "common_productivity_plus10/joint_choices": {
+      "error": 1.3877787807814457e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "common_productivity_plus10/housing_market": {
+      "error": 3.3866275440562755e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "common_productivity_plus10/marginal_product": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "common_productivity_plus10/goods_resource": {
+      "error": 1.9984014443252818e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "common_productivity_plus10/wage_bill": {
+      "error": 3.386627544056287e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "common_productivity_plus10/root_residual": {
+      "error": 1.39455854271849e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "common_productivity_plus10/initial_spread": {
+      "error": 2.0477203077571576e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "restricted_baseline/total_population": {
+      "error": 1.887379141862766e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "restricted_baseline/row_residents": {
+      "error": 3.0316490059097574e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "restricted_baseline/column_employment": {
+      "error": 3.0316490059097574e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "restricted_baseline/joint_choices": {
+      "error": 9.43689570931383e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "restricted_baseline/housing_market": {
+      "error": 2.897448009914828e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "restricted_baseline/marginal_product": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "restricted_baseline/goods_resource": {
+      "error": 1.3322676295501878e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "restricted_baseline/wage_bill": {
+      "error": 2.8974480099148197e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "restricted_baseline/root_residual": {
+      "error": 3.637978807091713e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "restricted_baseline/initial_spread": {
+      "error": 2.7816670516455018e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "restricted_B_housing_plus20/total_population": {
+      "error": 2.4424906541753444e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "restricted_B_housing_plus20/row_residents": {
+      "error": 3.266063796754024e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "restricted_B_housing_plus20/column_employment": {
+      "error": 3.266063796754024e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "restricted_B_housing_plus20/joint_choices": {
+      "error": 1.2212453270876722e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "restricted_B_housing_plus20/housing_market": {
+      "error": 3.1975883208370503e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "restricted_B_housing_plus20/marginal_product": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "restricted_B_housing_plus20/goods_resource": {
+      "error": 1.6653345369377348e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "restricted_B_housing_plus20/wage_bill": {
+      "error": 3.3974375908893546e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "restricted_B_housing_plus20/root_residual": {
+      "error": 1.697723443309466e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "restricted_B_housing_plus20/initial_spread": {
+      "error": 3.1363800445660672e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "high_tau_baseline/total_population": {
+      "error": 1.887379141862766e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "high_tau_baseline/row_residents": {
+      "error": 3.0316490059097574e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "high_tau_baseline/column_employment": {
+      "error": 3.0316490059097574e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "high_tau_baseline/joint_choices": {
+      "error": 9.43689570931383e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "high_tau_baseline/housing_market": {
+      "error": 2.897448009914828e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "high_tau_baseline/marginal_product": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "high_tau_baseline/goods_resource": {
+      "error": 1.3322676295501878e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "high_tau_baseline/wage_bill": {
+      "error": 2.8974480099148197e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "high_tau_baseline/root_residual": {
+      "error": 3.637978807091713e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "high_tau_baseline/initial_spread": {
+      "error": 2.7816670516455018e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "high_tau_B_housing_plus20/total_population": {
+      "error": 2.4424906541753444e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "high_tau_B_housing_plus20/row_residents": {
+      "error": 3.266063796754024e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "high_tau_B_housing_plus20/column_employment": {
+      "error": 3.266063796754024e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "high_tau_B_housing_plus20/joint_choices": {
+      "error": 1.2212453270876722e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "high_tau_B_housing_plus20/housing_market": {
+      "error": 3.1975883208370503e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "high_tau_B_housing_plus20/marginal_product": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "high_tau_B_housing_plus20/goods_resource": {
+      "error": 1.6653345369377348e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "high_tau_B_housing_plus20/wage_bill": {
+      "error": 3.3974375908893546e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "high_tau_B_housing_plus20/root_residual": {
+      "error": 1.697723443309466e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "high_tau_B_housing_plus20/initial_spread": {
+      "error": 3.1363800445660672e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_00_baseline/total_population": {
+      "error": 5.551115123125783e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_00_baseline/row_residents": {
+      "error": 1.2126596023639035e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_00_baseline/column_employment": {
+      "error": 1.2126596023639035e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_00_baseline/joint_choices": {
+      "error": 3.3306690738754696e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_00_baseline/housing_market": {
+      "error": 1.4487240049574122e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_00_baseline/marginal_product": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_00_baseline/goods_resource": {
+      "error": 5.551115123125783e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_00_baseline/wage_bill": {
+      "error": 1.2417634328206375e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_00_baseline/root_residual": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_00_baseline/initial_spread": {
+      "error": 2.481103601092047e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_00_policy/total_population": {
+      "error": 2.220446049250313e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_00_policy/row_residents": {
+      "error": 2.38342165709805e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_00_policy/column_employment": {
+      "error": 4.785676310188482e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_00_policy/joint_choices": {
+      "error": 1.1102230246251565e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_00_policy/housing_market": {
+      "error": 2.1043296917189554e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_00_policy/marginal_product": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_00_policy/goods_resource": {
+      "error": 2.220446049250313e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_00_policy/wage_bill": {
+      "error": 8.17857395426407e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_00_policy/root_residual": {
+      "error": 2.4253192047278088e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_00_policy/initial_spread": {
+      "error": 9.471590178833367e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_01_baseline/total_population": {
+      "error": 5.551115123125783e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_01_baseline/row_residents": {
+      "error": 1.2126596023639035e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_01_baseline/column_employment": {
+      "error": 1.2126596023639035e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_01_baseline/joint_choices": {
+      "error": 3.3306690738754696e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_01_baseline/housing_market": {
+      "error": 1.241763432820639e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_01_baseline/marginal_product": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_01_baseline/goods_resource": {
+      "error": 5.551115123125783e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_01_baseline/wage_bill": {
+      "error": 1.2417634328206375e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_01_baseline/root_residual": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_01_baseline/initial_spread": {
+      "error": 2.40064171100219e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_01_policy/total_population": {
+      "error": 1.5543122344752192e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_01_policy/row_residents": {
+      "error": 1.8861834766713915e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_01_policy/column_employment": {
+      "error": 2.4932466934687467e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_01_policy/joint_choices": {
+      "error": 6.661338147750939e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_01_policy/housing_market": {
+      "error": 1.813789235216736e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_01_policy/marginal_product": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_01_policy/goods_resource": {
+      "error": 1.1102230246251565e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_01_policy/wage_bill": {
+      "error": 2.4366615182894476e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_01_policy/root_residual": {
+      "error": 1.2732925824820995e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_01_policy/initial_spread": {
+      "error": 3.0253577421035516e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_02_baseline/total_population": {
+      "error": 1.3322676295501878e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_02_baseline/row_residents": {
+      "error": 4.24430860827367e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_02_baseline/column_employment": {
+      "error": 3.880510727564499e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_02_baseline/joint_choices": {
+      "error": 6.661338147750939e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_02_baseline/housing_market": {
+      "error": 4.553132587008992e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_02_baseline/marginal_product": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_02_baseline/goods_resource": {
+      "error": 6.661338147750939e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_02_baseline/wage_bill": {
+      "error": 3.725290298461918e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_02_baseline/root_residual": {
+      "error": 9.094947017729283e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_02_baseline/initial_spread": {
+      "error": 1.9698950426468074e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_02_policy/total_population": {
+      "error": 9.992007221626409e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_02_policy/row_residents": {
+      "error": 2.405136550491397e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_02_policy/column_employment": {
+      "error": 2.7486266396495928e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_02_policy/joint_choices": {
+      "error": 4.440892098500626e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_02_policy/housing_market": {
+      "error": 2.3707263577344483e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_02_policy/marginal_product": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_02_policy/goods_resource": {
+      "error": 5.551115123125783e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_02_policy/wage_bill": {
+      "error": 2.5511007285858397e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_02_policy/root_residual": {
+      "error": 4.8506384094556175e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_02_policy/initial_spread": {
+      "error": 4.919675777870225e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_03_baseline/total_population": {
+      "error": 2.6645352591003757e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_03_baseline/row_residents": {
+      "error": 3.880510727564499e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_03_baseline/column_employment": {
+      "error": 4.365574568510063e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_03_baseline/joint_choices": {
+      "error": 1.27675647831893e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_03_baseline/housing_market": {
+      "error": 3.932250870598676e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_03_baseline/marginal_product": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_03_baseline/goods_resource": {
+      "error": 1.7763568394002505e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_03_baseline/wage_bill": {
+      "error": 4.346172014872239e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_03_baseline/root_residual": {
+      "error": 7.882287415365378e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_03_baseline/initial_spread": {
+      "error": 1.5802471577667562e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_03_policy/total_population": {
+      "error": 2.6645352591003757e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_03_policy/row_residents": {
+      "error": 9.700507138506305e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_03_policy/column_employment": {
+      "error": 9.278361673336583e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_03_policy/joint_choices": {
+      "error": 1.2212453270876722e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_03_policy/housing_market": {
+      "error": 9.776120548778435e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_03_policy/marginal_product": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_03_policy/goods_resource": {
+      "error": 1.7763568394002505e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_03_policy/wage_bill": {
+      "error": 9.170788395987084e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_03_policy/root_residual": {
+      "error": 1.940255363782247e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_03_policy/initial_spread": {
+      "error": 7.632783294297951e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_04_baseline/total_population": {
+      "error": 2.6645352591003757e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_04_baseline/row_residents": {
+      "error": 4.001776687800889e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_04_baseline/column_employment": {
+      "error": 5.093170329928411e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_04_baseline/joint_choices": {
+      "error": 1.27675647831893e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_04_baseline/housing_market": {
+      "error": 4.139211442735448e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_04_baseline/marginal_product": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_04_baseline/goods_resource": {
+      "error": 1.7763568394002505e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_04_baseline/wage_bill": {
+      "error": 5.174014303419337e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_04_baseline/root_residual": {
+      "error": 6.669627813001474e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_04_baseline/initial_spread": {
+      "error": 2.3117072970958002e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_04_policy/total_population": {
+      "error": 4.440892098500626e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_04_policy/row_residents": {
+      "error": 5.647615430339881e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_04_policy/column_employment": {
+      "error": 5.650730408386319e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_04_policy/joint_choices": {
+      "error": 1.9984014443252818e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_04_policy/housing_market": {
+      "error": 5.679392121586087e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_04_policy/marginal_product": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_04_policy/goods_resource": {
+      "error": 2.886579864025407e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_04_policy/wage_bill": {
+      "error": 5.552630982160841e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_04_policy/root_residual": {
+      "error": 1.7583564234276613e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_04_policy/initial_spread": {
+      "error": 4.621303340002214e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_05_baseline/total_population": {
+      "error": 3.1086244689504383e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_05_baseline/row_residents": {
+      "error": 4.3655745685100615e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_05_baseline/column_employment": {
+      "error": 4.486840528746453e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_05_baseline/joint_choices": {
+      "error": 1.3877787807814457e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_05_baseline/housing_market": {
+      "error": 4.553132587008991e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_05_baseline/marginal_product": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_05_baseline/goods_resource": {
+      "error": 1.5543122344752192e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_05_baseline/wage_bill": {
+      "error": 4.553132587009012e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_05_baseline/root_residual": {
+      "error": 8.48861721654733e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_05_baseline/initial_spread": {
+      "error": 8.646971149686208e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_05_policy/total_population": {
+      "error": 1.6653345369377348e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_05_policy/row_residents": {
+      "error": 2.5254513885257103e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_05_policy/column_employment": {
+      "error": 2.6108690341648597e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_05_policy/joint_choices": {
+      "error": 8.326672684688674e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_05_policy/housing_market": {
+      "error": 2.5756368821043767e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_05_policy/marginal_product": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_05_policy/goods_resource": {
+      "error": 1.1102230246251565e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_05_policy/wage_bill": {
+      "error": 2.7446847841095904e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_05_policy/root_residual": {
+      "error": 4.244308608273665e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_05_policy/initial_spread": {
+      "error": 2.3175905639050143e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_06_baseline/total_population": {
+      "error": 1.3322676295501878e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_06_baseline/row_residents": {
+      "error": 4.24430860827367e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_06_baseline/column_employment": {
+      "error": 4.001776687800889e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_06_baseline/joint_choices": {
+      "error": 6.661338147750939e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_06_baseline/housing_market": {
+      "error": 4.3461720148722185e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_06_baseline/marginal_product": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_06_baseline/goods_resource": {
+      "error": 6.661338147750939e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_06_baseline/wage_bill": {
+      "error": 4.346172014872238e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_06_baseline/root_residual": {
+      "error": 9.094947017729283e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_06_baseline/initial_spread": {
+      "error": 3.9638707384688684e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_06_policy/total_population": {
+      "error": 2.220446049250313e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_06_policy/row_residents": {
+      "error": 3.1603830646949243e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_06_policy/column_employment": {
+      "error": 2.3674888474974354e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_06_policy/joint_choices": {
+      "error": 1.1102230246251565e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_06_policy/housing_market": {
+      "error": 3.010544994339249e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_06_policy/marginal_product": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_06_policy/goods_resource": {
+      "error": 1.3322676295501878e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_06_policy/wage_bill": {
+      "error": 2.3297344285747718e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_06_policy/root_residual": {
+      "error": 1.0913936421275138e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_06_policy/initial_spread": {
+      "error": 3.011479954295737e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_07_baseline/total_population": {
+      "error": 1.3322676295501878e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_07_baseline/row_residents": {
+      "error": 4.24430860827367e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_07_baseline/column_employment": {
+      "error": 3.880510727564499e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_07_baseline/joint_choices": {
+      "error": 6.661338147750939e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_07_baseline/housing_market": {
+      "error": 4.553132587008992e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_07_baseline/marginal_product": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_07_baseline/goods_resource": {
+      "error": 6.661338147750939e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_07_baseline/wage_bill": {
+      "error": 3.725290298461918e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_07_baseline/root_residual": {
+      "error": 9.094947017729283e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_07_baseline/initial_spread": {
+      "error": 1.9698950426468074e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_07_policy/total_population": {
+      "error": 9.992007221626409e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_07_policy/row_residents": {
+      "error": 2.405136550491397e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_07_policy/column_employment": {
+      "error": 2.7486266396495928e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_07_policy/joint_choices": {
+      "error": 4.440892098500626e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_07_policy/housing_market": {
+      "error": 2.3707263577344483e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_07_policy/marginal_product": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_07_policy/goods_resource": {
+      "error": 5.551115123125783e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_07_policy/wage_bill": {
+      "error": 2.5511007285858397e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_07_policy/root_residual": {
+      "error": 4.8506384094556175e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_07_policy/initial_spread": {
+      "error": 4.919675777870225e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_08_baseline/total_population": {
+      "error": 1.3322676295501878e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_08_baseline/row_residents": {
+      "error": 4.24430860827367e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_08_baseline/column_employment": {
+      "error": 3.880510727564499e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_08_baseline/joint_choices": {
+      "error": 6.661338147750939e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_08_baseline/housing_market": {
+      "error": 4.346172014872219e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_08_baseline/marginal_product": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_08_baseline/goods_resource": {
+      "error": 6.661338147750939e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_08_baseline/wage_bill": {
+      "error": 3.725290298461918e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_08_baseline/root_residual": {
+      "error": 9.094947017729283e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_08_baseline/initial_spread": {
+      "error": 1.154227810935026e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_08_policy/total_population": {
+      "error": 9.992007221626409e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_08_policy/row_residents": {
+      "error": 2.440193027173303e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_08_policy/column_employment": {
+      "error": 2.8186748328938463e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_08_policy/joint_choices": {
+      "error": 4.996003610813204e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_08_policy/housing_market": {
+      "error": 2.382796053719927e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_08_policy/marginal_product": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_08_policy/goods_resource": {
+      "error": 7.771561172376096e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_08_policy/wage_bill": {
+      "error": 3.0114035643967957e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_08_policy/root_residual": {
+      "error": 1.4551915228366853e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_08_policy/initial_spread": {
+      "error": 3.066991105526995e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_09_baseline/total_population": {
+      "error": 3.1086244689504383e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_09_baseline/row_residents": {
+      "error": 4.24430860827367e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_09_baseline/column_employment": {
+      "error": 4.486840528746453e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_09_baseline/joint_choices": {
+      "error": 1.3877787807814457e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_09_baseline/housing_market": {
+      "error": 4.346172014872219e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_09_baseline/marginal_product": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_09_baseline/goods_resource": {
+      "error": 2.220446049250313e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_09_baseline/wage_bill": {
+      "error": 4.553132587009013e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_09_baseline/root_residual": {
+      "error": 9.701276818911235e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_09_baseline/initial_spread": {
+      "error": 1.0191760938822303e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_09_policy/total_population": {
+      "error": 3.4416913763379853e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_09_policy/row_residents": {
+      "error": 4.065698623910106e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_09_policy/column_employment": {
+      "error": 4.0272603907925305e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_09_policy/joint_choices": {
+      "error": 1.6653345369377348e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_09_policy/housing_market": {
+      "error": 4.119907938895591e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_09_policy/marginal_product": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_09_policy/goods_resource": {
+      "error": 2.4424906541753444e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_09_policy/wage_bill": {
+      "error": 3.866169975160829e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_09_policy/root_residual": {
+      "error": 1.5158245029548805e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_09_policy/initial_spread": {
+      "error": 5.009881398621019e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_10_baseline/total_population": {
+      "error": 1.5543122344752192e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_10_baseline/row_residents": {
+      "error": 4.486840528746451e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_10_baseline/column_employment": {
+      "error": 3.5167128468553296e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_10_baseline/joint_choices": {
+      "error": 3.885780586188048e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_10_baseline/housing_market": {
+      "error": 4.553132587008991e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_10_baseline/marginal_product": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_10_baseline/goods_resource": {
+      "error": 1.3322676295501878e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_10_baseline/wage_bill": {
+      "error": 3.5183297263251476e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_10_baseline/root_residual": {
+      "error": 7.882287415365378e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_10_baseline/initial_spread": {
+      "error": 5.073150664244483e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_10_policy/total_population": {
+      "error": 2.220446049250313e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_10_policy/row_residents": {
+      "error": 3.8115924599157264e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_10_policy/column_employment": {
+      "error": 1.0913936421275148e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_10_policy/joint_choices": {
+      "error": 5.551115123125783e-17,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_10_policy/housing_market": {
+      "error": 3.686233419011817e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_10_policy/marginal_product": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_10_policy/goods_resource": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_10_policy/wage_bill": {
+      "error": 8.278422885470925e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_10_policy/root_residual": {
+      "error": 1.5764574830730755e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_10_policy/initial_spread": {
+      "error": 4.08006961549745e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_11_baseline/total_population": {
+      "error": 2.220446049250313e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_11_baseline/row_residents": {
+      "error": 3.6379788070917136e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_11_baseline/column_employment": {
+      "error": 3.6379788070917136e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_11_baseline/joint_choices": {
+      "error": 5.551115123125783e-17,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_11_baseline/housing_market": {
+      "error": 4.139211442735459e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_11_baseline/marginal_product": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_11_baseline/goods_resource": {
+      "error": 2.220446049250313e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_11_baseline/wage_bill": {
+      "error": 4.139211442735461e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_11_baseline/root_residual": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_11_baseline/initial_spread": {
+      "error": 2.9151318896010437e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_11_policy/total_population": {
+      "error": 3.4416913763379853e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_11_policy/row_residents": {
+      "error": 3.553460221302091e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_11_policy/column_employment": {
+      "error": 4.558087928414577e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_11_policy/joint_choices": {
+      "error": 1.3322676295501878e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_11_policy/housing_market": {
+      "error": 3.679326032373525e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_11_policy/marginal_product": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_11_policy/goods_resource": {
+      "error": 2.4424906541753444e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_11_policy/wage_bill": {
+      "error": 4.618151279888212e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_11_policy/root_residual": {
+      "error": 1.6370904631912708e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_11_policy/initial_spread": {
+      "error": 9.71445146547012e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_12_baseline/total_population": {
+      "error": 1.3322676295501878e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_12_baseline/row_residents": {
+      "error": 4.24430860827367e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_12_baseline/column_employment": {
+      "error": 3.880510727564499e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_12_baseline/joint_choices": {
+      "error": 6.661338147750939e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_12_baseline/housing_market": {
+      "error": 4.553132587008992e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_12_baseline/marginal_product": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_12_baseline/goods_resource": {
+      "error": 6.661338147750939e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_12_baseline/wage_bill": {
+      "error": 3.725290298461918e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_12_baseline/root_residual": {
+      "error": 9.094947017729283e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_12_baseline/initial_spread": {
+      "error": 1.9698950426468074e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_12_policy/total_population": {
+      "error": 9.992007221626409e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_12_policy/row_residents": {
+      "error": 2.405136550491397e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_12_policy/column_employment": {
+      "error": 2.7486266396495928e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_12_policy/joint_choices": {
+      "error": 4.440892098500626e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_12_policy/housing_market": {
+      "error": 2.3707263577344483e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_12_policy/marginal_product": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_12_policy/goods_resource": {
+      "error": 5.551115123125783e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_12_policy/wage_bill": {
+      "error": 2.5511007285858397e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_12_policy/root_residual": {
+      "error": 4.8506384094556175e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_12_policy/initial_spread": {
+      "error": 4.919675777870225e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_13_baseline/total_population": {
+      "error": 3.4416913763379853e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_13_baseline/row_residents": {
+      "error": 4.486840528746441e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_13_baseline/column_employment": {
+      "error": 4.971904369692e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_13_baseline/joint_choices": {
+      "error": 1.6653345369377348e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_13_baseline/housing_market": {
+      "error": 4.3461720148722485e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_13_baseline/marginal_product": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_13_baseline/goods_resource": {
+      "error": 2.220446049250313e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_13_baseline/wage_bill": {
+      "error": 4.760093159145773e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_13_baseline/root_residual": {
+      "error": 1.0913936421275138e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_13_baseline/initial_spread": {
+      "error": 6.080815821727714e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_13_policy/total_population": {
+      "error": 2.9976021664879227e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_13_policy/row_residents": {
+      "error": 4.042694173139733e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_13_policy/column_employment": {
+      "error": 7.812313684621154e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_13_policy/joint_choices": {
+      "error": 1.5543122344752192e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_13_policy/housing_market": {
+      "error": 3.866642996915853e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_13_policy/marginal_product": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_13_policy/goods_resource": {
+      "error": 1.9984014443252818e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_13_policy/wage_bill": {
+      "error": 7.926354766079116e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_13_policy/root_residual": {
+      "error": 1.0307606620093187e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_13_policy/initial_spread": {
+      "error": 7.618905506490137e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_14_baseline/total_population": {
+      "error": 1.5543122344752192e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_14_baseline/row_residents": {
+      "error": 4.486840528746451e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_14_baseline/column_employment": {
+      "error": 4.486840528746451e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_14_baseline/joint_choices": {
+      "error": 7.216449660063518e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_14_baseline/housing_market": {
+      "error": 4.3461720148722185e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_14_baseline/marginal_product": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_14_baseline/goods_resource": {
+      "error": 1.1102230246251565e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_14_baseline/wage_bill": {
+      "error": 4.3461720148722375e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_14_baseline/root_residual": {
+      "error": 7.882287415365378e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_14_baseline/initial_spread": {
+      "error": 4.306443402012927e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_14_policy/total_population": {
+      "error": 1.1102230246251565e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_14_policy/row_residents": {
+      "error": 4.315829758934935e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_14_policy/column_employment": {
+      "error": 3.9660800905218685e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_14_policy/joint_choices": {
+      "error": 5.551115123125783e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_14_policy/housing_market": {
+      "error": 4.3966147015804365e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_14_policy/marginal_product": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_14_policy/goods_resource": {
+      "error": 6.661338147750939e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_14_policy/wage_bill": {
+      "error": 3.797261490177169e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_14_policy/root_residual": {
+      "error": 2.243420264373223e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_14_policy/initial_spread": {
+      "error": 7.771561172376096e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_15_baseline/total_population": {
+      "error": 7.771561172376096e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_15_baseline/row_residents": {
+      "error": 1.5764574830730744e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_15_baseline/column_employment": {
+      "error": 1.333925562600294e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_15_baseline/joint_choices": {
+      "error": 3.3306690738754696e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_15_baseline/housing_market": {
+      "error": 1.6556845770941858e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_15_baseline/marginal_product": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_15_baseline/goods_resource": {
+      "error": 3.3306690738754696e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_15_baseline/wage_bill": {
+      "error": 1.2417634328206375e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_15_baseline/root_residual": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_15_baseline/initial_spread": {
+      "error": 3.0150222679552085e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_15_policy/total_population": {
+      "error": 2.6645352591003757e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_15_policy/row_residents": {
+      "error": 5.187516363412278e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_15_policy/column_employment": {
+      "error": 5.4958972471246964e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_15_policy/joint_choices": {
+      "error": 1.27675647831893e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_15_policy/housing_market": {
+      "error": 5.170092588777635e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_15_policy/marginal_product": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_15_policy/goods_resource": {
+      "error": 1.9984014443252818e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_15_policy/wage_bill": {
+      "error": 5.3136132484691414e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_15_policy/root_residual": {
+      "error": 1.2126596023639044e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_15_policy/initial_spread": {
+      "error": 8.021361352916756e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_16_baseline/total_population": {
+      "error": 4.440892098500626e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_16_baseline/row_residents": {
+      "error": 9.70127681891123e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_16_baseline/column_employment": {
+      "error": 9.70127681891123e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_16_baseline/joint_choices": {
+      "error": 2.220446049250313e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_16_baseline/housing_market": {
+      "error": 1.0348028606838657e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_16_baseline/marginal_product": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_16_baseline/goods_resource": {
+      "error": 3.3306690738754696e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_16_baseline/wage_bill": {
+      "error": 8.278422885470918e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_16_baseline/root_residual": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_16_baseline/initial_spread": {
+      "error": 4.4077750203393673e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_16_policy/total_population": {
+      "error": 2.886579864025407e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_16_policy/row_residents": {
+      "error": 4.048934741884963e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_16_policy/column_employment": {
+      "error": 3.1221626309091387e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_16_policy/joint_choices": {
+      "error": 1.27675647831893e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_16_policy/housing_market": {
+      "error": 4.093227257661528e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_16_policy/marginal_product": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_16_policy/goods_resource": {
+      "error": 1.9984014443252818e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_16_policy/wage_bill": {
+      "error": 3.18770275468682e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_16_policy/root_residual": {
+      "error": 1.2732925824820995e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_16_policy/initial_spread": {
+      "error": 4.260480856999038e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "baseline_restore/M": {
+      "error": 4.092726157978177e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "zero_shock/M": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "baseline_restore/R": {
+      "error": 1.3339255626002948e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "zero_shock/R": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "baseline_restore/E": {
+      "error": 1.3339255626002948e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "zero_shock/E": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "baseline_restore/w": {
+      "error": 1.8947806286936006e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "zero_shock/w": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "baseline_restore/r": {
+      "error": 1.4210854715202005e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "zero_shock/r": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "common_housing_plus20/scaling_M": {
+      "error": 3.5032388512735034e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "common_housing_plus20/scaling_w": {
+      "error": 1.8947806286936006e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "common_housing_plus20/scaling_r": {
+      "error": 4.2632564145605955e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "common_housing_plus20/welfare_scaling": {
+      "error": 8.881784197001252e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "common_productivity_plus10/scaling_M": {
+      "error": 3.5032388512735034e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "common_productivity_plus10/scaling_w": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "common_productivity_plus10/scaling_r": {
+      "error": 1.2918958832001804e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "common_productivity_plus10/welfare_scaling": {
+      "error": 2.220446049250313e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "label_mirror/R": {
+      "error": 2.5602487490752266e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "label_mirror/E": {
+      "error": 3.3733145122972276e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "label_mirror/w": {
+      "error": 3.8005532737557766e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "label_mirror/r": {
+      "error": 2.4604225215529277e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "label_mirror/M": {
+      "error": 7.128725001709611e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "label_mirror/welfare": {
+      "error": 1.7763568394002505e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "restricted_baseline/cross_exact_zero": {
+      "error": 0.0,
+      "threshold": 0.0,
+      "passed": true
+    },
+    "restricted_B_housing_plus20/cross_exact_zero": {
+      "error": 0.0,
+      "threshold": 0.0,
+      "passed": true
+    },
+    "restricted_restore/R": {
+      "error": 1.2126596023639043e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "restricted_restore/E": {
+      "error": 1.2126596023639043e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "restricted_restore/w": {
+      "error": 1.8947806286936006e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "restricted_restore/r": {
+      "error": 1.1842378929335002e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "high_tau_limit/R": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "high_tau_limit/E": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "high_tau_limit/w": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "high_tau_limit/r": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "high_tau_limit/cross_share": {
+      "error": 1.8080262132785264e-35,
+      "threshold": 1e-12,
+      "passed": true
+    },
+    "high_tau_limit/welfare_gain": {
+      "error": 0.0,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "restricted_analytical": {
+      "error": 4.85722573273506e-16,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "mle/score": {
+      "error": 1.7206719272501448e-11,
+      "threshold": 1e-07,
+      "passed": true
+    },
+    "mle/design_rank": {
+      "error": 0.0,
+      "threshold": 0.0,
+      "passed": true
+    },
+    "mle/recovery_theta": {
+      "error": 1.4403701649493972,
+      "threshold": 4.0,
+      "passed": true
+    },
+    "mle/recovery_theta_tau": {
+      "error": 0.7711445977547549,
+      "threshold": 4.0,
+      "passed": true
+    },
+    "mle/recovery_tau": {
+      "error": 0.7380200137937645,
+      "threshold": 4.0,
+      "passed": true
+    },
+    "data/one_choice_per_set": {
+      "error": 0.0,
+      "threshold": 0.0,
+      "passed": true
+    },
+    "sensitivity_OD/theta1.00.9": {
+      "error": 1.2126596023639043e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_OD/theta2.00.9": {
+      "error": 1.2126596023639043e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_OD/theta4.00.9": {
+      "error": 4.092726157978177e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_OD/theta6.00.9": {
+      "error": 2.964279028000655e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_OD/theta8.00.9": {
+      "error": 2.964279028000655e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_OD/beta4.00.8": {
+      "error": 4.092726157978177e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_OD/beta4.00.85": {
+      "error": 4.092726157978177e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_OD/beta4.00.9": {
+      "error": 4.092726157978177e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_OD/beta4.00.95": {
+      "error": 4.092726157978177e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_OD/beta4.01.0": {
+      "error": 4.092726157978177e-15,
+      "threshold": 1e-08,
+      "passed": true
+    },
+    "sensitivity_OD/estimated_theta3.907169025855850.9": {
+      "error": 3.031649005909761e-15,
+      "threshold": 1e-08,
+      "passed": true
+    }
+  },
+  "seed": 20261005,
+  "choice_sets": 20000,
+  "data_origin": "teaching_and_synthetic_only",
+  "versions": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "pandas": "2.2.3",
+    "matplotlib": "3.10.8"
+  },
+  "python": "3.11.14",
+  "timestamp": "2026-10-05T19:06:50.040434",
+  "input_sha256": {
+    "synthetic-joint-choice-tasks.csv": "4b205213dc543a8277cd942f865539d4053d0c828aeecc5fbc740fdd4b63ceb4",
+    "teaching-baseline.csv": "9a074cbb924e0864a36a8daddfd3eb7a4996e45586af3e29a9ed2bde26012d15"
+  }
+}

@@ -1,0 +1,4603 @@
+{
+  "baseline": [
+    {
+      "initial": [
+        0.0,
+        0.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 9.094947017729283e-16,
+      "xy": [
+        2.4096937050954317e-15,
+        2.4505472541890408e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 9.094947017729283e-16
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 8.48861721654733e-16,
+      "xy": [
+        2.6950150045769235e-15,
+        4.420442296835848e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 8.48861721654733e-16
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 9.701276818911235e-16,
+      "xy": [
+        2.1950451170886253e-15,
+        4.313874894172736e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 9.701276818911235e-16
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 9.094947017729283e-16,
+      "xy": [
+        2.4912633647102947e-15,
+        2.6878518555915784e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 9.094947017729283e-16
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 9.094947017729283e-16,
+      "xy": [
+        2.5606557260476393e-15,
+        2.588774229142917e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 9.094947017729283e-16
+      }
+    }
+  ],
+  "B_housing_plus20": [
+    {
+      "initial": [
+        0.0,
+        0.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 11,
+      "residual": 4.8506384094556175e-16,
+      "xy": [
+        0.08410573251038966,
+        0.058792110022613774
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 4.8506384094556175e-16
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 15,
+      "residual": 7.275957614183426e-16,
+      "xy": [
+        0.08410573251038925,
+        0.058792110022612865
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 7.275957614183426e-16
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 14,
+      "residual": 7.275957614183426e-16,
+      "xy": [
+        0.08410573251039276,
+        0.05879211002261869
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 7.275957614183426e-16
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 15,
+      "residual": 2.4253192047278088e-16,
+      "xy": [
+        0.0841057325103917,
+        0.058792110022617264
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 2.4253192047278088e-16
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 18,
+      "residual": 1.8189894035458566e-16,
+      "xy": [
+        0.08410573251038987,
+        0.05879211002261533
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 1.8189894035458566e-16
+      }
+    }
+  ],
+  "zero_shock": [
+    {
+      "initial": [
+        0.0,
+        0.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 9.094947017729283e-16,
+      "xy": [
+        2.4096937050954317e-15,
+        2.4505472541890408e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 9.094947017729283e-16
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 8.48861721654733e-16,
+      "xy": [
+        2.6950150045769235e-15,
+        4.420442296835848e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 8.48861721654733e-16
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 9.701276818911235e-16,
+      "xy": [
+        2.1950451170886253e-15,
+        4.313874894172736e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 9.701276818911235e-16
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 9.094947017729283e-16,
+      "xy": [
+        2.4912633647102947e-15,
+        2.6878518555915784e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 9.094947017729283e-16
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 9.094947017729283e-16,
+      "xy": [
+        2.5606557260476393e-15,
+        2.588774229142917e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 9.094947017729283e-16
+      }
+    }
+  ],
+  "common_housing_plus20": [
+    {
+      "initial": [
+        0.0,
+        0.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 6.063298011819521e-16,
+      "xy": [
+        3.3052266678155768e-15,
+        3.4167978743114674e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 6.063298011819521e-16
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 6.063298011819521e-16,
+      "xy": [
+        3.4321697708938e-15,
+        4.6447311439858994e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 6.063298011819521e-16
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 6.063298011819521e-16,
+      "xy": [
+        3.3232982666563875e-15,
+        4.300089520139555e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 6.063298011819521e-16
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 6.063298011819521e-16,
+      "xy": [
+        3.2905101141872598e-15,
+        3.885589071119911e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 6.063298011819521e-16
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 6.063298011819521e-16,
+      "xy": [
+        3.3439105256466082e-15,
+        3.719741903138951e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 6.063298011819521e-16
+      }
+    }
+  ],
+  "common_productivity_plus10": [
+    {
+      "initial": [
+        0.0,
+        0.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 1.39455854271849e-15,
+      "xy": [
+        2.0992255854902072e-16,
+        8.226517432390917e-16
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 1.39455854271849e-15
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 1.39455854271849e-15,
+      "xy": [
+        6.011838244272749e-16,
+        1.1444200550195773e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 1.39455854271849e-15
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 1.39455854271849e-15,
+      "xy": [
+        1.810242292475147e-16,
+        2.8703720509962494e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 1.39455854271849e-15
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 1.39455854271849e-15,
+      "xy": [
+        6.075557767479802e-16,
+        1.5168410057213658e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 1.39455854271849e-15
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 1.39455854271849e-15,
+      "xy": [
+        5.91942185508454e-16,
+        1.0730864931607224e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 1.39455854271849e-15
+      }
+    }
+  ],
+  "restricted_baseline": [
+    {
+      "initial": [
+        0.0,
+        0.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 3.637978807091713e-16,
+      "xy": [
+        -2.3555478051790712e-15,
+        -2.3423584319054284e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 3.637978807091713e-16
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 3.637978807091713e-16,
+      "xy": [
+        -2.4812930701587488e-15,
+        -5.12402548355093e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 3.637978807091713e-16
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 3.637978807091713e-16,
+      "xy": [
+        -2.2775017504466894e-15,
+        -2.3038238678771384e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 3.637978807091713e-16
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 4.8506384094556175e-16,
+      "xy": [
+        -1.989627267589592e-15,
+        -1.874985456647214e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 4.8506384094556175e-16
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 4.8506384094556175e-16,
+      "xy": [
+        -1.861647572879769e-15,
+        -1.8762093122145313e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 4.8506384094556175e-16
+      }
+    }
+  ],
+  "restricted_B_housing_plus20": [
+    {
+      "initial": [
+        0.0,
+        0.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 9,
+      "residual": 1.697723443309466e-15,
+      "xy": [
+        0.07927024208432858,
+        0.07927024208432855
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 1.697723443309466e-15
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 30,
+      "residual": 9.094947017729283e-16,
+      "xy": [
+        0.07927024208432545,
+        0.07927024208432562
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 9.094947017729283e-16
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 19,
+      "residual": 9.094947017729283e-16,
+      "xy": [
+        0.07927024208432544,
+        0.07927024208432548
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 9.094947017729283e-16
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 15,
+      "residual": 2.1221543041368327e-15,
+      "xy": [
+        0.07927024208433045,
+        0.07927024208433052
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 2.1221543041368327e-15
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 15,
+      "residual": 1.2126596023639043e-15,
+      "xy": [
+        0.07927024208432706,
+        0.0792702420843269
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 1.2126596023639043e-15
+      }
+    }
+  ],
+  "high_tau_baseline": [
+    {
+      "initial": [
+        0.0,
+        0.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 3.637978807091713e-16,
+      "xy": [
+        -2.3555478051790712e-15,
+        -2.3423584319054284e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 3.637978807091713e-16
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 3.637978807091713e-16,
+      "xy": [
+        -2.4812930701587488e-15,
+        -5.12402548355093e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 3.637978807091713e-16
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 3.637978807091713e-16,
+      "xy": [
+        -2.2775017504466894e-15,
+        -2.3038238678771384e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 3.637978807091713e-16
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 4.8506384094556175e-16,
+      "xy": [
+        -1.989627267589592e-15,
+        -1.874985456647214e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 4.8506384094556175e-16
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 4.8506384094556175e-16,
+      "xy": [
+        -1.861647572879769e-15,
+        -1.8762093122145313e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 4.8506384094556175e-16
+      }
+    }
+  ],
+  "high_tau_B_housing_plus20": [
+    {
+      "initial": [
+        0.0,
+        0.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 9,
+      "residual": 1.697723443309466e-15,
+      "xy": [
+        0.07927024208432858,
+        0.07927024208432855
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 1.697723443309466e-15
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 30,
+      "residual": 9.094947017729283e-16,
+      "xy": [
+        0.07927024208432545,
+        0.07927024208432562
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 9.094947017729283e-16
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 19,
+      "residual": 9.094947017729283e-16,
+      "xy": [
+        0.07927024208432544,
+        0.07927024208432548
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 9.094947017729283e-16
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 15,
+      "residual": 2.1221543041368327e-15,
+      "xy": [
+        0.07927024208433045,
+        0.07927024208433052
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 2.1221543041368327e-15
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 15,
+      "residual": 1.2126596023639043e-15,
+      "xy": [
+        0.07927024208432706,
+        0.0792702420843269
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 1.2126596023639043e-15
+      }
+    }
+  ],
+  "sensitivity_00_baseline": [
+    {
+      "initial": [
+        0.0,
+        0.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 8,
+      "residual": 0.0,
+      "xy": [
+        -1.15233861703688e-15,
+        -1.1116852909671835e-15
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 0.0
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 17,
+      "residual": 0.0,
+      "xy": [
+        -1.1499221473320665e-15,
+        -1.3597956510763882e-15
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 0.0
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 17,
+      "residual": 0.0,
+      "xy": [
+        -1.0218284667890588e-15,
+        -1.3155944771415145e-15
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 0.0
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 15,
+      "residual": 0.0,
+      "xy": [
+        -1.358123839672139e-15,
+        -1.2773144204568304e-15
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 0.0
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 15,
+      "residual": 0.0,
+      "xy": [
+        -1.0296093380196987e-15,
+        -9.770144427646294e-16
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 0.0
+      }
+    }
+  ],
+  "sensitivity_00_policy": [
+    {
+      "initial": [
+        0.0,
+        0.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 9,
+      "residual": 2.4253192047278088e-16,
+      "xy": [
+        0.03516110036281351,
+        0.027150223078868985
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 2.4253192047278088e-16
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 15,
+      "residual": 3.0316490059097607e-16,
+      "xy": [
+        0.03516110036281297,
+        0.027150223078868982
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 3.0316490059097607e-16
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 15,
+      "residual": 4.8506384094556175e-16,
+      "xy": [
+        0.03516110036281274,
+        0.027150223078868038
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 4.8506384094556175e-16
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 20,
+      "residual": 2.4253192047278088e-16,
+      "xy": [
+        0.03516110036281325,
+        0.027150223078868593
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 2.4253192047278088e-16
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 21,
+      "residual": 2.4253192047278088e-16,
+      "xy": [
+        0.03516110036281331,
+        0.027150223078868857
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 2.4253192047278088e-16
+      }
+    }
+  ],
+  "sensitivity_01_baseline": [
+    {
+      "initial": [
+        0.0,
+        0.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 7,
+      "residual": 0.0,
+      "xy": [
+        -1.243023641168759e-15,
+        -1.3047003867229334e-15
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 0.0
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 17,
+      "residual": 0.0,
+      "xy": [
+        -1.1870236288665426e-15,
+        -1.18304124431315e-15
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 0.0
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 17,
+      "residual": 0.0,
+      "xy": [
+        -1.00295947006854e-15,
+        -1.2389865537234052e-15
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 0.0
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 16,
+      "residual": 0.0,
+      "xy": [
+        -1.2992190558340384e-15,
+        -1.3223653217596667e-15
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 0.0
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 15,
+      "residual": 0.0,
+      "xy": [
+        -1.3422586068052682e-15,
+        -1.3185506173685915e-15
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 0.0
+      }
+    }
+  ],
+  "sensitivity_01_policy": [
+    {
+      "initial": [
+        0.0,
+        0.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 9,
+      "residual": 1.2732925824820995e-15,
+      "xy": [
+        0.057350419499163245,
+        0.04279288605957697
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 1.2732925824820995e-15
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 14,
+      "residual": 1.0913936421275138e-15,
+      "xy": [
+        0.05735041949916277,
+        0.04279288605957659
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 1.0913936421275138e-15
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 15,
+      "residual": 1.0307606620093187e-15,
+      "xy": [
+        0.05735041949916501,
+        0.04279288605957765
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 1.0307606620093187e-15
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 17,
+      "residual": 7.275957614183426e-16,
+      "xy": [
+        0.057350419499164744,
+        0.04279288605957897
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 7.275957614183426e-16
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 22,
+      "residual": 4.8506384094556175e-16,
+      "xy": [
+        0.05735041949916508,
+        0.042792886059579996
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 4.8506384094556175e-16
+      }
+    }
+  ],
+  "sensitivity_02_baseline": [
+    {
+      "initial": [
+        0.0,
+        0.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 9.094947017729283e-16,
+      "xy": [
+        2.4096937050954317e-15,
+        2.4505472541890408e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 9.094947017729283e-16
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 8.48861721654733e-16,
+      "xy": [
+        2.6950150045769235e-15,
+        4.420442296835848e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 8.48861721654733e-16
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 9.701276818911235e-16,
+      "xy": [
+        2.1950451170886253e-15,
+        4.313874894172736e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 9.701276818911235e-16
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 9.094947017729283e-16,
+      "xy": [
+        2.4912633647102947e-15,
+        2.6878518555915784e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 9.094947017729283e-16
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 9.094947017729283e-16,
+      "xy": [
+        2.5606557260476393e-15,
+        2.588774229142917e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 9.094947017729283e-16
+      }
+    }
+  ],
+  "sensitivity_02_policy": [
+    {
+      "initial": [
+        0.0,
+        0.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 11,
+      "residual": 4.8506384094556175e-16,
+      "xy": [
+        0.08410573251038966,
+        0.058792110022613774
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 4.8506384094556175e-16
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 15,
+      "residual": 7.275957614183426e-16,
+      "xy": [
+        0.08410573251038925,
+        0.058792110022612865
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 7.275957614183426e-16
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 14,
+      "residual": 7.275957614183426e-16,
+      "xy": [
+        0.08410573251039276,
+        0.05879211002261869
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 7.275957614183426e-16
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 15,
+      "residual": 2.4253192047278088e-16,
+      "xy": [
+        0.0841057325103917,
+        0.058792110022617264
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 2.4253192047278088e-16
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 18,
+      "residual": 1.8189894035458566e-16,
+      "xy": [
+        0.08410573251038987,
+        0.05879211002261533
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 1.8189894035458566e-16
+      }
+    }
+  ],
+  "sensitivity_03_baseline": [
+    {
+      "initial": [
+        0.0,
+        0.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 7.882287415365378e-16,
+      "xy": [
+        2.3147299921750363e-15,
+        3.4811737440124044e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 7.882287415365378e-16
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 7.882287415365378e-16,
+      "xy": [
+        2.212837310425667e-15,
+        2.1408141584868407e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 7.882287415365378e-16
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 7.882287415365378e-16,
+      "xy": [
+        2.2037370728846146e-15,
+        2.5900844193862466e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 7.882287415365378e-16
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 7.882287415365378e-16,
+      "xy": [
+        2.327497917363162e-15,
+        2.4887567527238208e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 7.882287415365378e-16
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 6.669627813001474e-16,
+      "xy": [
+        2.433881314566617e-15,
+        5.0614209017791605e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 6.669627813001474e-16
+      }
+    }
+  ],
+  "sensitivity_03_policy": [
+    {
+      "initial": [
+        0.0,
+        0.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 10,
+      "residual": 1.940255363782247e-15,
+      "xy": [
+        0.09993232703810209,
+        0.06569914209676951
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 1.940255363782247e-15
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 16,
+      "residual": 1.0913936421275138e-15,
+      "xy": [
+        0.09993232703809872,
+        0.06569914209676508
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 1.0913936421275138e-15
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 17,
+      "residual": 1.152026622245709e-15,
+      "xy": [
+        0.09993232703809919,
+        0.06569914209676188
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 1.152026622245709e-15
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 16,
+      "residual": 1.2732925824820995e-15,
+      "xy": [
+        0.0999323270380996,
+        0.06569914209676539
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 1.2732925824820995e-15
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 15,
+      "residual": 1.0913936421275138e-15,
+      "xy": [
+        0.09993232703809843,
+        0.0656991420967636
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 1.0913936421275138e-15
+      }
+    }
+  ],
+  "sensitivity_04_baseline": [
+    {
+      "initial": [
+        0.0,
+        0.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 6.669627813001474e-16,
+      "xy": [
+        2.7013108299430785e-15,
+        4.8910730481927144e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 6.669627813001474e-16
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 9.094947017729283e-16,
+      "xy": [
+        1.651635328996899e-15,
+        3.4320301841208522e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 9.094947017729283e-16
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 7.882287415365378e-16,
+      "xy": [
+        2.2904190910552088e-15,
+        2.579365751096914e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 7.882287415365378e-16
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 7.882287415365378e-16,
+      "xy": [
+        2.2221077532071118e-15,
+        2.722669659273383e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 7.882287415365378e-16
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 7.882287415365378e-16,
+      "xy": [
+        2.2443285369139337e-15,
+        2.5901868619566245e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 7.882287415365378e-16
+      }
+    }
+  ],
+  "sensitivity_04_policy": [
+    {
+      "initial": [
+        0.0,
+        0.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 10,
+      "residual": 1.7583564234276613e-15,
+      "xy": [
+        0.1105708788074331,
+        0.06860642020815311
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 1.7583564234276613e-15
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 17,
+      "residual": 1.8796223836640518e-15,
+      "xy": [
+        0.11057087880743223,
+        0.06860642020815297
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 1.8796223836640518e-15
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 22,
+      "residual": 1.6370904631912708e-15,
+      "xy": [
+        0.11057087880743352,
+        0.06860642020815658
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 1.6370904631912708e-15
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 16,
+      "residual": 2.8497500655551753e-15,
+      "xy": [
+        0.11057087880742848,
+        0.06860642020814858
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 2.8497500655551753e-15
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 16,
+      "residual": 1.5158245029548805e-15,
+      "xy": [
+        0.11057087880743427,
+        0.0686064202081529
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 1.5158245029548805e-15
+      }
+    }
+  ],
+  "sensitivity_05_baseline": [
+    {
+      "initial": [
+        0.0,
+        0.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 8.48861721654733e-16,
+      "xy": [
+        2.6518183653497116e-15,
+        2.8698675587006272e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 8.48861721654733e-16
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 7.275957614183426e-16,
+      "xy": [
+        3.234506817192614e-15,
+        3.42226368467104e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 7.275957614183426e-16
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 7.275957614183426e-16,
+      "xy": [
+        2.9652117381016536e-15,
+        3.734564673669248e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 7.275957614183426e-16
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 7.275957614183426e-16,
+      "xy": [
+        3.2217500632761436e-15,
+        3.4429394769794555e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 7.275957614183426e-16
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 7.275957614183426e-16,
+      "xy": [
+        3.251032287609641e-15,
+        3.313777742609532e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 7.275957614183426e-16
+      }
+    }
+  ],
+  "sensitivity_05_policy": [
+    {
+      "initial": [
+        0.0,
+        0.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 14,
+      "residual": 4.244308608273665e-16,
+      "xy": [
+        0.07934003805933054,
+        0.04925322813914053
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 4.244308608273665e-16
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 15,
+      "residual": 1.0307606620093187e-15,
+      "xy": [
+        0.07934003805933007,
+        0.0492532281391415
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 1.0307606620093187e-15
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 15,
+      "residual": 1.0913936421275138e-15,
+      "xy": [
+        0.07934003805933286,
+        0.049253228139142
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 1.0913936421275138e-15
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 14,
+      "residual": 4.244308608273665e-16,
+      "xy": [
+        0.07934003805933047,
+        0.04925322813913918
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 4.244308608273665e-16
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 14,
+      "residual": 3.395446886618932e-15,
+      "xy": [
+        0.07934003805932843,
+        0.049253228139138516
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 3.395446886618932e-15
+      }
+    }
+  ],
+  "sensitivity_06_baseline": [
+    {
+      "initial": [
+        0.0,
+        0.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 9.094947017729283e-16,
+      "xy": [
+        2.550151243362743e-15,
+        2.6749839358826427e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 9.094947017729283e-16
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 1.2126596023639043e-15,
+      "xy": [
+        3.897803838910039e-15,
+        -1.2888868025862254e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 1.2126596023639043e-15
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 9.094947017729283e-16,
+      "xy": [
+        2.5593332617823728e-15,
+        2.344993636302259e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 9.094947017729283e-16
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 9.094947017729283e-16,
+      "xy": [
+        2.4115335987701076e-15,
+        2.6402692763602166e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 9.094947017729283e-16
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 9.094947017729283e-16,
+      "xy": [
+        2.517463774382106e-15,
+        2.7611364553772632e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 9.094947017729283e-16
+      }
+    }
+  ],
+  "sensitivity_06_policy": [
+    {
+      "initial": [
+        0.0,
+        0.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 13,
+      "residual": 1.0913936421275138e-15,
+      "xy": [
+        0.08151247938208593,
+        0.05360176515747108
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 1.0913936421275138e-15
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 18,
+      "residual": 1.0307606620093187e-15,
+      "xy": [
+        0.08151247938208499,
+        0.0536017651574714
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 1.0307606620093187e-15
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 15,
+      "residual": 1.2732925824820995e-15,
+      "xy": [
+        0.08151247938208446,
+        0.05360176515746914
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 1.2732925824820995e-15
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 24,
+      "residual": 1.0913936421275138e-15,
+      "xy": [
+        0.08151247938208578,
+        0.05360176515747095
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 1.0913936421275138e-15
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 14,
+      "residual": 1.4551915228366853e-15,
+      "xy": [
+        0.081512479382084,
+        0.05360176515746807
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 1.4551915228366853e-15
+      }
+    }
+  ],
+  "sensitivity_07_baseline": [
+    {
+      "initial": [
+        0.0,
+        0.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 9.094947017729283e-16,
+      "xy": [
+        2.4096937050954317e-15,
+        2.4505472541890408e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 9.094947017729283e-16
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 8.48861721654733e-16,
+      "xy": [
+        2.6950150045769235e-15,
+        4.420442296835848e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 8.48861721654733e-16
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 9.701276818911235e-16,
+      "xy": [
+        2.1950451170886253e-15,
+        4.313874894172736e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 9.701276818911235e-16
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 9.094947017729283e-16,
+      "xy": [
+        2.4912633647102947e-15,
+        2.6878518555915784e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 9.094947017729283e-16
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 9.094947017729283e-16,
+      "xy": [
+        2.5606557260476393e-15,
+        2.588774229142917e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 9.094947017729283e-16
+      }
+    }
+  ],
+  "sensitivity_07_policy": [
+    {
+      "initial": [
+        0.0,
+        0.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 11,
+      "residual": 4.8506384094556175e-16,
+      "xy": [
+        0.08410573251038966,
+        0.058792110022613774
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 4.8506384094556175e-16
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 15,
+      "residual": 7.275957614183426e-16,
+      "xy": [
+        0.08410573251038925,
+        0.058792110022612865
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 7.275957614183426e-16
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 14,
+      "residual": 7.275957614183426e-16,
+      "xy": [
+        0.08410573251039276,
+        0.05879211002261869
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 7.275957614183426e-16
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 15,
+      "residual": 2.4253192047278088e-16,
+      "xy": [
+        0.0841057325103917,
+        0.058792110022617264
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 2.4253192047278088e-16
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 18,
+      "residual": 1.8189894035458566e-16,
+      "xy": [
+        0.08410573251038987,
+        0.05879211002261533
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 1.8189894035458566e-16
+      }
+    }
+  ],
+  "sensitivity_08_baseline": [
+    {
+      "initial": [
+        0.0,
+        0.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 9.094947017729283e-16,
+      "xy": [
+        2.430574397994111e-15,
+        2.605237669994856e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 9.094947017729283e-16
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 9.094947017729283e-16,
+      "xy": [
+        2.397368554309998e-15,
+        2.6067090075473544e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 9.094947017729283e-16
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 9.094947017729283e-16,
+      "xy": [
+        2.462752040734486e-15,
+        1.45100985905983e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 9.094947017729283e-16
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 9.094947017729283e-16,
+      "xy": [
+        2.6019386264558137e-15,
+        2.7273955095411063e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 9.094947017729283e-16
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 9.094947017729283e-16,
+      "xy": [
+        2.51871307698806e-15,
+        2.7858861193465146e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 9.094947017729283e-16
+      }
+    }
+  ],
+  "sensitivity_08_policy": [
+    {
+      "initial": [
+        0.0,
+        0.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 10,
+      "residual": 1.4551915228366853e-15,
+      "xy": [
+        0.08725508923442565,
+        0.06509484006334752
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 1.4551915228366853e-15
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 17,
+      "residual": 1.5158245029548805e-15,
+      "xy": [
+        0.0872550892344233,
+        0.06509484006334708
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 1.5158245029548805e-15
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 15,
+      "residual": 1.3339255626002948e-15,
+      "xy": [
+        0.08725508923442485,
+        0.06509484006334713
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 1.3339255626002948e-15
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 15,
+      "residual": 3.152914966146151e-15,
+      "xy": [
+        0.08725508923442406,
+        0.06509484006334446
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 3.152914966146151e-15
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 15,
+      "residual": 1.4551915228366853e-15,
+      "xy": [
+        0.0872550892344255,
+        0.06509484006334793
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 1.4551915228366853e-15
+      }
+    }
+  ],
+  "sensitivity_09_baseline": [
+    {
+      "initial": [
+        0.0,
+        0.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 9.701276818911235e-16,
+      "xy": [
+        2.3372104520647565e-15,
+        2.867107830857429e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 9.701276818911235e-16
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 9.094947017729283e-16,
+      "xy": [
+        2.6130685216161996e-15,
+        1.8479317369751986e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 9.094947017729283e-16
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 9.094947017729283e-16,
+      "xy": [
+        2.4182254685347188e-15,
+        2.5354315010906112e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 9.094947017729283e-16
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 9.094947017729283e-16,
+      "xy": [
+        2.632507744407112e-15,
+        1.8988714774968747e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 9.094947017729283e-16
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 9.094947017729283e-16,
+      "xy": [
+        2.478969757363985e-15,
+        2.6022278445746743e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 9.094947017729283e-16
+      }
+    }
+  ],
+  "sensitivity_09_policy": [
+    {
+      "initial": [
+        0.0,
+        0.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 10,
+      "residual": 1.5158245029548805e-15,
+      "xy": [
+        0.09116077839697798,
+        0.07291044158948956
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 1.5158245029548805e-15
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 14,
+      "residual": 3.2135479462643463e-15,
+      "xy": [
+        0.09116077839697466,
+        0.07291044158948455
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 3.2135479462643463e-15
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 15,
+      "residual": 1.7583564234276613e-15,
+      "xy": [
+        0.0911607783969791,
+        0.07291044158949048
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 1.7583564234276613e-15
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 16,
+      "residual": 1.7583564234276613e-15,
+      "xy": [
+        0.0911607783969792,
+        0.07291044158948995
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 1.7583564234276613e-15
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 15,
+      "residual": 2.304053244491418e-15,
+      "xy": [
+        0.09116077839698089,
+        0.07291044158949375
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 2.304053244491418e-15
+      }
+    }
+  ],
+  "sensitivity_10_baseline": [
+    {
+      "initial": [
+        0.0,
+        0.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 7.882287415365378e-16,
+      "xy": [
+        2.4835017116656028e-15,
+        4.054848780792088e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 7.882287415365378e-16
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 7.882287415365378e-16,
+      "xy": [
+        2.408142687875905e-15,
+        4.248563529908837e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 7.882287415365378e-16
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 7.882287415365378e-16,
+      "xy": [
+        2.5551135002126485e-15,
+        4.562163847216537e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 7.882287415365378e-16
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 7.882287415365378e-16,
+      "xy": [
+        2.514903613789262e-15,
+        4.463068168367642e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 7.882287415365378e-16
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 7.882287415365378e-16,
+      "xy": [
+        2.430407426087473e-15,
+        4.173641619708212e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 7.882287415365378e-16
+      }
+    }
+  ],
+  "sensitivity_10_policy": [
+    {
+      "initial": [
+        0.0,
+        0.0
+      ],
+      "success": true,
+      "status": 2,
+      "message": "The relative error between two consecutive iterates is at most 0.000000",
+      "nfev": 6,
+      "residual": 1.5764574830730755e-15,
+      "xy": [
+        0.09116077839697893,
+        1.747357483033774e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 1.5764574830730755e-15
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 14,
+      "residual": 2.7284841053187848e-15,
+      "xy": [
+        0.09116077839697609,
+        -2.1867251778750746e-16
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 2.7284841053187848e-15
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 14,
+      "residual": 2.4253192047278086e-15,
+      "xy": [
+        0.09116077839697737,
+        -1.8944884216135693e-15
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 2.4253192047278086e-15
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 14,
+      "residual": 1.6370904631912708e-15,
+      "xy": [
+        0.09116077839697928,
+        3.3757191456525273e-15
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 1.6370904631912708e-15
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 14,
+      "residual": 3.092281986027956e-15,
+      "xy": [
+        0.09116077839697485,
+        8.664418085416127e-16
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 3.092281986027956e-15
+      }
+    }
+  ],
+  "sensitivity_11_baseline": [
+    {
+      "initial": [
+        0.0,
+        0.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 6,
+      "residual": 0.0,
+      "xy": [
+        2.233322133252246e-16,
+        2.769807272414192e-16
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 0.0
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 17,
+      "residual": 0.0,
+      "xy": [
+        5.14845402285329e-16,
+        4.835523230001229e-16
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 0.0
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 18,
+      "residual": 0.0,
+      "xy": [
+        2.6178751768986596e-16,
+        4.271332298628671e-16
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 0.0
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 21,
+      "residual": 0.0,
+      "xy": [
+        2.8801569833613125e-16,
+        3.518765366681851e-16
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 0.0
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 17,
+      "residual": 0.0,
+      "xy": [
+        3.9872604076752256e-16,
+        3.7449672623466234e-16
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 0.0
+      }
+    }
+  ],
+  "sensitivity_11_policy": [
+    {
+      "initial": [
+        0.0,
+        0.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 11,
+      "residual": 1.6370904631912708e-15,
+      "xy": [
+        0.08899359950031012,
+        0.0312645145105381
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 1.6370904631912708e-15
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 20,
+      "residual": 1.940255363782247e-15,
+      "xy": [
+        0.08899359950031151,
+        0.031264514510540894
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 1.940255363782247e-15
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 15,
+      "residual": 3.577345826973517e-15,
+      "xy": [
+        0.08899359950031596,
+        0.03126451451054781
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 3.577345826973517e-15
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 24,
+      "residual": 1.6370904631912708e-15,
+      "xy": [
+        0.08899359950031008,
+        0.03126451451053979
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 1.6370904631912708e-15
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 21,
+      "residual": 1.940255363782247e-15,
+      "xy": [
+        0.08899359950031122,
+        0.03126451451053849
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 1.940255363782247e-15
+      }
+    }
+  ],
+  "sensitivity_12_baseline": [
+    {
+      "initial": [
+        0.0,
+        0.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 9.094947017729283e-16,
+      "xy": [
+        2.4096937050954317e-15,
+        2.4505472541890408e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 9.094947017729283e-16
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 8.48861721654733e-16,
+      "xy": [
+        2.6950150045769235e-15,
+        4.420442296835848e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 8.48861721654733e-16
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 9.701276818911235e-16,
+      "xy": [
+        2.1950451170886253e-15,
+        4.313874894172736e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 9.701276818911235e-16
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 9.094947017729283e-16,
+      "xy": [
+        2.4912633647102947e-15,
+        2.6878518555915784e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 9.094947017729283e-16
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 9.094947017729283e-16,
+      "xy": [
+        2.5606557260476393e-15,
+        2.588774229142917e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 9.094947017729283e-16
+      }
+    }
+  ],
+  "sensitivity_12_policy": [
+    {
+      "initial": [
+        0.0,
+        0.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 11,
+      "residual": 4.8506384094556175e-16,
+      "xy": [
+        0.08410573251038966,
+        0.058792110022613774
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 4.8506384094556175e-16
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 15,
+      "residual": 7.275957614183426e-16,
+      "xy": [
+        0.08410573251038925,
+        0.058792110022612865
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 7.275957614183426e-16
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 14,
+      "residual": 7.275957614183426e-16,
+      "xy": [
+        0.08410573251039276,
+        0.05879211002261869
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 7.275957614183426e-16
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 15,
+      "residual": 2.4253192047278088e-16,
+      "xy": [
+        0.0841057325103917,
+        0.058792110022617264
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 2.4253192047278088e-16
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 18,
+      "residual": 1.8189894035458566e-16,
+      "xy": [
+        0.08410573251038987,
+        0.05879211002261533
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 1.8189894035458566e-16
+      }
+    }
+  ],
+  "sensitivity_13_baseline": [
+    {
+      "initial": [
+        0.0,
+        0.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 1.0913936421275138e-15,
+      "xy": [
+        -2.2800391473208663e-15,
+        -3.1212040614465e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 1.0913936421275138e-15
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 9.701276818911235e-16,
+      "xy": [
+        -2.7816907987967176e-15,
+        -7.100505851646718e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 9.701276818911235e-16
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 9.701276818911235e-16,
+      "xy": [
+        -2.7938795422071346e-15,
+        -4.941436718764881e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 9.701276818911235e-16
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 1.0913936421275138e-15,
+      "xy": [
+        -2.334664748534443e-15,
+        -3.0770226281479983e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 1.0913936421275138e-15
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 6.669627813001474e-16,
+      "xy": [
+        2.8294493861818868e-15,
+        2.9596117602812144e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 6.669627813001474e-16
+      }
+    }
+  ],
+  "sensitivity_13_policy": [
+    {
+      "initial": [
+        0.0,
+        0.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 9,
+      "residual": 1.0307606620093187e-15,
+      "xy": [
+        0.0802784134593202,
+        0.0752562740479852
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 1.0307606620093187e-15
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 15,
+      "residual": 7.882287415365378e-16,
+      "xy": [
+        0.08027841345931859,
+        0.07525627404799133
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 7.882287415365378e-16
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 14,
+      "residual": 4.608106488982836e-15,
+      "xy": [
+        0.08027841345932021,
+        0.07525627404799176
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 4.608106488982836e-15
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 15,
+      "residual": 3.4560798667371273e-15,
+      "xy": [
+        0.08027841345931676,
+        0.07525627404798856
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 3.4560798667371273e-15
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 15,
+      "residual": 4.790005429337422e-15,
+      "xy": [
+        0.08027841345932038,
+        0.07525627404799282
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 4.790005429337422e-15
+      }
+    }
+  ],
+  "sensitivity_14_baseline": [
+    {
+      "initial": [
+        0.0,
+        0.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 7.882287415365378e-16,
+      "xy": [
+        2.396107884802907e-15,
+        2.3772477918989335e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 7.882287415365378e-16
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 7.882287415365378e-16,
+      "xy": [
+        2.5967202876096983e-15,
+        2.802703358044267e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 7.882287415365378e-16
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 7.882287415365378e-16,
+      "xy": [
+        2.8267522250041995e-15,
+        2.638212601886876e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 7.882287415365378e-16
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 7.882287415365378e-16,
+      "xy": [
+        2.4644075768162242e-15,
+        2.3090637314063826e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 7.882287415365378e-16
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 7.882287415365378e-16,
+      "xy": [
+        2.45977996214286e-15,
+        2.3008113639639694e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 7.882287415365378e-16
+      }
+    }
+  ],
+  "sensitivity_14_policy": [
+    {
+      "initial": [
+        0.0,
+        0.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 9,
+      "residual": 2.243420264373223e-15,
+      "xy": [
+        0.07928966769176718,
+        0.07919385392723507
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 2.243420264373223e-15
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 14,
+      "residual": 1.8796223836640518e-15,
+      "xy": [
+        0.07928966769176835,
+        0.07919385392723714
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 1.8796223836640518e-15
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 23,
+      "residual": 2.4253192047278088e-16,
+      "xy": [
+        0.07928966769177495,
+        0.07919385392724285
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 2.4253192047278088e-16
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 15,
+      "residual": 7.882287415365378e-16,
+      "xy": [
+        0.07928966769177284,
+        0.07919385392724063
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 7.882287415365378e-16
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 15,
+      "residual": 5.456968210637569e-16,
+      "xy": [
+        0.07928966769177359,
+        0.07919385392724222
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 5.456968210637569e-16
+      }
+    }
+  ],
+  "sensitivity_15_baseline": [
+    {
+      "initial": [
+        0.0,
+        0.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 8,
+      "residual": 0.0,
+      "xy": [
+        -1.5515311140267791e-15,
+        -1.4175616096614564e-15
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 0.0
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 15,
+      "residual": 0.0,
+      "xy": [
+        -1.388700616906119e-15,
+        -1.5856045015345188e-15
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 0.0
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 18,
+      "residual": 0.0,
+      "xy": [
+        -1.6155938810135715e-15,
+        -1.408183122869588e-15
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 0.0
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 18,
+      "residual": 0.0,
+      "xy": [
+        -1.4796430649579434e-15,
+        -1.4931284408205975e-15
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 0.0
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 17,
+      "residual": 0.0,
+      "xy": [
+        -1.559092178680191e-15,
+        -1.7190638364569773e-15
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 0.0
+      }
+    }
+  ],
+  "sensitivity_15_policy": [
+    {
+      "initial": [
+        0.0,
+        0.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 14,
+      "residual": 1.2126596023639044e-16,
+      "xy": [
+        0.08317517152819223,
+        0.058312730580046164
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 1.2126596023639044e-16
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 15,
+      "residual": 2.0615213240186375e-15,
+      "xy": [
+        0.08317517152818711,
+        0.05831273058003814
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 2.0615213240186375e-15
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 15,
+      "residual": 7.882287415365378e-16,
+      "xy": [
+        0.0831751715281895,
+        0.05831273058004362
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 7.882287415365378e-16
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 15,
+      "residual": 1.7583564234276613e-15,
+      "xy": [
+        0.08317517152818639,
+        0.058312730580038274
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 1.7583564234276613e-15
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 16,
+      "residual": 1.8189894035458566e-16,
+      "xy": [
+        0.0831751715281917,
+        0.05831273058004653
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 1.8189894035458566e-16
+      }
+    }
+  ],
+  "sensitivity_16_baseline": [
+    {
+      "initial": [
+        0.0,
+        0.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 9,
+      "residual": 0.0,
+      "xy": [
+        -8.610091204615676e-16,
+        -8.497840581235261e-16
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 0.0
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 14,
+      "residual": 0.0,
+      "xy": [
+        -8.875227466350942e-16,
+        -8.421451985320612e-16
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 0.0
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 29,
+      "residual": 0.0,
+      "xy": [
+        -9.290620011488917e-16,
+        -8.834091919761775e-16
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 0.0
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 4,
+      "message": "The cosine of the angle between func(x) and any column of the\n  Jacobian is at most 0.000000 in absolute value",
+      "nfev": 5,
+      "residual": 6.063298011819522e-17,
+      "xy": [
+        -5.778800451751979e-16,
+        -1.2905615601574629e-15
+      ],
+      "primary_hybr": {
+        "success": false,
+        "status": 5,
+        "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+        "residual": 6.063298011819522e-17
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 24,
+      "residual": 0.0,
+      "xy": [
+        -8.984238657897525e-16,
+        -8.804286087073047e-16
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 0.0
+      }
+    }
+  ],
+  "sensitivity_16_policy": [
+    {
+      "initial": [
+        0.0,
+        0.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 12,
+      "residual": 1.2732925824820995e-15,
+      "xy": [
+        0.08324226915548068,
+        0.057997616512057905
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 1.2732925824820995e-15
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 15,
+      "residual": 3.031649005909761e-15,
+      "xy": [
+        0.0832422691554784,
+        0.057997616512053644
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 3.031649005909761e-15
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 15,
+      "residual": 1.697723443309466e-15,
+      "xy": [
+        0.08324226915547976,
+        0.05799761651205944
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 1.697723443309466e-15
+      }
+    },
+    {
+      "initial": [
+        -2.0,
+        2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 15,
+      "residual": 1.3339255626002948e-15,
+      "xy": [
+        0.08324226915548164,
+        0.05799761651205697
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 1.3339255626002948e-15
+      }
+    },
+    {
+      "initial": [
+        2.0,
+        -2.0
+      ],
+      "success": true,
+      "status": 1,
+      "message": "The solution converged.",
+      "nfev": 15,
+      "residual": 1.3339255626002948e-15,
+      "xy": [
+        0.0832422691554819,
+        0.057997616512057995
+      ],
+      "primary_hybr": {
+        "success": true,
+        "status": 1,
+        "message": "The solution converged.",
+        "residual": 1.3339255626002948e-15
+      }
+    }
+  ]
+}
