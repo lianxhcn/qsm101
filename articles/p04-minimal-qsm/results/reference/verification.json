@@ -1,0 +1,46 @@
+{
+  "seed": 20261004,
+  "data_origin": "teaching_and_synthetic_only",
+  "baseline_relative_error": 0.0,
+  "zero_shock_error": 0.0,
+  "mle_mean_score_max_abs": 3.474042584161729e-11,
+  "baseline": {
+    "population_total_error": 0.0,
+    "location_choice_error": 9.992007221626409e-16,
+    "housing_market_relative_error": 0.0,
+    "wage_marginal_product_relative_error": 0.0,
+    "analytical_log_odds_error": 5.551115123125783e-17,
+    "root_residual": 4.9960036108132044e-15
+  },
+  "counterfactual": {
+    "population_total_error": 0.0,
+    "location_choice_error": 4.440892098500626e-16,
+    "housing_market_relative_error": 0.0,
+    "wage_marginal_product_relative_error": 2.220446049250313e-16,
+    "analytical_log_odds_error": 2.1094237467877974e-15,
+    "root_residual": 7.771561172376096e-16
+  },
+  "estimation_sample_size": 8000,
+  "independent_properties": {
+    "common_housing": {
+      "checks_passed": true,
+      "expected_welfare_ratio": 1.0466351393921056,
+      "observed_welfare_ratio": 1.0466351393921065
+    },
+    "common_productivity": {
+      "checks_passed": true,
+      "expected_welfare_ratio": 1.0740994986439416,
+      "observed_welfare_ratio": 1.0740994986439414
+    }
+  },
+  "versions": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "pandas": "2.2.3",
+    "matplotlib": "3.10.8"
+  },
+  "input_sha256": {
+    "synthetic-choice-tasks.csv": "5aaa13d501941242f72f8d936a94843ed909faabc5cc86c92e8eaeaeef009047",
+    "teaching-baseline.csv": "4f85970e3663d4cd94ae56c8ee4f918a11be4e42f750fc5bb74656e982409fd3"
+  }
+}

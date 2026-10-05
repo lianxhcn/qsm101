@@ -1,0 +1,438 @@
+
+> **作者：** 茅靓化 (连享会)    
+> **邮箱：** <lianxhcn@163.com>
+
+&emsp;
+
+- **Title**: QSM 怎么学？从读懂模型到复现论文，再到自己的研究
+- **Keywords**: QSM, 数量空间模型, 学习路线, 空间均衡, 论文复现
+
+>**提要**：本文回答一个很实际的问题：已经知道 QSM 大致在做什么以后，接下来该怎么学。文章按照「理解框架—跑通模型—复现论文—专题扩展—进入自己的研究」这条路线，整理了值得优先阅读的综述、课程、经典论文和代码资源，并说明不同工具分别适合解决什么问题。重点不是罗列资料，而是帮助读者真正看懂数据、参数、基本面反演、均衡求解和政策反事实之间的关系。
+
+> 点击查看：[QSM 系列推文](https://www.lianxh.cn/search.html?s=QSM)
+
+
+---
+
+想学数量空间模型 (Quantitative Spatial Models, QSM)，常见的困惑是：综述能看懂，论文公式也能跟下来，但打开复现代码以后，仍然不知道数据怎样进入模型、均衡怎样求解，以及政策变化怎样转化为反事实结果。
+
+QSM 把不同地点的经济主体选择与市场清算联系起来。交通、税收或贸易成本变化以后，工资、人口、价格和土地租金往往需要共同调整。学习时既要理解模型，也要看清数据、参数和数值程序之间的对应关系。
+
+与已有成熟估计命令的实证方法相比，QSM 的程序更依赖具体模型设定。理解识别假设、样本和推断方法仍是使用 DID、IV 等工具的前提；进入 QSM，还需要掌握均衡条件与反事实求解。下面按学习环节整理资源，不把任何一个工具包视为通用解决方案。
+
+学习 QSM 比较合适的顺序是：
+
+<div class="qsm-callout" style="margin: 16px 0; padding: 14px 18px; border-left: 4px solid #397b88; background: #f2f7f8; color: #243746; line-height: 1.8;">
+<strong>学习顺序</strong><br>
+理解基本框架 → 跑通简单模型 → 复现经典论文 → 专题扩展 → 自己的研究
+</div>
+
+![图 1：QSM 学习路线。先完成一个简单模型，再进入论文复现与专题扩展。](figures/qsm-roadmap-fig01-learning-path-20261003-010924.png)
+
+图 1：QSM 学习路线。先完成一个简单模型，再进入论文复现与专题扩展。
+
+下面沿着这条路线介绍综述、课程、论文与代码资源。资源核查日期 (retrieved_date)：2026-10-03。本文是学习路线导读，未执行各工具包或论文的完整复现。
+
+## 1. 学习 QSM，要打通哪些环节
+
+已经熟悉 DID、IV 或面板数据方法的研究者，转向 QSM 时需要适应的一个变化，是研究对象从单个估计方程变成了一套相互联系的均衡条件。
+
+以一个地区模型为例，数据中可能直接观察到人口 $L_{i}$、工资 $w_{i}$、双边通勤流量 $L_{ij}$、贸易流量 $X_{ij}$、土地价格 $r_{i}$ 和旅行时间 $t_{ij}$。
+
+模型中还需要一些结构参数，例如贸易弹性、迁移弹性、通勤弹性、住房供给弹性，以及集聚外部性的强度。这些参数有些可以利用当前数据估计，有些需要参考已有研究。
+
+此外，模型通常还包含无法直接观察的地点特征，例如生产率 $A_{i}$、宜居度 $B_{i}$ 或双边贸易成本。这些量往往需要结合模型结构和观察数据进行反演。
+
+进行政策反事实时，研究者改变某个外生条件，例如交通时间、税率或贸易成本，再重新求解均衡：
+
+$$
+F(x;\theta,z)=0,
+$$
+
+其中，$x$ 表示工资、人口、价格、贸易流量等内生变量，$\theta$ 表示结构参数，$z$ 表示模型设定为外生的地点基本面、交通网络或政策条件。
+
+在包含集聚外部性的模型中，生产率和宜居度可能同时包含外生基本面与人口密度等内生成分。反事实分析要保持模型规定不变的基本面，让内生成分随新均衡调整。反演结果也取决于给定的结构参数、识别限制和归一化条件。
+
+学习 QSM 时，需要逐渐看清下面这条链条：
+
+<div class="qsm-callout" style="margin: 16px 0; padding: 14px 18px; border-left: 4px solid #397b88; background: #f2f7f8; color: #243746; line-height: 1.8;">
+<strong>从数据到反事实</strong><br>
+观察数据 → 估计或设定结构参数 → 反演地点基本面 → 匹配基准均衡 → 施加政策冲击 → 求解反事实均衡
+</div>
+
+这是一条常见的学习顺序，实际研究中的参数估计与反演可能交替进行；部分模型也可直接用变化率求解反事实，无须恢复全部基本面的水平值。基准均衡能匹配用于反演的数据，并不单独证明机制成立，还需要说明参数识别来源，并检验未参与校准的事实或开展敏感性分析。
+
+读论文时如果一直没有把这几个环节分开，很容易出现一种情况：每条公式似乎都能看懂，但仍然不知道作者怎样从数据走到最终的反事实结果。
+
+## 2. 用综述和经典论文建立框架
+
+第一轮学习没有必要马上进入复杂论文。先用几篇综述建立地图，后面的阅读会容易很多。
+
+### 2.1 Allen & Arkolakis (2023)：空间均衡的基本直觉
+
+比较适合作为第一篇的是 [Allen & Arkolakis](https://doi.org/10.1257/jep.37.2.3) ([2023](https://scholar.google.com/scholar?q=Economic+Activity+across+Space+A+Supply+and+Demand+Approach)) 的 *Economic Activity across Space: A Supply and Demand Approach*。
+
+这篇文章发表于 *Journal of Economic Perspectives*，全文开放。作者用劳动供给和劳动需求描述不同地点的经济活动，并强调不同地点通过贸易网络相互联系。一个地区的交通、生产率或其他条件变化以后，影响会沿着这些空间联系传到其他地区，因此最终结果需要在整个系统中共同决定。
+
+这篇文章不需要配代码。阅读目标也比较简单：理解为什么改变一个地点的条件以后，人口、工资和经济活动会重新配置，以及为什么这种重新配置不能只分析受到直接冲击的地区。
+
+建议放在第 1 周阅读。
+
+### 2.2 Redding & Rossi-Hansberg (2017)：QSM 的模型模块
+
+[Redding & Rossi-Hansberg](https://doi.org/10.1146/annurev-economics-063016-103713) ([2017](https://scholar.google.com/scholar?q=Quantitative+Spatial+Economics+Redding+Rossi-Hansberg)) 的 *Quantitative Spatial Economics* 仍然是 QSM 最重要的综述之一。
+
+文章系统整理了生产率、宜居度、贸易、通勤、迁移、集聚等模块，并讨论这些模块如何进入数量空间模型。作者特别强调两点：模型既要能够容纳大量异质地点和贸易、通勤等引力关系，又要保持足够的可处理性，以便估计参数和进行现实的政策反事实。
+
+第一次读这篇综述，不必逐页推导。更有用的做法是建立一张自己的模型模块表。
+
+| 模块 | 主要经济对象 | 常见数据 |
+| --- | --- | --- |
+| 商品流动 | 贸易成本 | 双边贸易流量 |
+| 居住选择 | 迁移成本、宜居度 | 人口、迁移 |
+| 工作选择 | 通勤成本 | 居住地—工作地流量 |
+| 生产 | 生产率 | 就业、工资 |
+| 土地与住房 | 住房与土地供给 | 租金、地价 |
+| 集聚 | 外部经济 | 密度、生产率 |
+
+以后每读一篇论文，都可以问：这篇文章保留了哪些模块，又增加了哪些机制？
+
+### 2.3 Allen & Arkolakis (2025)：统一的区域经济框架
+
+等跑过一两个模型以后，再读 [Allen & Arkolakis](https://doi.org/10.1016/bs.hesreg.2025.05.002) ([2025](https://scholar.google.com/scholar?q=Quantitative+Regional+Economics+Allen+Arkolakis)) 的 *Quantitative Regional Economics* 会更合适。
+
+该文正式收入 *Handbook of Regional and Urban Economics*, Volume 6，共 72 页。文章从经验事实出发，建立基准数量区域模型，然后把大量现有模型放入一个较统一的框架中讨论均衡、估计、反事实与福利。
+
+它很适合第二轮学习。已经见过几个具体模型以后，再看这种统一表述，很容易发现不同论文共享的结构。
+
+### 2.4 城市方向的补充材料
+
+城市方向可以继续读 [Redding](https://doi.org/10.1016/bs.hesreg.2025.06.007) ([2025](https://scholar.google.com/scholar?q=Quantitative+Urban+Economics+Stephen+Redding)) 的 *Quantitative Urban Economics*。该文同样收入 *Handbook of Regional and Urban Economics*, Volume 6，重点讨论城市内部大量非对称地点、交通网络、结构参数识别和政策反事实。
+
+如果希望用教材补充空间经济学基础，2026 年 Oxford University Press 出版的 [Koster, Proost & Thisse](https://doi.org/10.1093/oso/9780197824696.003.0013) ([2026](https://scholar.google.com/scholar?q=Koster+Proost+Thisse+Quantitative+Spatial+Economics+2026)), *Spatial Economics* 也值得参考，其中第 13 章专门讨论 Quantitative Spatial Economics。
+
+这一阶段的目标仍然是形成模型地图。数值计算可以放到下一步。
+
+第一次学习 QSM，没有必要依次精读十几篇论文。比较合适的安排是先掌握几篇共同基础，然后根据自己的研究方向选择专题文献。
+
+### 2.5 共同基础
+
+我建议把下面四篇作为第一轮的主线。
+
+| 论文 | 主要学习内容 |
+| --- | --- |
+| [Eaton & Kortum](https://doi.org/10.1111/1468-0262.00352) ([2002](https://scholar.google.com/scholar?q=Technology+Geography+and+Trade+Eaton+Kortum)) | 异质地点的选择如何形成结构性贸易关系 |
+| [Allen & Arkolakis](https://doi.org/10.1093/qje/qju016) ([2014](https://scholar.google.com/scholar?q=Trade+and+the+Topography+of+the+Spatial+Economy)) | 贸易引力关系与劳动流动如何形成空间均衡 |
+| [Ahlfeldt et al.](https://doi.org/10.3982/ECTA10876) ([2015](https://scholar.google.com/scholar?q=The+Economics+of+Density+Evidence+from+the+Berlin+Wall)) | 城市内部居住、工作、通勤、土地市场和集聚 |
+| [Monte et al.](https://doi.org/10.1257/aer.20151507) ([2018](https://scholar.google.com/scholar?q=Commuting+Migration+and+Local+Employment+Elasticities)) | 贸易、通勤和迁移如何共同连接地区 |
+
+这四篇分别展示贸易、劳动流动、城市内部结构和多种空间联系，可按研究兴趣调整阅读顺序。
+
+[Eaton & Kortum](https://doi.org/10.1111/1468-0262.00352) ([2002](https://scholar.google.com/scholar?q=Technology+Geography+and+Trade+Eaton+Kortum)) 可以帮助理解后来 QSM 中反复出现的引力结构。[Allen & Arkolakis](https://doi.org/10.1093/qje/qju016) ([2014](https://scholar.google.com/scholar?q=Trade+and+the+Topography+of+the+Spatial+Economy)) 把贸易和劳动流动进一步放进空间均衡。[Ahlfeldt et al.](https://doi.org/10.3982/ECTA10876) ([2015](https://scholar.google.com/scholar?q=The+Economics+of+Density+Evidence+from+the+Berlin+Wall)) 把空间尺度缩小到城市内部。[Monte et al.](https://doi.org/10.1257/aer.20151507) ([2018](https://scholar.google.com/scholar?q=Commuting+Migration+and+Local+Employment+Elasticities)) 再把商品市场和劳动力市场中的多种空间联系放到同一个框架中。
+
+学完以后，读者已经具备进入不同专题的共同基础。
+
+### 2.6 按研究问题选择专题论文
+
+| 研究方向 | 代表论文 | 重点学习内容 |
+| --- | --- | --- |
+| 贸易与产业网络 | [Caliendo & Parro](https://doi.org/10.1093/restud/rdu035) ([2015](https://scholar.google.com/scholar?q=Estimates+of+the+Trade+and+Welfare+Effects+of+NAFTA)) | 多部门、投入产出关系 |
+| 企业区位 | [Gaubert](https://doi.org/10.1257/aer.20150361) ([2018](https://scholar.google.com/scholar?q=Firm+Sorting+and+Agglomeration+Gaubert)) | 异质企业的空间排序 |
+| 财政税收 | [Fajgelbaum et al.](https://doi.org/10.1093/restud/rdy050) ([2019](https://scholar.google.com/scholar?q=State+Taxes+and+Spatial+Misallocation)) | 税收、区位选择和空间错配 |
+| 中国区域与迁移 | [Tombe & Zhu](https://doi.org/10.1257/aer.20150811) ([2019](https://scholar.google.com/scholar?q=Trade+Migration+and+Productivity+A+Quantitative+Analysis+of+China)) | 内部贸易、迁移摩擦与生产率 |
+| 城市交通 | [Heblich et al.](https://doi.org/10.1093/qje/qjaa014) ([2020](https://scholar.google.com/scholar?q=The+Making+of+the+Modern+Metropolis+Evidence+from+London)) | 交通网络与城市内部结构 |
+| 交通基础设施 | [Allen & Arkolakis](https://doi.org/10.1093/restud/rdac001) ([2022](https://scholar.google.com/scholar?q=The+Welfare+Effects+of+Transportation+Infrastructure+Improvements)) | 网络、拥堵和福利 |
+| 动态空间经济 | [Kleinman et al.](https://doi.org/10.3982/ECTA20273) ([2023](https://scholar.google.com/scholar?q=Dynamic+Spatial+General+Equilibrium)) | 迁移、资本和过渡路径 |
+| 细粒度空间数据 | [Dingel & Tintelnot](https://doi.org/10.3982/ECTA19350) ([2026](https://scholar.google.com/scholar?q=Spatial+Economics+for+Granular+Settings)) | 细粒度数据下的校准 |
+
+这里没有必要全部读完，重点说明如下：
+
+- 研究**地方税收**，可以直接进入 [Fajgelbaum et al.](https://doi.org/10.1093/restud/rdy050) ([2019](https://scholar.google.com/scholar?q=State+Taxes+and+Spatial+Misallocation))。该文把美国州级企业税和个人所得税放入空间均衡模型，分析税收对企业和劳动者区位选择以及空间错配的影响。
+- 研究**企业区位**，可以读 [Gaubert](https://doi.org/10.1257/aer.20150361) ([2018](https://scholar.google.com/scholar?q=Firm+Sorting+and+Agglomeration+Gaubert))。文章研究异质企业如何在不同城市之间进行区位选择，以及企业排序、集聚经济与地方政策之间的关系。
+- 研究**中国区域经济、人口迁移或地方市场分割**，可以重点读 [Tombe & Zhu](https://doi.org/10.1257/aer.20150811) ([2019](https://scholar.google.com/scholar?q=Trade+Migration+and+Productivity+A+Quantitative+Analysis+of+China))。作者把国内贸易、国际贸易以及地区和产业之间的劳动力迁移放入一般均衡框架，用于量化中国内部贸易和迁移摩擦。
+- 研究**长期调整**，可以读 [Kleinman et al.](https://doi.org/10.3982/ECTA20273) ([2023](https://scholar.google.com/scholar?q=Dynamic+Spatial+General+Equilibrium))。文章将资本积累和动态迁移结合起来，并求解经济从旧稳态走向新稳态的过渡路径。
+
+近年的研究还开始关注更细的空间数据。[Dingel & Tintelnot](https://doi.org/10.3982/ECTA19350) ([2026](https://scholar.google.com/scholar?q=Spatial+Economics+for+Granular+Settings)) 指出，在居住地—工作地组合很多、但每个细分单元中实际人数有限的情况下，直接令观察份额等于模型中的选择概率可能造成明显的校准问题。该文正式发表于 2026 年的 *Econometrica*, 94(2), 407–464。
+
+![图 2：论文阅读路径。左侧提供共同基础，右侧按研究问题分流，无须全部读完。](figures/qsm-roadmap-fig02-reading-path-20261003-010924.png)
+
+图 2：论文阅读路径。左侧提供共同基础，右侧按研究问题分流，无须全部读完。
+
+## 3. 从教学工具包开始动手
+
+开始动手时，我比较推荐 [Gabriel Ahlfeldt](https://github.com/Ahlfeldt) 的 [*Quantitative Spatial Economics* 课程](https://github.com/Ahlfeldt/Lectures-QuantitativeSpatialEconomics) 和配套 toolkit。Ahlfeldt 目前公开的 GitHub 主页仍将 `Lectures-QuantitativeSpatialEconomics`、`ARSW2015-toolkit`、`MRRH2018-toolkit` 和 `AB2022-toolkit` 列为主要教学资源。
+
+这套材料的一个优点，是把论文中的理论模型、Codebook 中的伪代码和实际程序放在一起。对于第一次学习 QSM 的研究者，这比直接打开原始复现材料容易很多。
+
+### 3.1 AB2022 toolkit
+
+长期使用 Stata 的读者可以先看 AB2022 toolkit。
+
+[官方 README](https://github.com/Ahlfeldt/AB2022-toolkit) 标注版本为 v0.95 (2026 年 5 月)，基于 [Ahlfeldt & Barr](https://doi.org/10.1016/j.jue.2021.103419) ([2022](https://scholar.google.com/scholar?q=The+economics+of+skyscrapers+A+synthesis)) 的模型。程序以 Stata 18 编写；较早版本的兼容性需另行测试。工具包包含 `ado` 文件和分步操作说明，可以求解一个较小的空间一般均衡，并展示楼面租金、建筑高度、地租、土地用途、就业和工资。
+
+这个案例很适合第一次观察完整的 QSM 计算流程：
+
+<div class="qsm-callout" style="margin: 16px 0; padding: 14px 18px; border-left: 4px solid #397b88; background: #f2f7f8; color: #243746; line-height: 1.8;">
+<strong>教学模型的计算环节</strong><br>
+给定模型与基本面 → 求解基准均衡 → 用模型生成的数据练习反演 → 改变外生条件并求解反事实
+</div>
+
+重点是看清每一步在经济模型中对应什么。
+
+### 3.2 ARSW2015 toolkit
+
+[Ahlfeldt et al.](https://doi.org/10.3982/ECTA10876) ([2015](https://scholar.google.com/scholar?q=The+Economics+of+Density+Evidence+from+the+Berlin+Wall)) 研究柏林墙，是城市 QSM 中最有代表性的论文之一。论文建立了包含通勤、生产率、宜居度、土地市场和集聚外部性的城市内部模型，并利用柏林分裂和统一进行估计和反事实分析。
+
+Ahlfeldt 后来把原始复现代码重新整理成教学版 ARSW2015 toolkit。[官方 README](https://github.com/Ahlfeldt/ARSW2015-toolkit) 标注版本为 v0.92 (2024)。教学版删去了部分与学习模型关系不大的代码，增加了详细注释、`META.m`、Codebook 和几个教学反事实练习。
+
+作者建议把三类材料放在一起阅读：
+
+<div class="qsm-callout" style="margin: 16px 0; padding: 14px 18px; border-left: 4px solid #397b88; background: #f2f7f8; color: #243746; line-height: 1.8;">
+<strong>论文与程序对照</strong><br>
+论文方程 ↔ Codebook 中的伪代码 ↔ MATLAB 程序
+</div>
+
+这是学习 QSM 很有效的方法。
+
+### 3.3 MRRH2018 toolkit
+
+在 ARSW 基础上，可以继续学习 [Monte et al.](https://doi.org/10.1257/aer.20151507) ([2018](https://scholar.google.com/scholar?q=Commuting+Migration+and+Local+Employment+Elasticities))。
+
+这篇论文把商品市场中的贸易，与要素市场中的通勤和迁移放进同一个数量一般均衡模型，并利用贸易引力关系和通勤引力关系对模型进行量化。
+
+Ahlfeldt 与 Tobias Seidel 整理的 [MRRH2018 toolkit](https://github.com/Ahlfeldt/MRRH2018-toolkit) 标注版本为 v0.91 (2024)，配有 Codebook，用伪代码总结外生设定、内生变量和核心算法。原论文使用 Mathematica；这套 MATLAB 教学工具包采用与原模型相关的变体，示例不对应原论文的实证分析，不能用教学示例跑通来证明原论文已经复现。
+
+学习到这里，重点是观察：在原有空间均衡框架中增加贸易、通勤或迁移以后，均衡条件和算法需要怎样调整。
+
+### 3.4 论文和代码的配合方式
+
+拿到一篇论文和复现材料后，可以按照下面的顺序学习。
+
+1. **Step 1**: 列出模型中的内生变量、外生基本面和结构参数。
+2. **Step 2**: 找到决定均衡的主要方程，明确每条方程对应哪个市场或行为选择。
+3. **Step 3**: 阅读 Codebook 或伪代码，确认理论方程怎样转化为计算步骤。
+4. **Step 4**: 沿着主程序追踪一个反事实分析，从政策变量变化一直看到新的均衡结果。
+5. **Step 5**: 修改一个参数或外生条件，先写下预期的比较静态，再运行程序检查结果。
+
+这样更容易抓住模型结构，也不需要从第一行开始通读几千行代码。
+
+### 3.5 区分教学代码与复现材料
+
+学习 QSM 时，一个常见困惑是网上代码很多，但不知道哪些适合学习，哪些只是用来复现论文。
+
+![图 3：代码资源的四种类型。教学工具包、论文复现材料、专用软件与数值求解器承担不同任务。](figures/qsm-roadmap-fig03-code-resources-20261003-010924.png)
+
+图 3：代码资源的四种类型。教学工具包、论文复现材料、专用软件与数值求解器承担不同任务。
+
+图中的专用软件仍需满足各自的数据和模型要求，不能仅凭输入数据就认定估计与一般均衡分析已经完成。可以把现有资源分成四类。
+
+| 类型 | 代表资源 | 主要用途 |
+| --- | --- | --- |
+| 教学工具包 | AB2022、ARSW2015、MRRH2018 | 理解模型怎样转化为程序 |
+| 复现材料 | 论文官方复现文件 | 重现论文结果 |
+| 专用软件包 | `GEGravity`、`gegravity` | 求解某一类标准化模型 |
+| 数值求解器 | `fsolve`、`scipy.optimize`、`NonlinearSolve.jl` | 求解自己写出的方程组 |
+
+教学工具包适合第一次学习。作者通常会删掉大量与主模型关系不大的数据处理和制图程序，并增加注释、伪代码和简单反事实。
+
+复现材料的目标是完整重新生成论文结果，其中可能包含几十甚至上百个数据清理、估计、绘图和模拟任务。结构规范的复现材料很适合第二阶段学习，但不一定适合作为入门材料。
+
+例如，[Dingel & Tintelnot](https://doi.org/10.3982/ECTA19350) ([2026](https://scholar.google.com/scholar?q=Spatial+Economics+for+Granular+Settings)) 的 [复现项目](https://github.com/jdingel/DingelTintelnotSEGS)同时调用 Julia、MATLAB、R 和 Stata，并通过大量任务目录管理整个计算流程。这样的项目更适合已经掌握 QSM 基础以后，用来学习大型结构研究怎样组织代码和计算任务。
+
+因此，看到一个新的 GitHub 仓库时，先确认它是教学代码、正式复现项目，还是针对某类模型开发的软件工具。
+
+### 3.6 从结构引力进入一般均衡
+
+结构引力可以作为 QSM 的一个计算入口。
+
+它的理论、估计和一般均衡反事实已经形成比较成熟的工作流程。[Yotov et al.](https://www.wto.org/english/res_e/publications_e/advancedguide2016_e.htm) ([2016](https://scholar.google.com/scholar?q=An+Advanced+Guide+to+Trade+Policy+Analysis+The+Structural+Gravity+Model)) 的 *An Advanced Guide to Trade Policy Analysis: The Structural Gravity Model* 提供了完整的实践材料，WTO 目前仍提供教材和配套资源。
+
+一个典型练习可以写成：
+
+<div class="qsm-callout" style="margin: 16px 0; padding: 14px 18px; border-left: 4px solid #397b88; background: #f2f7f8; color: #243746; line-height: 1.8;">
+<strong>结构引力练习</strong><br>
+双边贸易数据 → 在识别假设下估计成本相关参数 → 设定贸易弹性与闭合条件 → 校准基准均衡 → 施加政策冲击 → 联立求解新的多边阻力、价格与贸易流量
+</div>
+
+这类练习可以帮助理解基准均衡与反事实均衡的区别。PPML 是估计方法，把回归系数转成贸易成本或政策冲击还需要成本函数、贸易弹性和识别限制。反事实结果也取决于哪些产出、支出和要素供给允许调整，应区分条件一般均衡与允许更多经济对象调整的一般均衡分析。
+
+几类软件需要分开理解。
+
+[`ppmlhdfe`](https://github.com/sergiocorreia/ppmlhdfe) 用于带高维固定效应的 PPML 估计。R 中的 [`fixest::fepois()`](https://lrberge.github.io/fixest/reference/fepois.html) 可以完成类似的 PPML 估计。
+
+进一步进行结构引力的一般均衡反事实分析时，可以使用 Stata 的 `ge_gravity`、R 的 [`GEGravity`](https://github.com/VKudlay/GEGravity)，或者 Python 的 [`gegravity`](https://pypi.org/project/gegravity/)。其中，`GEGravity` 求解的是单部门 Armington-CES 贸易模型；Python 的 `gegravity` 同样基于 [Yotov et al.](https://www.wto.org/english/res_e/publications_e/advancedguide2016_e.htm) ([2016](https://scholar.google.com/scholar?q=An+Advanced+Guide+to+Trade+Policy+Analysis+The+Structural+Gravity+Model)) 的结构引力框架。
+
+这些程序解决的是特定类型的引力模型估计或结构引力一般均衡问题。更一般的 QSM 可能同时包含住房、土地、通勤、人口迁移、企业区位、交通拥堵和集聚外部性。研究问题发生变化以后，均衡条件通常也需要重新设定。
+
+因此，结构引力很适合作为学习入口，但它只是更广泛的 QSM 框架中相对标准化的一支。
+
+## 4. 编程、均衡求解与结果检查
+
+### 4.1 选择语言并理解残差函数
+
+学习 QSM 没有必要先解决哪一种语言最好的问题。不同工具适合不同阶段。
+
+| 工具 | 比较适合的任务 |
+| --- | --- |
+| Stata | AB2022、引力模型估计、小型模型 |
+| MATLAB | ARSW2015、MRRH2018 教学工具包 |
+| Python | 自己重写模型、数值求解和数据处理 |
+| Julia | 大规模稀疏方程组、自动微分和高性能计算 |
+| R | 引力模型估计、空间数据处理和中小型数值问题 |
+
+第一次复现论文时，尽量使用作者原来的语言。例如 ARSW toolkit 使用 MATLAB，直接跟着作者代码运行，可以把精力集中在模型本身。
+
+理解模型以后，可以再用自己熟悉的语言写一个简化版本。下面用伪代码说明残差函数的接口；它未指定具体模型，不能直接运行：
+
+```text
+输入：候选内生变量、结构参数和数据
+计算：行为选择、市场供需与均衡条件
+返回：经尺度调整的方程残差
+```
+
+随后用非线性求根器寻找：
+
+$$
+F(x)=0.
+$$
+
+经济模型决定 $F(x)$ 怎样写。[`scipy.optimize.root()`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.root.html)、MATLAB [`fsolve`](https://www.mathworks.com/help/optim/ug/fsolve.html) 或 Julia [`NonlinearSolve.jl`](https://docs.sciml.ai/NonlinearSolve/stable/) 负责寻找让这些方程同时接近 0 的 $x$。
+
+自己重写一个小模型很有价值。即使只有几个地区，只保留最基本的选择、流动和市场清算条件，也能很好地检查自己是否理解了模型。
+
+### 4.2 检查均衡解与校准结果
+
+自己开始写 QSM 程序以后，还需要养成检查数值结果的习惯。
+
+求解器返回 `success = True`，只能说明算法满足了某种收敛标准。最终结果仍然要回到经济模型中检查。
+
+最基本的指标是均衡残差：
+
+$$
+\max_{j}|F_{j}(x^{*})|.
+$$
+
+比较残差前，应按各条方程的经济规模进行标准化，或报告相对残差，并记录容差。人口、货币和份额方程的单位不同，直接比较原始残差的最大值可能误导判断。标准化后的残差足够小，才表明候选解在所采用的精度下满足均衡条件。
+
+同时还要检查人口、支出等加总约束，商品市场和劳动力市场是否清算，贸易份额和通勤概率是否正确加总，以及工资、价格、人口等变量是否满足模型要求的取值范围。
+
+价格水平只有相对意义时，还需要确认归一化是否正确。
+
+初值也值得检查。可以选择几组经济上合理的初值重新求解。如果都收敛到相同结果，对数值解会更有把握。如果得到不同结果，需要继续判断是数值问题，还是模型允许多个均衡。多组初值收敛到同一个解可以增加数值上的信心，但不能证明均衡唯一。
+
+对于细粒度空间数据，还要进一步考虑校准是否可靠。[Dingel & Tintelnot](https://doi.org/10.3982/ECTA19350) ([2026](https://scholar.google.com/scholar?q=Spatial+Economics+for+Granular+Settings)) 的结果说明，当选择集合很大而每个细分地点实际观察到的个体较少时，观察份额中可能包含相当多的个体随机波动，简单地把它们当成总体选择概率会影响反事实预测。
+
+因此，QSM 的数值检查至少包含两个层面：程序是否把模型方程解得足够准确，以及模型从数据中恢复出来的对象是否足以支持所做的反事实分析。
+
+## 5. 学习安排与研究起步
+
+### 5.1 第一轮学习安排
+
+下面的 8–10 周安排适用于已有微观经济学、计量经济学和基本编程基础，且每周能持续投入时间的读者。它是第一轮学习的示例安排；完整复现论文可能需要更长时间。
+
+| 时间 | 主要任务 | 完成标准 |
+| --- | --- | --- |
+| 第 1–2 周 | [Allen & Arkolakis](https://doi.org/10.1257/jep.37.2.3) ([2023](https://scholar.google.com/scholar?q=Economic+Activity+across+Space+A+Supply+and+Demand+Approach)) + [Redding & Rossi-Hansberg](https://doi.org/10.1146/annurev-economics-063016-103713) ([2017](https://scholar.google.com/scholar?q=Quantitative+Spatial+Economics+Redding+Rossi-Hansberg)) | 能画出 QSM 的基本模块图 |
+| 第 3 周 | 结构引力 GE | 完成一次 baseline → 反事实分析 |
+| 第 4 周 | AB2022 或自写简化模型 | 能解释 $x^{(0)}$、$F(x)$、求解器和 $x^{*}$ |
+| 第 5–6 周 | [Ahlfeldt et al.](https://doi.org/10.3982/ECTA10876) ([2015](https://scholar.google.com/scholar?q=The+Economics+of+Density+Evidence+from+the+Berlin+Wall)) | 分清数据、参数、基本面和 equilibrium |
+| 第 7 周 | ARSW 反事实分析 | 能解释一次政策冲击怎样改变工资、人口和地价 |
+| 第 8 周 | [Monte et al.](https://doi.org/10.1257/aer.20151507) ([2018](https://scholar.google.com/scholar?q=Commuting+Migration+and+Local+Employment+Elasticities)) | 理解贸易、通勤、迁移如何共同进入模型 |
+| 第 9–10 周 | 专题论文 | 能说明相对基准模型增加了哪个调整机制 |
+
+这条路线的完成标准可以落在一项具体能力上：拿到一套均衡条件后，能够解释数据怎样进入模型，哪些参数需要估计，哪些基本面需要反演，程序怎样求解均衡，以及政策改变某个外生条件以后为什么需要重新计算整个系统。
+
+达到这个程度以后，再读新的 QSM 论文会容易很多。
+
+### 5.2 从小修改走向自己的问题
+
+完整跑通 ARSW 或 MRRH 以后，可以先对现有模型做几个小修改，再进入自己的研究。
+
+例如，改变通勤弹性，调整住房供给弹性，降低部分线路的出行时间，给某些地点加入生产率冲击，或者改变迁移摩擦。
+
+修改以后，重新梳理：
+
+<div class="qsm-callout" style="margin: 16px 0; padding: 14px 18px; border-left: 4px solid #397b88; background: #f2f7f8; color: #243746; line-height: 1.8;">
+<strong>追踪政策传导</strong><br>
+外生条件变化 → 主体行为调整 → 市场重新清算 → 新的均衡结果
+</div>
+
+运行程序之前，先判断主要变量可能向什么方向变化；运行以后，再解释为什么实际结果与自己的判断一致或不同。经过几次这样的练习，模型的比较静态会逐渐变得具体。
+
+再回到自己的研究问题时，可以沿着几个基本问题展开：研究中的空间单元怎样定义？经济主体在这些地点之间进行什么选择？不同地点通过贸易、通勤、迁移、企业、财政还是生产网络发生联系？哪些结果可以直接观察？哪些基本面需要反演？哪些弹性参数可以利用当前数据估计，哪些需要参考外部文献？政策改变模型中的哪个外生条件？政策发生变化以后，需要重新清算哪些市场？
+
+这些问题确定以后，模型设定、数据需求和估计方法才会逐渐清楚。
+
+## 6. 课程、代码与软件入口
+
+- Ahlfeldt, *Lectures on Quantitative Spatial Economics*: [GitHub](https://github.com/Ahlfeldt/Lectures-QuantitativeSpatialEconomics)
+- AB2022 toolkit: [GitHub](https://github.com/Ahlfeldt/AB2022-toolkit)
+- ARSW2015 toolkit: [GitHub](https://github.com/Ahlfeldt/ARSW2015-toolkit)
+- MRRH2018 toolkit: [GitHub](https://github.com/Ahlfeldt/MRRH2018-toolkit)
+- Stephen Redding, Data and Code: [Code](https://stephenredding.github.io/reddatacode.htm)
+- WTO Structural Gravity Guide: [Guide](https://www.wto.org/english/res_e/publications_e/advancedguide2016_e.htm)
+- `ppmlhdfe`: [GitHub](https://github.com/sergiocorreia/ppmlhdfe)
+- `fixest`: [Docs](https://lrberge.github.io/fixest/)
+- `GEGravity`: [GitHub](https://github.com/VKudlay/GEGravity)
+- `gegravity`: [PyPI](https://pypi.org/project/gegravity/)
+- SciPy `optimize.root`: [Docs](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.root.html)
+- Julia `NonlinearSolve.jl`: [Docs](https://docs.sciml.ai/NonlinearSolve/stable/)
+
+## 7. 参考文献
+
+以下 PDF 链接包含工作论文版本；部分条目采用 DOI 入口兜底，未宣称全部可以直接下载。Code 可能指教学工具包或作者代码索引，不能一概视为原论文完整复现包。
+
+1. Ahlfeldt, G. M., & Barr, J. (**2022**). The economics of skyscrapers: A synthesis. *Journal of Urban Economics*, 129, 103419. [Link](https://doi.org/10.1016/j.jue.2021.103419), [PDF](https://researchonline.lse.ac.uk/id/eprint/112791/1/GA_JB_Skyscrapers.pdf), [Google](<https://scholar.google.com/scholar?q=The+economics+of+skyscrapers+A+synthesis>).
+
+2. Ahlfeldt, G. M., Redding, S. J., Sturm, D. M., & Wolf, N. (**2015**). The economics of density: Evidence from the Berlin Wall. *Econometrica*, 83(6), 2127–2189. [Link](https://doi.org/10.3982/ECTA10876), [PDF](https://onlinelibrary.wiley.com/doi/pdf/10.3982/ecta10876), [Google](<https://scholar.google.com/scholar?q=The+Economics+of+Density+Evidence+from+the+Berlin+Wall>), [Code](https://github.com/Ahlfeldt/ARSW2015-toolkit).
+
+3. Allen, T., & Arkolakis, C. (**2014**). Trade and the topography of the spatial economy. *Quarterly Journal of Economics*, 129(3), 1085–1140. [Link](https://doi.org/10.1093/qje/qju016), [PDF](https://arkolakis.com/wp-content/uploads/research/Topography/AllenArkolakis.pdf), [Google](<https://scholar.google.com/scholar?q=Trade+and+the+Topography+of+the+Spatial+Economy>), [Working Paper](https://www.nber.org/papers/w19181).
+
+4. Allen, T., & Arkolakis, C. (**2022**). The welfare effects of transportation infrastructure improvements. *Review of Economic Studies*, 89(6), 2911–2957. [Link](https://doi.org/10.1093/restud/rdac001), [PDF](https://doi.org/10.1093/restud/rdac001), [Google](<https://scholar.google.com/scholar?q=The+Welfare+Effects+of+Transportation+Infrastructure+Improvements>).
+
+5. Allen, T., & Arkolakis, C. (**2023**). Economic activity across space: A supply and demand approach. *Journal of Economic Perspectives*, 37(2), 3–28. [Link](https://doi.org/10.1257/jep.37.2.3), [PDF](https://www.aeaweb.org/articles/pdf/doi/10.1257/jep.37.2.3), [Google](<https://scholar.google.com/scholar?q=Economic+Activity+across+Space+A+Supply+and+Demand+Approach>).
+
+6. Allen, T., & Arkolakis, C. (**2025**). Quantitative regional economics. *Handbook of Regional and Urban Economics*, 6, 1–72. [Link](https://doi.org/10.1016/bs.hesreg.2025.05.002), [PDF](https://www.nber.org/system/files/working_papers/w33436/w33436.pdf), [Google](<https://scholar.google.com/scholar?q=Quantitative+Regional+Economics+Allen+Arkolakis>).
+
+7. Caliendo, L., & Parro, F. (**2015**). Estimates of the trade and welfare effects of NAFTA. *Review of Economic Studies*, 82(1), 1–44. [Link](https://doi.org/10.1093/restud/rdu035), [PDF](https://www.nber.org/papers/w18508.pdf), [Google](<https://scholar.google.com/scholar?q=Estimates+of+the+Trade+and+Welfare+Effects+of+NAFTA>), [Code](https://faculty.som.yale.edu/lorenzocaliendo/estimates-of-the-trade-and-welfare-effects-of-nafta/).
+
+8. Dingel, J. I., & Tintelnot, F. (**2026**). Spatial economics for granular settings. *Econometrica*, 94(2), 407–464. [Link](https://doi.org/10.3982/ECTA19350), [PDF](https://www.jdingel.com/research/DingelTintelnot_ECTA19350.pdf), [Google](<https://scholar.google.com/scholar?q=Spatial+Economics+for+Granular+Settings>), [Code](https://github.com/jdingel/DingelTintelnotSEGS).
+
+9. Eaton, J., & Kortum, S. (**2002**). Technology, geography, and trade. *Econometrica*, 70(5), 1741–1779. [Link](https://doi.org/10.1111/1468-0262.00352), [PDF](https://onlinelibrary.wiley.com/doi/pdf/10.1111/1468-0262.00352), [Google](<https://scholar.google.com/scholar?q=Technology+Geography+and+Trade+Eaton+Kortum>).
+
+10. Fajgelbaum, P. D., Morales, E., Suárez Serrato, J. C., & Zidar, O. (**2019**). State taxes and spatial misallocation. *Review of Economic Studies*, 86(1), 333–376. [Link](https://doi.org/10.1093/restud/rdy050), [PDF](https://zidar.princeton.edu/document/63), [Google](<https://scholar.google.com/scholar?q=State+Taxes+and+Spatial+Misallocation>), [Code](https://zidar.princeton.edu/publications/state-taxes-and-spatial-misallocation).
+
+11. Gaubert, C. (**2018**). Firm sorting and agglomeration. *American Economic Review*, 108(11), 3117–3153. [Link](https://doi.org/10.1257/aer.20150361), [PDF](https://doi.org/10.1257/aer.20150361), [Google](<https://scholar.google.com/scholar?q=Firm+Sorting+and+Agglomeration+Gaubert>), [Code](https://www.aeaweb.org/articles?id=10.1257/aer.20150361).
+
+12. Heblich, S., Redding, S. J., & Sturm, D. M. (**2020**). The making of the modern metropolis: Evidence from London. *Quarterly Journal of Economics*, 135(4), 2059–2133. [Link](https://doi.org/10.1093/qje/qjaa014), [PDF](https://doi.org/10.1093/qje/qjaa014), [Google](<https://scholar.google.com/scholar?q=The+Making+of+the+Modern+Metropolis+Evidence+from+London>), [Code](https://stephenredding.github.io/reddatacode.htm).
+
+13. Kleinman, B., Liu, E., & Redding, S. J. (**2023**). Dynamic spatial general equilibrium. *Econometrica*, 91(2), 385–424. [Link](https://doi.org/10.3982/ECTA20273), [PDF](https://onlinelibrary.wiley.com/doi/pdf/10.3982/ECTA20273), [Google](<https://scholar.google.com/scholar?q=Dynamic+Spatial+General+Equilibrium>), [Code](https://stephenredding.github.io/reddatacode.htm).
+
+14. Koster, H. R. A., Proost, S., & Thisse, J.-F. (**2026**). Quantitative spatial economics. In *Spatial Economics* (pp. 376–398). Oxford University Press. [Link](https://doi.org/10.1093/oso/9780197824696.003.0013), [PDF](https://doi.org/10.1093/oso/9780197824696.003.0013), [Google](<https://scholar.google.com/scholar?q=Koster+Proost+Thisse+Quantitative+Spatial+Economics+2026>).
+
+15. Monte, F., Redding, S. J., & Rossi-Hansberg, E. (**2018**). Commuting, migration, and local employment elasticities. *American Economic Review*, 108(12), 3855–3890. [Link](https://doi.org/10.1257/aer.20151507), [PDF](https://doi.org/10.1257/aer.20151507), [Google](<https://scholar.google.com/scholar?q=Commuting+Migration+and+Local+Employment+Elasticities>), [Code](https://stephenredding.github.io/reddatacode.htm).
+
+16. Redding, S. J. (**2025**). Quantitative urban economics. *Handbook of Regional and Urban Economics*, 6, 73–141. [Link](https://doi.org/10.1016/bs.hesreg.2025.06.007), [PDF](https://gceps.princeton.edu/wp-content/uploads/2024/11/wp340_Redding_QUM.pdf) (2024 年 11 月工作论文版), [Google](<https://scholar.google.com/scholar?q=Quantitative+Urban+Economics+Stephen+Redding>).
+
+17. Redding, S. J., & Rossi-Hansberg, E. (**2017**). Quantitative spatial economics. *Annual Review of Economics*, 9, 21–58. [Link](https://doi.org/10.1146/annurev-economics-063016-103713), [PDF](https://www.princeton.edu/~reddings/pubpapers/ARQSM-2017.pdf), [Google](<https://scholar.google.com/scholar?q=Quantitative+Spatial+Economics+Redding+Rossi-Hansberg>).
+
+18. Tombe, T., & Zhu, X. (**2019**). Trade, migration, and productivity: A quantitative analysis of China. *American Economic Review*, 109(5), 1843–1872. [Link](https://doi.org/10.1257/aer.20150811), [PDF](https://doi.org/10.1257/aer.20150811), [Google](<https://scholar.google.com/scholar?q=Trade+Migration+and+Productivity+A+Quantitative+Analysis+of+China>), [Code](https://www.aeaweb.org/articles?id=10.1257/aer.20150811).
+
+19. Yotov, Y. V., Piermartini, R., Monteiro, J.-A., & Larch, M. (**2016**). *An Advanced Guide to Trade Policy Analysis: The Structural Gravity Model*. World Trade Organization and United Nations Conference on Trade and Development. [Link](https://www.wto.org/english/res_e/publications_e/advancedguide2016_e.htm), [PDF](https://www.wto.org/english/res_e/booksp_e/advancedwtounctad2016_e.pdf), [Google](<https://scholar.google.com/scholar?q=An+Advanced+Guide+to+Trade+Policy+Analysis+The+Structural+Gravity+Model>).
+
+
+## 8. 相关推文
+
+> Note：产生如下推文列表的 Stata 命令为：   
+> &emsp; `lianxh 结构转型 合作模式 DSGE 理论模型 理论类 QSM, nocat md2`  
+> 安装最新版 `lianxh` 命令：    
+> &emsp; `ssc install lianxh, replace` 
+
+  - 刘潍嘉, 2023, [论文推介：中国经济学家合作模式的社会网络分析](https://www.lianxh.cn/details/1312.html).
+  - 张弛, 2024, [如何撰写理论模型类论文？](https://www.lianxh.cn/details/1491.html).
+  - 李祉豪, 2024, [dsgenl命令：用 Stata 估计 DSGE 模型](https://www.lianxh.cn/details/1531.html).
+  - 涂云峰, 2025, [如何在 MATLAB 中安装和配置 Dynare](https://www.lianxh.cn/details/1623.html).
+  - 涂云峰, 2025, [小白上手 DSGE 模型：Matlab 实现稳态求解与可视化的实用秘籍](https://www.lianxh.cn/details/1625.html).
+  - 连享会, 2020, [DSGE模型的Stata实现简介](https://www.lianxh.cn/details/293.html).
+  - 连玉君, 2025, [如何借助 AI 工具来伴读一篇理论类的论文？](https://www.lianxh.cn/details/1571.html).
+  - 陈文武, 2021, [一文理解经济结构转型](https://www.lianxh.cn/details/800.html).

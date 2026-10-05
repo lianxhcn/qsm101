@@ -1,0 +1,31 @@
+# Private work and personal outputs
+/.work/
+/Task/
+/runs/
+
+# Environments and local settings
+.venv/
+venv/
+.env
+.env.*
+.Renviron
+*.pem
+
+# Generated defaults: use an explicit runs/ output path instead
+**/code/demo-output/
+
+# Caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.Rhistory
+.Rproj.user/
+
+# Editors and operating system
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
