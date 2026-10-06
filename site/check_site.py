@@ -88,7 +88,7 @@ def check() -> list[str]:
         nb = json.loads(commuting.read_text(encoding="utf-8"))
         cells = nb.get("cells", [])
         joined = "\n".join("".join(c.get("source", [])) for c in cells)
-        for required in ["load_csv", "commute_multiplier", "def state", "def solve", "def estimate", "高通勤成本", "练习", "EXPECTED_HASHES", "借助 Agent 实现", "03-estimate-calibrate.md"]:
+        for required in ["load_csv", "commute_multiplier", "def state", "def solve", "def estimate", "高通勤成本", "练习", "EXPECTED_HASHES", "Agent 实现与核验", "03-estimate-calibrate.md"]:
             if required not in joined:
                 errors.append(f"通勤 Notebook 缺少：{required}。")
         if "**作者" in joined or "待定" in joined:

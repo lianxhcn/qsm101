@@ -58,7 +58,7 @@ website:
         href: https://github.com/lianxhcn/qsm101
         aria-label: "GitHub 仓库"
   sidebar:
-    style: docked
+    style: floating
     contents:
       - text: "学习起点"
         href: index.qmd
@@ -66,13 +66,13 @@ website:
         contents:
           - text: "什么是 QSM"
             href: site/pages/foundations.qmd
-          - text: "文献、工具与学习路线"
+          - text: "文献与学习路线"
             href: site/pages/reading.qmd
       - section: "两地区模型"
         contents:
           - text: "搭建、校准与求解"
             href: site/pages/laboratory.qmd
-          - text: "居住与就业的通勤扩展"
+          - text: "居住、就业与通勤"
             href: site/pages/commuting.ipynb
       - section: "进入论文"
         contents:
@@ -93,6 +93,14 @@ website:
 format:
   html:
     theme: cosmo
+    fontsize: 18px
+    grid:
+      # Quarto includes two 24px gutters: usable text width is 800px.
+      body-width: 848px
+      sidebar-width: 240px
+      margin-width: 220px
+      gutter-width: 24px
+    lightbox: true
     css: site/styles.css
     include-after-body: site/callout-copy.html
     toc: true

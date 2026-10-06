@@ -29,3 +29,34 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 </script>
+
+<script>
+// 只给超出容器的公式提示滚动；不改公式内容或缩小数学字形。
+window.addEventListener("load", () => {
+  const ready = window.MathJax?.startup?.promise || Promise.resolve();
+  ready.then(() => {
+    document.querySelectorAll("main .math.display").forEach((formula) => {
+      const hint = document.createElement("span");
+      hint.className = "math-scroll-hint";
+      hint.textContent = "左右滑动查看完整公式";
+      hint.hidden = true;
+      formula.after(hint);
+      const update = () => {
+        const overflow = formula.scrollWidth > formula.clientWidth + 1;
+        hint.hidden = !overflow;
+        if (overflow) {
+          formula.setAttribute("tabindex", "0");
+          formula.setAttribute("role", "region");
+          formula.setAttribute("aria-label", "公式，可左右滚动查看完整内容");
+        } else {
+          formula.removeAttribute("tabindex");
+          formula.removeAttribute("role");
+          formula.removeAttribute("aria-label");
+        }
+      };
+      new ResizeObserver(update).observe(formula);
+      update();
+    });
+  });
+});
+</script>

@@ -1,10 +1,10 @@
-# QSM 课程预习站维护说明
+# QSM 学习网站维护说明
 
 改版前先读[网站内容与更新台账](../docs/site-content-ledger.md)：其中记录网站定位、原稿对应关系、P05 的插入位置和发布前核对项。
 
 网站用 Quarto 构建。公开页面是 `index.qmd` 与 `site/pages/*.qmd`，按学习主题组织；`articles/*/article.md` 保留原始推文，不直接作为网站章节渲染。两地区模型以 `site/pages/laboratory.ipynb` 为可下载主文件；修改后先从头执行，再用 `quarto convert site/pages/laboratory.ipynb --output site/pages/laboratory.qmd` 更新网页源，并删除转换产生的 `#| execution:` 时间元数据。新增内容先核对模型与数据性质，再加入对应主题，并在 `site/pages/updates.qmd` 记录变化。
 
-课程主页固定入口配置在 `_quarto.yml` 的导航和页脚，首页另有显要按钮。课程日期、报名和费用以 <https://www.lianxh.cn/qsm.html> 为准，不在本网站复制易变信息。
+课程主页固定入口配置在 `_quarto.yml` 的导航和页脚；首页以学习与模型实践为入口。课程日期、报名和费用以 <https://www.lianxh.cn/qsm.html> 为准，不在本网站复制易变信息。
 
 新页面应使用稳定英文 slug。加入导航时更新 `_quarto.yml`；若替换已有公开 URL，更新 `site/build_legacy.py` 的跳转表，避免旧链接失效。图标与封面原文件保存在 `figs/raw/`，上传结果记录在 `figs/uploaded-images.md`；再次生成或上传须采用新时间戳，不覆盖同名对象。
 
@@ -24,3 +24,9 @@ GitHub Actions 在推送到 main 后执行同样的构建与检查，再发布 `
 通勤 Notebook 下载副本位于 `articles/p05-commuting-qsm/downloads/commuting.ipynb`，仅从已执行的网页源文件逐字节复制。重新执行后须同步该副本及 ZIP；站点检查会阻止不同步的下载文件。
 
 Callout 采用 Quarto 原生 note/tip/warning 三类，提示词额外使用 agent-prompt 类。site/callout-copy.html 为纯文本提示词增加复制按钮，site/styles.css 管理手机换行与按钮焦点。只改 Markdown 排版时核对代码单元及已有输出保持不变即可，不必重复计算模型。
+
+## 阅读版式
+
+讲义使用浮动侧栏和 Quarto 网格，桌面正文净宽 800 px、正文 18 px；手机正文保持 17 px，首页另用宽布局。单行公式去掉 MathJax 与外层叠加边距，多行公式保留更多空间；超宽公式提供滚动提示和键盘焦点。示意图上限 640 px、通勤计算图 540 px；原本小字较多的无通勤统计图及论文多面板图上限为 720 px。图片均保留纵横比，并可点击放大。图片中的文字无法在所有终端与正文严格等大，密集图应在放大视图检查细节。
+
+左右栏宽度为 240/220 px，顶部菜单内容居中且最大 1360 px。Agent 提示词使用正文字体，桌面 17 px、手机 16 px，标题分别为 18/17 px。章节标题优先表达主题，解释移入导语；改标题须保留原有锚点。辅助运行步骤保留正文标题但不进入右侧目录。Markdown 排版变更同步 Notebook 下载副本和离线包，核对代码单元、输出及执行次数未变。

@@ -33,7 +33,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid #c57a41; outline-offs
 }
 .qsm-hero__content { max-width: 620px; padding: 3.5rem clamp(1.5rem,5vw,4.3rem); }
 .qsm-eyebrow, .qsm-kicker { text-transform: uppercase; letter-spacing: .15em; font-size: .78rem; font-weight: 760; color: var(--qsm-teal); }
-.qsm-hero h1 { font-size: clamp(2.35rem,4vw,4rem); line-height: 1.25; margin: .75rem 0 1.3rem; }
+.qsm-hero h1 { font-size: clamp(1.5rem,3vw,2.45rem); line-height: 1.25; margin: .75rem 0 1.3rem; }
 .qsm-hero p:not(.qsm-eyebrow) { font-size: 1.09rem; max-width: 34rem; }
 .qsm-actions { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1.8rem; }
 .qsm-button { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: .67rem 1.2rem; border-radius: .5rem; text-decoration: none; font-weight: 690; transition: background .18s ease, transform .18s ease; }
@@ -73,7 +73,7 @@ table { font-size: .96rem; }
 @media (max-width: 640px) {
   .qsm-hero { min-height: 0; background-position: 60% center; }
   .qsm-hero__content { padding: 2.5rem 1.35rem; background: rgba(247,244,237,.72); }
-  .qsm-hero h1 { font-size: 2rem; }
+  .qsm-hero h1 { font-size: 1.5rem; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -128,3 +128,63 @@ div.sourceCode { border-radius: .55rem; }
 }
 .prompt-copy-button:hover { background: #eef5fa; }
 .prompt-copy-button:focus-visible { outline: 3px solid #276b8e; outline-offset: 2px; }
+
+/* 讲义阅读尺度：网格宽度由 Quarto 管理，正文、目录随网格一起居中。 */
+#quarto-sidebar, #quarto-margin-sidebar { font-size: 15px; }
+#quarto-document-content p:has(> .math.display) {
+  margin-block: .6em;
+}
+#quarto-document-content .math.display {
+  margin-block: 0;
+  padding-block: .15em;
+}
+#quarto-document-content .math.display mjx-container[display="true"] {
+  margin-block: 0 !important;
+}
+#quarto-document-content p:has(> .math.display mjx-mtable) {
+  margin-block: .9em;
+}
+/* 图片保持纵横比；按信息密度分配上限，不让小图自动撑满正文。 */
+#quarto-document-content img {
+  width: auto;
+  height: auto;
+  max-width: min(100%, 640px);
+}
+#quarto-document-content img[src*="qsm-site-fig"] {
+  max-width: min(100%, 720px);
+}
+#quarto-document-content .cell-output-display img {
+  max-width: min(100%, 540px);
+}
+#quarto-document-content img[src*="ahlfeldt-berlin-fig03"] {
+  max-width: min(100%, 720px);
+}
+#quarto-document-content .quarto-figure { text-align: center; }
+#quarto-document-content .cell-output-display > p:has(> img),
+#quarto-document-content .cell-output-display > p:has(> a > img) {
+  text-align: center;
+}
+#quarto-document-content figure figcaption { font-size: .86rem; line-height: 1.6; }
+@media (max-width: 640px) {
+  #quarto-document-content { font-size: 17px; }
+  #quarto-document-content .callout-body { font-size: 17px; }
+}
+
+.math-scroll-hint { display: block; margin-top: .2em; font-size: 12px; color: #55707e; }
+.math-scroll-hint[hidden] { display: none; }
+.math.display:focus-visible { outline: 2px solid #276b8e; outline-offset: 2px; }
+
+/* 顶部菜单居中，与讲义网格保持相近宽度。 */
+.navbar > .container-fluid { max-width: 1360px; margin-inline: auto; width: 100%; }
+#quarto-sidebar .sidebar-item-text, #quarto-margin-sidebar #TOC a {
+  white-space: normal; overflow-wrap: anywhere; text-overflow: clip; line-height: 1.5;
+}
+/* 自然语言提示词接近正文字号；程序代码保留原有字体。 */
+.callout.agent-prompt pre, .callout.agent-prompt pre code {
+  font-family: var(--bs-body-font-family); font-size: 17px; line-height: 1.75;
+}
+.callout.agent-prompt .callout-title-container { font-size: 18px; }
+@media (max-width: 640px) {
+  .callout.agent-prompt pre, .callout.agent-prompt pre code { font-size: 16px; }
+  .callout.agent-prompt .callout-title-container { font-size: 17px; }
+}

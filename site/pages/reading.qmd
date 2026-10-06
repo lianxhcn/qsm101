@@ -28,7 +28,7 @@ QSM 把不同地点的经济主体选择与市场清算联系起来。交通、�
 
 下面沿着这条路线介绍综述、课程、论文与代码资源。资源核查日期 (retrieved_date)：2026-10-03。本文是学习路线导读，未执行各工具包或论文的完整复现。
 
-## 1. 学习 QSM，要打通哪些环节
+## 1. QSM 学习路线 {#学习-qsm要打通哪些环节}
 
 已经熟悉 DID、IV 或面板数据方法的研究者，转向 QSM 时需要适应的一个变化，是研究对象从单个估计方程变成了一套相互联系的均衡条件。
 
@@ -59,11 +59,13 @@ $$
 
 读论文时如果一直没有把这几个环节分开，很容易出现一种情况：每条公式似乎都能看懂，但仍然不知道作者怎样从数据走到最终的反事实结果。
 
-## 2. 用综述和经典论文建立框架
+## 2. 综述与经典论文 {#用综述和经典论文建立框架}
 
 第一轮学习没有必要马上进入复杂论文。先用几篇综述建立地图，后面的阅读会容易很多。
 
-### 2.1 Allen & Arkolakis (2023)：空间均衡的基本直觉
+### 2.1 空间均衡直觉 {#allen-arkolakis-2023空间均衡的基本直觉}
+
+这一节从 Allen & Arkolakis (2023) 的材料建立空间均衡直觉。
 
 比较适合作为第一篇的是 [Allen & Arkolakis](https://doi.org/10.1257/jep.37.2.3) ([2023](https://scholar.google.com/scholar?q=Economic+Activity+across+Space+A+Supply+and+Demand+Approach)) 的 *Economic Activity across Space: A Supply and Demand Approach*。
 
@@ -73,7 +75,9 @@ $$
 
 建议放在第 1 周阅读。
 
-### 2.2 Redding & Rossi-Hansberg (2017)：QSM 的模型模块
+### 2.2 QSM 模型模块 {#redding-rossi-hansberg-2017qsm-的模型模块}
+
+Redding & Rossi-Hansberg (2017) 的综述帮助我们拆解和比较 QSM 的模型模块。
 
 [Redding & Rossi-Hansberg](https://doi.org/10.1146/annurev-economics-063016-103713) ([2017](https://scholar.google.com/scholar?q=Quantitative+Spatial+Economics+Redding+Rossi-Hansberg)) 的 *Quantitative Spatial Economics* 仍然是 QSM 最重要的综述之一。
 
@@ -92,7 +96,9 @@ $$
 
 以后每读一篇论文，都可以问：这篇文章保留了哪些模块，又增加了哪些机制？
 
-### 2.3 Allen & Arkolakis (2025)：统一的区域经济框架
+### 2.3 统一区域框架 {#allen-arkolakis-2025统一的区域经济框架}
+
+Allen & Arkolakis (2025) 提供了理解区域经济模型的统一框架。
 
 等跑过一两个模型以后，再读 [Allen & Arkolakis](https://doi.org/10.1016/bs.hesreg.2025.05.002) ([2025](https://scholar.google.com/scholar?q=Quantitative+Regional+Economics+Allen+Arkolakis)) 的 *Quantitative Regional Economics* 会更合适。
 
@@ -127,7 +133,7 @@ $$
 
 学完以后，读者已经具备进入不同专题的共同基础。
 
-### 2.6 按研究问题选择专题论文
+### 2.6 专题论文 {#按研究问题选择专题论文}
 
 | 研究方向 | 代表论文 | 重点学习内容 |
 | --- | --- | --- |
@@ -153,7 +159,7 @@ $$
 
 图 2：论文阅读路径。左侧提供共同基础，右侧按研究问题分流，无须全部读完。
 
-## 3. 从教学工具包开始动手
+## 3. 教学工具包 {#从教学工具包开始动手}
 
 开始动手时，我比较推荐 [Gabriel Ahlfeldt](https://github.com/Ahlfeldt) 的 [*Quantitative Spatial Economics* 课程](https://github.com/Ahlfeldt/Lectures-QuantitativeSpatialEconomics) 和配套 toolkit。Ahlfeldt 目前公开的 GitHub 主页仍将 `Lectures-QuantitativeSpatialEconomics`、`ARSW2015-toolkit`、`MRRH2018-toolkit` 和 `AB2022-toolkit` 列为主要教学资源。
 
@@ -211,7 +217,7 @@ Ahlfeldt 与 Tobias Seidel 整理的 [MRRH2018 toolkit](https://github.com/Ahlfe
 
 这样更容易抓住模型结构，也不需要从第一行开始通读几千行代码。
 
-### 3.5 区分教学代码与复现材料
+### 3.5 教学与复现代码 {#区分教学代码与复现材料}
 
 学习 QSM 时，一个常见困惑是网上代码很多，但不知道哪些适合学习，哪些只是用来复现论文。
 
@@ -236,7 +242,7 @@ Ahlfeldt 与 Tobias Seidel 整理的 [MRRH2018 toolkit](https://github.com/Ahlfe
 
 因此，看到一个新的 GitHub 仓库时，先确认它是教学代码、正式复现项目，还是针对某类模型开发的软件工具。
 
-### 3.6 从结构引力进入一般均衡
+### 3.6 结构引力与均衡 {#从结构引力进入一般均衡}
 
 结构引力可以作为 QSM 的一个计算入口。
 
@@ -261,9 +267,9 @@ Ahlfeldt 与 Tobias Seidel 整理的 [MRRH2018 toolkit](https://github.com/Ahlfe
 
 因此，结构引力很适合作为学习入口，但它只是更广泛的 QSM 框架中相对标准化的一支。
 
-## 4. 编程、均衡求解与结果检查
+## 4. 编程与均衡求解 {#编程均衡求解与结果检查}
 
-### 4.1 选择语言并理解残差函数
+### 4.1 语言与残差函数 {#选择语言并理解残差函数}
 
 学习 QSM 没有必要先解决哪一种语言最好的问题。不同工具适合不同阶段。
 
@@ -295,7 +301,7 @@ $$
 
 自己重写一个小模型很有价值。即使只有几个地区，只保留最基本的选择、流动和市场清算条件，也能很好地检查自己是否理解了模型。
 
-### 4.2 检查均衡解与校准结果
+### 4.2 均衡与校准核验 {#检查均衡解与校准结果}
 
 自己开始写 QSM 程序以后，还需要养成检查数值结果的习惯。
 
@@ -343,7 +349,7 @@ $$
 
 达到这个程度以后，再读新的 QSM 论文会容易很多。
 
-### 5.2 从小修改走向自己的问题
+### 5.2 开始自己的研究 {#从小修改走向自己的问题}
 
 完整跑通 ARSW 或 MRRH 以后，可以先对现有模型做几个小修改，再进入自己的研究。
 

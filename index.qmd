@@ -2,6 +2,10 @@
 page-layout: full
 toc: false
 sidebar: false
+format:
+  html:
+    grid:
+      body-width: 1100px
 ---
 
 ```{=html}
@@ -12,7 +16,7 @@ sidebar: false
     <p>从一个地方的变化为何影响别处开始，亲手搭建两地区模型，再读懂顶刊论文怎样把因果证据、经济机制和政策反事实连接起来。</p>
     <div class="qsm-actions">
       <a class="qsm-button qsm-button--primary" href="site/pages/foundations.html">开始学习</a>
-      <a class="qsm-button qsm-button--outline" href="https://www.lianxh.cn/qsm.html">查看课程主页 ↗</a>
+      <a class="qsm-button qsm-button--outline" href="site/pages/laboratory.html">动手做模型</a>
     </div>
   </div>
 </section>
@@ -20,11 +24,11 @@ sidebar: false
 
 <div class="qsm-intro">
 
-课前预习与课后回查
+从直觉到实践
 
-## 五章建立 QSM 的完整认识
+## 从入门到模型实践
 
-本站面向第一次接触或刚开始学习 QSM 的读者。主线从经济直觉和学习资料出发，用一个连续章节完成最小模型的设定、校准、求解与核验，再增加通勤机制，最后回到柏林墙研究。两地区模型和通勤扩展均提供可下载、可独立运行的 Notebook。课程时间与报名信息以[课程主页](https://www.lianxh.cn/qsm.html)为准。
+本站面向第一次接触或刚开始学习 QSM 的读者。主线从经济直觉和学习资料出发，用一个连续章节完成最小模型的设定、校准、求解与核验，再增加通勤机制，最后回到柏林墙研究。两地区模型和通勤扩展均提供可下载、可独立运行的 Notebook。
 
 </div>
 
@@ -81,10 +85,10 @@ sidebar: false
 ```{=html}
 <div class="qsm-course-panel">
   <div>
-    <p class="qsm-kicker">与 12 月课程衔接</p>
-    <h2>课前建立共同语言，开课后按进度继续补充</h2>
-    <p>本站会逐步增加模型扩展、课堂练习和常见错误，并在<a href="site/pages/updates.html">更新记录</a>说明变化。课程安排、报名与后续通知始终以连享会课程主页为准。</p>
+    <p class="qsm-kicker">继续探索</p>
+    <h2>从简单模型走向更多空间问题</h2>
+    <p>本站持续整理 QSM 的模型扩展、研究案例与可复现练习。阅读中遇到疑问，可以查看<a href="site/pages/faq.html">常见问题</a>；新增内容和修订说明见更新记录。</p>
   </div>
-  <a class="qsm-button qsm-button--light" href="https://www.lianxh.cn/qsm.html">返回课程主页 ↗</a>
+  <a class="qsm-button qsm-button--light" href="site/pages/updates.html">查看更新记录</a>
 </div>
 ```
