@@ -1,13 +1,12 @@
 ---
-title: "什么是 QSM：一个地方的变化如何影响其他地区"
-description: "从具体政策问题出发，逐步理解地点、主体、空间联系、市场清算、模型量化与反事实。"
+title: "什么是 QSM？"
 ---
 
-::: {.callout-note title="阅读提示" icon=false}
+<div class="page-intro">
 
-本章保留原入门文章的主要推导、案例和常见问题。阅读时不必记住每条公式，先抓住一条主线：局部冲击改变主体选择，选择改变空间配置，工资与价格反馈又推动整个系统走向新的均衡。
+一个地方的变化，如何通过主体选择、空间联系和价格反馈影响其他地区？本章从具体政策问题出发，建立空间均衡的基本直觉。
 
-:::
+</div>
 
 一个开发区设立以后，当地就业明显增加。这是不是意味着整个城市真的增加了同样多的就业？未必。企业可能从其他地区迁入，工人可能改变居住地和通勤地点，工资和房租也会随之调整。**定量空间模型** (Quantitative Spatial Models, QSMs) 的任务，就是把这些相互联系的地点、主体和市场放进同一个系统，研究经济活动怎样重新配置、价格怎样反馈，以及政策变化以后整个空间经济会形成什么样的新均衡。
 
@@ -36,7 +35,7 @@ description: "从具体政策问题出发，逐步理解地点、主体、空间
 <p style="margin:0;">政策冲击 → 主体重新选择 → 空间重新配置 → 价格调整 → 新的均衡</p>
 </div>
 
-![空间冲击与跨地区调整](https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/qsm-p01-fig01-spatial-shock-20261003-110423.png)
+![空间冲击与跨地区调整。教学示意。](https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/qsm-p01-fig01-spatial-shock-20261003-110423.png){#fig-foundations-spatial-shock fig-alt="空间冲击与跨地区调整" .dense-figure}
 
 > 一个地区的政策变化会通过企业迁移、工人迁移与通勤、贸易和其他经济联系影响其他地区。工资、房租、人口和就业随之共同调整，直到形成新的空间均衡。
 
@@ -104,7 +103,7 @@ QSM 是一类模型，而非某一个固定模型。研究国际贸易时，地�
 
 $$
 c_{ij}
-$$
+$$ {#eq-foundations-friction}
 
 其中 $i$ 和 $j$ 表示两个地点，$c_{ij}$ 表示地点 $i$ 与地点 $j$ 之间的广义双边摩擦。在不同研究中，它可以具体表现为贸易成本、通勤成本、迁移成本、运输时间，或者其他阻碍两地经济互动的因素。后面进入具体论文时，我们再采用原文自己的符号。
 
@@ -116,7 +115,7 @@ QSM 中最关键的一点，是很多我们平时习惯分别分析的变量，�
 
 $$
 w_{i},\quad r_{i},\quad R_{i},\quad L_{i}
-$$
+$$ {#eq-foundations-endogenous-variables}
 
 这四个变量分别表示地区 $i$ 的工资、房租、居住人口和工作地就业人数。
 
@@ -136,7 +135,7 @@ QSM 的基本结构可以概括为：
 
 设经济中只有两个地区，记为 $i\in\{1,2\}$，总共有 $N$ 个工人。这里 $i$ 是地点下标，$N$ 是经济中的工人总数。为了把逻辑讲清楚，我们先假设每个人住在哪里就在哪里工作，等这一步讲清楚以后，再允许居民跨地区通勤。
 
-![两地区空间均衡](https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/qsm-p01-fig02-two-region-equilibrium-20261003-110423.png)
+![两地区空间均衡。教学示意。](https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/qsm-p01-fig02-two-region-equilibrium-20261003-110423.png){#fig-foundations-equilibrium fig-alt="两地区空间均衡" .dense-figure}
 
 > 两地区模型的重点是解释工资、人口和房租为什么会在居民选择、企业劳动需求和住房供给之间共同决定。
 
@@ -154,7 +153,7 @@ V_{ni}
 \alpha\log r_{i}
 +
 \varepsilon_{ni}
-$$
+$$ {#eq-foundations-location-utility}
 
 其中，$V_{ni}$ 是工人 $n$ 选择地区 $i$ 时的效用；$B_{i}$ 表示地区 $i$ 的居住便利度 (amenity)；$w_{i}$ 是当地工资；$r_{i}$ 是当地房租；$\alpha>0$ 衡量居民对住房成本的敏感程度；$\varepsilon_{ni}$ 表示个人对地区 $i$ 的特有偏好。
 
@@ -164,7 +163,7 @@ $$
 
 $$
 R_{i}=Ns_{i}
-$$
+$$ {#eq-foundations-population}
 
 因此，居住人口 $R_{i}$ 不是预先固定的，而是居民在工资、房租和便利度之间权衡后的结果。
 
@@ -176,7 +175,7 @@ $$
 Y_{i}=Z_{i}L_{i}^{\beta},
 \qquad
 0<\beta<1
-$$
+$$ {#eq-foundations-production}
 
 其中，$Y_{i}$ 表示地区 $i$ 的产出，$Z_{i}$ 是地区生产率，$L_{i}$ 是在地区 $i$ 工作的就业人数，$0<\beta<1$ 是生产函数中劳动投入的产出弹性。生产率提高会增加企业对劳动的需求，而工资会随着劳动供求发生调整。
 
@@ -184,7 +183,7 @@ $$
 
 $$
 L_{i}=R_{i}
-$$
+$$ {#eq-foundations-local-employment}
 
 住房市场将房租与居住人口联系起来。假设住房供给为：
 
@@ -192,13 +191,13 @@ $$
 H_{i}^{s}=\bar H_{i} r_{i}^{\eta},
 \qquad
 \eta>0
-$$
+$$ {#eq-foundations-housing-supply}
 
 其中，$H_{i}^{s}$ 表示地区 $i$ 的住房供给量，$\bar H_{i}$ 是决定住房供给水平的地点特征，$\eta>0$ 是住房供给弹性。若每位居民需要一单位住房，则住房需求等于 $R_{i}$，住房市场清算条件为：
 
 $$
 R_{i}=H_{i}^{s}
-$$
+$$ {#eq-foundations-housing-clearing}
 
 现在假设地区 1 的生产率提高，即 $Z_{1}\uparrow$。企业对劳动需求增加，工资上升；较高工资吸引更多居民进入；人口增加提高住房需求，进而推高房租；房租上涨又会抵消一部分工资提高带来的居住吸引力。
 
@@ -216,7 +215,7 @@ $$
 
 $$
 X_{ij}=R_{i}\pi_{ij\mid i}
-$$
+$$ {#eq-foundations-bilateral-flow}
 
 其中 $X_{ij}$ 是从居住地 $i$ 到工作地 $j$ 的通勤人数。
 
@@ -224,17 +223,17 @@ $$
 
 $$
 R_{i}=\sum_{j}X_{ij}
-$$
+$$ {#eq-foundations-residents}
 
 也就是固定居住地 $i$，对所有可能的工作地 $j$ 求和。反过来，固定工作地 $j$，对所有居住地 $i$ 求和，则得到在地点 $j$ 工作的就业人数：
 
 $$
 L_{j}=\sum_{i}X_{ij}
-$$
+$$ {#eq-foundations-jobs}
 
 同一个双边流量矩阵因此同时连接了居住空间和就业空间。
 
-![个体选择、双边流动与引力关系](https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/qsm-p01-fig03-choice-gravity-20261003-110423.png)
+![个体选择、双边流动与引力关系。教学示意。](https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/qsm-p01-fig03-choice-gravity-20261003-110423.png){#fig-foundations-gravity fig-alt="个体选择、双边流动与引力关系" .dense-figure}
 
 > 微观层面的「住在哪里、在哪里工作」经过聚合以后形成双边通勤流。在许多 QSM 中，这些流量进一步呈现引力关系，并进入完整的空间均衡。
 
@@ -246,7 +245,7 @@ $$
 X_{ij}
 =
 G\frac{O_{i}^{a}D_{j}^{b}}{c_{ij}^{\theta}}
-$$
+$$ {#eq-foundations-gravity}
 
 其中，$X_{ij}$ 是地点 $i$ 到地点 $j$ 的双边流量；$O_{i}$ 表示出发地规模；$D_{j}$ 表示目的地规模或吸引力；$c_{ij}$ 表示两地之间的双边摩擦；$a$、$b$ 和 $\theta$ 是弹性参数，且通常有 $\theta>0$；$G$ 是比例常数。
 
@@ -258,7 +257,7 @@ O_{i}\uparrow\Rightarrow X_{ij}\uparrow,
 D_{j}\uparrow\Rightarrow X_{ij}\uparrow,
 \qquad
 c_{ij}\uparrow\Rightarrow X_{ij}\downarrow
-$$
+$$ {#eq-foundations-gravity-directions}
 
 也就是说，两端越大或越有吸引力，双边流量越大；两地之间的阻力越高，流量越小。
 
@@ -279,7 +278,7 @@ E_{j}\left(w_{j}/d_{ij}\right)^{\varepsilon}
 \displaystyle\sum_{s=1}^{S}
 E_{s}\left(w_{s}/d_{is}\right)^{\varepsilon}
 }
-$$
+$$ {#eq-foundations-conditional-choice}
 
 其中，$\pi_{ij\mid i}$ 表示在已经居住于地点 $i$ 的条件下，工人选择去地点 $j$ 工作的概率；$w_{j}$ 是工作地点 $j$ 的工资；$d_{ij}$ 是从 $i$ 到 $j$ 的通勤成本；$E_{j}$ 是工作地点 $j$ 的异质性尺度参数，可以理解为该工作地平均吸引力的一部分；$\varepsilon>0$ 衡量工人对工资和通勤成本差异的敏感程度；$s=1,\ldots,S$ 枚举所有可能的工作地点。
 
@@ -287,7 +286,7 @@ $$
 
 $$
 d_{ij}=\exp(\kappa\tau_{ij})
-$$
+$$ {#eq-foundations-time-cost}
 
 其中 $\tau_{ij}$ 是通勤时间，$\kappa\geq0$ 把通勤时间转换为经济意义上的通勤成本。因此，通勤时间越长，$d_{ij}$ 越大，从而选择该通勤组合的概率越低。
 
@@ -303,7 +302,7 @@ E_{j}\left(w_{j}/d_{ij}\right)^{\varepsilon}
 \displaystyle\sum_{s=1}^{S}
 E_{s}\left(w_{s}/d_{is}\right)^{\varepsilon}
 }
-$$
+$$ {#eq-foundations-commuting-flow}
 
 这个式子可以拆成四部分理解：
 
@@ -326,7 +325,7 @@ $$
 \varsigma_{j}
 +
 e_{ij}
-$$
+$$ {#eq-foundations-gravity-estimation}
 
 其中，$\vartheta_{i}$ 是居住地固定效应，$\varsigma_{j}$ 是工作地固定效应，$e_{ij}$ 是误差项，$\nu>0$ 衡量通勤概率对通勤时间的敏感程度。
 
@@ -354,7 +353,7 @@ $$
 
 一个常见的量化过程如下面这张图所示。
 
-![现实数据、模型量化与政策反事实](https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/qsm-p01-fig04-counterfactual-workflow-20261003-110423.png)
+![现实数据、模型量化与政策反事实。教学示意。](https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/qsm-p01-fig04-counterfactual-workflow-20261003-110423.png){#fig-foundations-counterfactual fig-alt="现实数据、模型量化与政策反事实" .dense-figure}
 
 > QSM 的「Quantitative」体现在一整套工作流程中：利用现实数据确定行为参数和经济基本面，使模型与基准均衡相匹配，再改变某个外生政策条件，重新求解新的空间均衡并比较福利。
 
@@ -500,6 +499,8 @@ Giroud et al. ([2024](https://doi.org/10.3982/ECTA20029)) 研究大型制造工�
 | 州税 | 地方税率 | 工人、企业 | 迁移与企业区位 | 人口、企业、工资、税基与福利 |
 | 大型工厂 | 局部生产率冲击 | 工厂、企业 | 地理集聚与企业内部网络 | 生产率及跨地区传播 |
 
+: 空间模型中的变量及作用 {#tbl-foundations-applications}
+
 因此，判断一个研究问题是否值得进一步考虑 QSM，更有用的标准是：
 
 > **一个地区受到冲击以后，其他地区会不会通过明确的经济联系发生调整？这种重新配置会不会进一步改变价格，并使经济主体再次改变选择？**
@@ -522,7 +523,7 @@ $$
 \mathcal P^{0}
 \rightarrow
 \mathcal P^{1}
-$$
+$$ {#eq-foundations-policy-change}
 
 随后，研究者在新的政策环境下重新求解空间均衡：
 
@@ -530,7 +531,7 @@ $$
 \mathcal E^{0}
 \rightarrow
 \mathcal E^{1}
-$$
+$$ {#eq-foundations-equilibrium-change}
 
 QSM 的分析思路可以概括为以下五个问题：
 
@@ -587,4 +588,4 @@ QSM 的分析思路可以概括为以下五个问题：
 
 ## 继续学习
 
-理解基本框架后，进入[文献、工具与学习路线](reading.qmd)，再用[两地区模型](laboratory.ipynb)把估计、校准和求解完整做一遍。
+理解基本框架后，进入[文献、工具与学习路线](reading.qmd)，再用[两地区模型](m1-baseline.ipynb)把估计、校准和求解完整做一遍。

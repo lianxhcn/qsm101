@@ -1,0 +1,626 @@
+[
+  {
+    "scenario": "baseline",
+    "method": "hybr",
+    "start": [
+      0.0,
+      0.0
+    ],
+    "success": true,
+    "message": "The solution converged.",
+    "nfev": 10,
+    "max_residual": 9.2148511043888e-15,
+    "solution": [
+      0.33647223662121906,
+      -0.047259698678974026
+    ]
+  },
+  {
+    "scenario": "policy25",
+    "method": "hybr",
+    "start": [
+      0.0,
+      0.0
+    ],
+    "success": true,
+    "message": "The solution converged.",
+    "nfev": 11,
+    "max_residual": 2.4702462297909733e-15,
+    "solution": [
+      0.38563848039862814,
+      -0.17043796276873438
+    ]
+  },
+  {
+    "scenario": "zero_shock",
+    "method": "hybr",
+    "start": [
+      0.0,
+      0.0
+    ],
+    "success": true,
+    "message": "The solution converged.",
+    "nfev": 10,
+    "max_residual": 9.2148511043888e-15,
+    "solution": [
+      0.33647223662121906,
+      -0.047259698678974026
+    ]
+  },
+  {
+    "scenario": "symmetric_baseline",
+    "method": "hybr",
+    "start": [
+      0.0,
+      0.0
+    ],
+    "success": true,
+    "message": "The solution converged.",
+    "nfev": 6,
+    "max_residual": 0.0,
+    "solution": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "scenario": "symmetric_policy",
+    "method": "hybr",
+    "start": [
+      0.0,
+      0.0
+    ],
+    "success": true,
+    "message": "The solution converged.",
+    "nfev": 6,
+    "max_residual": 0.0,
+    "solution": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "scenario": "tau20",
+    "method": "hybr",
+    "start": [
+      0.0,
+      0.0
+    ],
+    "success": true,
+    "message": "The solution converged.",
+    "nfev": 9,
+    "max_residual": 2.7755575615628914e-17,
+    "solution": [
+      0.234382341884512,
+      0.234382341884512
+    ]
+  },
+  {
+    "scenario": "local_only",
+    "method": "hybr",
+    "start": [
+      0.0,
+      0.0
+    ],
+    "success": true,
+    "message": "The solution converged.",
+    "nfev": 9,
+    "max_residual": 2.7755575615628914e-17,
+    "solution": [
+      0.234382341884512,
+      0.234382341884512
+    ]
+  },
+  {
+    "scenario": "tau0",
+    "method": "hybr",
+    "start": [
+      0.0,
+      0.0
+    ],
+    "success": true,
+    "message": "The solution converged.",
+    "nfev": 8,
+    "max_residual": 3.1086244689504383e-15,
+    "solution": [
+      0.5743050560547953,
+      -0.5805054531192468
+    ]
+  },
+  {
+    "scenario": "labels_swapped",
+    "method": "hybr",
+    "start": [
+      0.0,
+      0.0
+    ],
+    "success": true,
+    "message": "The solution converged.",
+    "nfev": 11,
+    "max_residual": 2.609024107869118e-15,
+    "solution": [
+      -0.38563848039862886,
+      0.17043796276873413
+    ]
+  },
+  {
+    "scenario": "baseline_start0",
+    "method": "hybr",
+    "start": [
+      0.0,
+      0.0
+    ],
+    "success": true,
+    "message": "The solution converged.",
+    "nfev": 10,
+    "max_residual": 9.2148511043888e-15,
+    "solution": [
+      0.33647223662121906,
+      -0.047259698678974026
+    ]
+  },
+  {
+    "scenario": "baseline_start1",
+    "method": "hybr",
+    "start": [
+      -2.0,
+      -2.0
+    ],
+    "success": true,
+    "message": "The solution converged.",
+    "nfev": 13,
+    "max_residual": 3.7192471324942744e-15,
+    "solution": [
+      0.3364722366212168,
+      -0.04725969867897674
+    ]
+  },
+  {
+    "scenario": "baseline_start2",
+    "method": "hybr",
+    "start": [
+      2.0,
+      2.0
+    ],
+    "success": true,
+    "message": "The solution converged.",
+    "nfev": 11,
+    "max_residual": 3.5318969970887792e-15,
+    "solution": [
+      0.3364722366212161,
+      -0.047259698678976926
+    ]
+  },
+  {
+    "scenario": "baseline_start3",
+    "method": "hybr",
+    "start": [
+      -2.0,
+      2.0
+    ],
+    "success": true,
+    "message": "The solution converged.",
+    "nfev": 12,
+    "max_residual": 6.106226635438361e-15,
+    "solution": [
+      0.33647223662121534,
+      -0.04725969867897924
+    ]
+  },
+  {
+    "scenario": "baseline_start4",
+    "method": "hybr",
+    "start": [
+      2.0,
+      -2.0
+    ],
+    "success": true,
+    "message": "The solution converged.",
+    "nfev": 11,
+    "max_residual": 6.904199434387692e-15,
+    "solution": [
+      0.3364722366212154,
+      -0.047259698678980035
+    ]
+  },
+  {
+    "scenario": "policy25_start0",
+    "method": "hybr",
+    "start": [
+      0.0,
+      0.0
+    ],
+    "success": true,
+    "message": "The solution converged.",
+    "nfev": 11,
+    "max_residual": 2.4702462297909733e-15,
+    "solution": [
+      0.38563848039862814,
+      -0.17043796276873438
+    ]
+  },
+  {
+    "scenario": "policy25_start1",
+    "method": "hybr",
+    "start": [
+      -2.0,
+      -2.0
+    ],
+    "success": true,
+    "message": "The solution converged.",
+    "nfev": 14,
+    "max_residual": 2.7755575615628914e-16,
+    "solution": [
+      0.38563848039862775,
+      -0.17043796276873688
+    ]
+  },
+  {
+    "scenario": "policy25_start2",
+    "method": "hybr",
+    "start": [
+      2.0,
+      2.0
+    ],
+    "success": true,
+    "message": "The solution converged.",
+    "nfev": 11,
+    "max_residual": 4.3021142204224816e-15,
+    "solution": [
+      0.38563848039862914,
+      -0.17043796276873255
+    ]
+  },
+  {
+    "scenario": "policy25_start3",
+    "method": "hybr",
+    "start": [
+      -2.0,
+      2.0
+    ],
+    "success": true,
+    "message": "The solution converged.",
+    "nfev": 12,
+    "max_residual": 2.0539125955565396e-15,
+    "solution": [
+      0.3856384803986279,
+      -0.1704379627687348
+    ]
+  },
+  {
+    "scenario": "policy25_start4",
+    "method": "hybr",
+    "start": [
+      2.0,
+      -2.0
+    ],
+    "success": true,
+    "message": "The solution converged.",
+    "nfev": 11,
+    "max_residual": 2.7478019859472624e-15,
+    "solution": [
+      0.38563848039862875,
+      -0.1704379627687341
+    ]
+  },
+  {
+    "scenario": "reduction0.0_base",
+    "method": "hybr",
+    "start": [
+      0.0,
+      0.0
+    ],
+    "success": true,
+    "message": "The solution converged.",
+    "nfev": 10,
+    "max_residual": 9.2148511043888e-15,
+    "solution": [
+      0.33647223662121906,
+      -0.047259698678974026
+    ]
+  },
+  {
+    "scenario": "reduction0.0_policy",
+    "method": "hybr",
+    "start": [
+      0.0,
+      0.0
+    ],
+    "success": true,
+    "message": "The solution converged.",
+    "nfev": 10,
+    "max_residual": 9.2148511043888e-15,
+    "solution": [
+      0.33647223662121906,
+      -0.047259698678974026
+    ]
+  },
+  {
+    "scenario": "reduction0.1_base",
+    "method": "hybr",
+    "start": [
+      0.0,
+      0.0
+    ],
+    "success": true,
+    "message": "The solution converged.",
+    "nfev": 10,
+    "max_residual": 9.2148511043888e-15,
+    "solution": [
+      0.33647223662121906,
+      -0.047259698678974026
+    ]
+  },
+  {
+    "scenario": "reduction0.1_policy",
+    "method": "hybr",
+    "start": [
+      0.0,
+      0.0
+    ],
+    "success": true,
+    "message": "The solution converged.",
+    "nfev": 11,
+    "max_residual": 6.106226635438361e-16,
+    "solution": [
+      0.35462867281706245,
+      -0.09354748326017405
+    ]
+  },
+  {
+    "scenario": "reduction0.25_base",
+    "method": "hybr",
+    "start": [
+      0.0,
+      0.0
+    ],
+    "success": true,
+    "message": "The solution converged.",
+    "nfev": 10,
+    "max_residual": 9.2148511043888e-15,
+    "solution": [
+      0.33647223662121906,
+      -0.047259698678974026
+    ]
+  },
+  {
+    "scenario": "reduction0.25_policy",
+    "method": "hybr",
+    "start": [
+      0.0,
+      0.0
+    ],
+    "success": true,
+    "message": "The solution converged.",
+    "nfev": 11,
+    "max_residual": 2.4702462297909733e-15,
+    "solution": [
+      0.38563848039862814,
+      -0.17043796276873438
+    ]
+  },
+  {
+    "scenario": "reduction0.5_base",
+    "method": "hybr",
+    "start": [
+      0.0,
+      0.0
+    ],
+    "success": true,
+    "message": "The solution converged.",
+    "nfev": 10,
+    "max_residual": 9.2148511043888e-15,
+    "solution": [
+      0.33647223662121906,
+      -0.047259698678974026
+    ]
+  },
+  {
+    "scenario": "reduction0.5_policy",
+    "method": "hybr",
+    "start": [
+      0.0,
+      0.0
+    ],
+    "success": true,
+    "message": "The solution converged.",
+    "nfev": 11,
+    "max_residual": 4.9960036108132044e-15,
+    "solution": [
+      0.44572573951258726,
+      -0.3122107778372545
+    ]
+  },
+  {
+    "scenario": "theta2.0_base",
+    "method": "hybr",
+    "start": [
+      0.0,
+      0.0
+    ],
+    "success": true,
+    "message": "The solution converged.",
+    "nfev": 10,
+    "max_residual": 2.3037127760972e-15,
+    "solution": [
+      0.33647223662121295,
+      -0.13505631443403113
+    ]
+  },
+  {
+    "scenario": "theta2.0_policy",
+    "method": "hybr",
+    "start": [
+      0.0,
+      0.0
+    ],
+    "success": true,
+    "message": "The solution converged.",
+    "nfev": 10,
+    "max_residual": 3.164135620181696e-15,
+    "solution": [
+      0.36048350395033674,
+      -0.19060661421969258
+    ]
+  },
+  {
+    "scenario": "theta4.0_base",
+    "method": "hybr",
+    "start": [
+      0.0,
+      0.0
+    ],
+    "success": true,
+    "message": "The solution converged.",
+    "nfev": 10,
+    "max_residual": 9.2148511043888e-15,
+    "solution": [
+      0.33647223662121906,
+      -0.047259698678974026
+    ]
+  },
+  {
+    "scenario": "theta4.0_policy",
+    "method": "hybr",
+    "start": [
+      0.0,
+      0.0
+    ],
+    "success": true,
+    "message": "The solution converged.",
+    "nfev": 11,
+    "max_residual": 2.4702462297909733e-15,
+    "solution": [
+      0.38563848039862814,
+      -0.17043796276873438
+    ]
+  },
+  {
+    "scenario": "theta6.0_base",
+    "method": "hybr",
+    "start": [
+      0.0,
+      0.0
+    ],
+    "success": true,
+    "message": "The solution converged.",
+    "nfev": 11,
+    "max_residual": 6.050715484207103e-15,
+    "solution": [
+      0.33647223662121417,
+      0.09857209140604763
+    ]
+  },
+  {
+    "scenario": "theta6.0_policy",
+    "method": "hybr",
+    "start": [
+      0.0,
+      0.0
+    ],
+    "success": true,
+    "message": "The solution converged.",
+    "nfev": 11,
+    "max_residual": 3.12944115066216e-15,
+    "solution": [
+      0.39021641068348606,
+      -0.053023002621337
+    ]
+  },
+  {
+    "scenario": "beta0.8_base",
+    "method": "hybr",
+    "start": [
+      0.0,
+      0.0
+    ],
+    "success": true,
+    "message": "The solution converged.",
+    "nfev": 10,
+    "max_residual": 2.3869795029440866e-15,
+    "solution": [
+      0.33647223662121556,
+      -0.04725969867897845
+    ]
+  },
+  {
+    "scenario": "beta0.8_policy",
+    "method": "hybr",
+    "start": [
+      0.0,
+      0.0
+    ],
+    "success": true,
+    "message": "The solution converged.",
+    "nfev": 11,
+    "max_residual": 1.2212453270876722e-15,
+    "solution": [
+      0.393326624705734,
+      -0.14697156074773937
+    ]
+  },
+  {
+    "scenario": "beta0.9_base",
+    "method": "hybr",
+    "start": [
+      0.0,
+      0.0
+    ],
+    "success": true,
+    "message": "The solution converged.",
+    "nfev": 10,
+    "max_residual": 9.2148511043888e-15,
+    "solution": [
+      0.33647223662121906,
+      -0.047259698678974026
+    ]
+  },
+  {
+    "scenario": "beta0.9_policy",
+    "method": "hybr",
+    "start": [
+      0.0,
+      0.0
+    ],
+    "success": true,
+    "message": "The solution converged.",
+    "nfev": 11,
+    "max_residual": 2.4702462297909733e-15,
+    "solution": [
+      0.38563848039862814,
+      -0.17043796276873438
+    ]
+  },
+  {
+    "scenario": "beta1.0_base",
+    "method": "hybr",
+    "start": [
+      0.0,
+      0.0
+    ],
+    "success": false,
+    "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+    "nfev": 31,
+    "max_residual": 1.2212453270876722e-15,
+    "solution": [
+      0.3364722366212144,
+      -0.04725969867897962
+    ]
+  },
+  {
+    "scenario": "beta1.0_policy",
+    "method": "hybr",
+    "start": [
+      0.0,
+      0.0
+    ],
+    "success": false,
+    "message": "The iteration is not making good progress, as measured by the \n improvement from the last ten iterations.",
+    "nfev": 21,
+    "max_residual": 2.220446049250313e-15,
+    "solution": [
+      0.3732328998848598,
+      -0.20853578237702539
+    ]
+  }
+]

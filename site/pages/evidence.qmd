@@ -1,17 +1,16 @@
 ---
-title: "从因果证据到空间均衡：柏林墙研究"
-description: "Ahlfeldt 等人的顶刊案例如何把历史冲击、主体行为、市场反馈、参数量化与反事实连接起来。"
+title: "柏林墙研究"
 ---
+
+<div class="page-intro">
+
+从因果证据走向空间均衡，观察柏林墙研究如何连接历史冲击、经济机制、参数量化与政策反事实。
+
+</div>
 
 ::: {.callout-tip title="阅读顺序" icon=false}
 
-阅读准备：完成[通勤模型练习](commuting.ipynb)后，再看本章如何用真实数据识别更丰富的通勤和集聚机制。两地区练习的教学参数不等于论文估计值。
-
-:::
-
-::: {.callout-note title="阅读提示" icon=false}
-
-前面的两地区练习让我们亲手走完一次模型计算。本章回到一篇成熟的顶刊论文，观察研究者怎样用历史冲击提供经验事实，再用通勤、集聚与土地市场模型解释机制并开展反事实分析。
+阅读准备：完成[通勤模型练习](m2-commuting.ipynb)后，再看本章如何用真实数据识别更丰富的通勤和集聚机制。两地区练习的教学参数不等于论文估计值。
 
 :::
 
@@ -33,11 +32,11 @@ $$
 \text{Why?}
 \rightarrow
 \text{What if?}
-$$
+$$ {#eq-evidence-research-questions}
 
 下面这幅图，是理解这篇论文最简单的入口。
 
-![DID → QSM](https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/v3-DID-to-QSM-Berlin-Wall-Ahlfeldt-2025-Econometrica.png)
+![DID → QSM。教学示意。](https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/v3-DID-to-QSM-Berlin-Wall-Ahlfeldt-2025-Econometrica.png){#fig-evidence-did-qsm fig-alt="DID → QSM" .dense-figure}
 
 左边是熟悉的简约式 (reduced-form) 世界：政策冲击、处理效应、事件研究和回归表。右边多出来的是主体行为、价格调整、市场清算、参数量化以及反事实。QSM 并没有取消左边的工作，而是从左边继续往前走。
 
@@ -113,7 +112,7 @@ $$
 \text{division}
 \rightarrow
 \text{reintegration}.
-$$
+$$ {#eq-evidence-history}
 
 关键在于，那些西柏林街区并没有改变自己的地理位置，很多历史建筑和自然条件也没有因为政治分割突然变化。真正发生巨大变化的，是它们能够接触到的企业、工人和就业机会。因此，作者可以利用街区在战前相对于传统 CBD 的位置，构造不同程度的空间暴露。
 
@@ -123,19 +122,19 @@ $$
 
 $$
 \widehat{\beta}_{1}=-0.800.
-$$
+$$ {#eq-evidence-division-effect}
 
 换算以后，大约对应 55% 的相对下降。统一以后，方向发生反转。1986–2006 年最近一组的估计约为：
 
 $$
 \widehat{\beta}_{1}=0.398,
-$$
+$$ {#eq-evidence-reunification-effect}
 
 大致对应 49% 的相对上涨。
 
 原文 Figure 3 把这种空间梯度画得很清楚：分裂以后，越靠近战前 CBD 的西柏林地区下降越明显；统一以后，这一梯度又反向变化，同时作者还利用更早时期的数据检查事前趋势和冲击发生的时间。
 
-![柏林分裂、统一及安慰剂时期的地价梯度](https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/ahlfeldt-berlin-fig03-division-reunification-20260927-104327.png)
+![柏林分裂、统一及安慰剂时期的地价梯度。来源：Ahlfeldt 等 (2015)，论文图形；本站编号按本页顺序。](https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/ahlfeldt-berlin-fig03-division-reunification-20260927-104327.png){#fig-evidence-land-gradient fig-alt="柏林分裂、统一及安慰剂时期的地价梯度" .dense-figure}
 
 到这里，一篇通常意义上的政策评价论文已经可以做得相当完整。我们可以继续更换距离区间、加入控制变量、做 placebo、换样本，还可以研究就业和人口是否出现类似结果。
 
@@ -161,7 +160,7 @@ $$
 \text{firms}
 \rightarrow
 \text{employment},
-$$
+$$ {#eq-evidence-productivity-cycle}
 
 同时还存在：
 
@@ -173,7 +172,7 @@ $$
 \text{residents}
 \rightarrow
 \text{population}.
-$$
+$$ {#eq-evidence-amenity-cycle}
 
 这时候，逐项考察中间变量当然仍有价值，但研究目标已经发生变化：我们不再只是想证明某个变量也发生了变化，而是希望说明不同经济主体怎样共同作出选择，这些选择如何影响价格和数量，以及整个系统怎样同时满足市场约束。
 
@@ -204,7 +203,7 @@ $$
 \text{residence }i
 +
 \text{workplace }j.
-$$
+$$ {#eq-evidence-joint-location}
 
 一个工作地点工资越高，对居民越有吸引力；但通勤时间越长，这种吸引力越弱。高度简化以后，住在 $i$ 的居民选择到 $j$ 工作的概率可以理解为：
 
@@ -213,7 +212,7 @@ $$
 \propto
 w_{j}^{\varepsilon}
 e^{-\nu\tau_{ij}}.
-$$
+$$ {#eq-evidence-commuting-gravity}
 
 企业面对的是另一组权衡。一个地方生产率越高，企业越愿意在那里支付工资和商业地价；但工资、土地和建筑成本越高，又越会抑制企业继续进入。开发商则连接了企业和居民的区位需求：一个地方越受欢迎，建筑面积价格越高，土地稀缺由此成为限制无限集聚的一种力量。
 
@@ -228,7 +227,7 @@ a_{i}
 e^{-\delta\tau_{ij}}
 \frac{H^{M}_{j}}{K_{j}}
 \right]^{\lambda}.
-$$
+$$ {#eq-evidence-productivity}
 
 这个公式不需要一开始就逐项推导。最重要的是，它把两个概念明确分开了：
 
@@ -238,7 +237,7 @@ $$
 \text{local fundamentals}
 \times
 \text{agglomeration}.
-$$
+$$ {#eq-evidence-productivity-decomposition}
 
 $a_{i}$ 表示这个地区本身的生产基本面，括号里的部分则表示它能够接触到的周边就业密度。一个地方今天企业很多，可能是因为这个地方天然条件好，也可能因为周围已经聚集了大量企业，使这里进一步获得了集聚收益。
 
@@ -256,7 +255,7 @@ w,Q
 \text{location choice}
 \rightarrow
 H.
-$$
+$$ {#eq-evidence-feedback}
 
 这就是 QSM 与普通机制回归最根本的区别之一。它不是多找几个中间变量，而是要求这些中间变量和主体行为共同构成一个能够闭合的经济系统。
 
@@ -284,7 +283,7 @@ $$
 \rightarrow
 \text{latent economic objects}
 }
-$$
+$$ {#eq-evidence-inversion}
 
 从这个角度看，结构模型本身也是一种测量工具。
 
@@ -298,6 +297,8 @@ $$
 | 工资、生产率、居住便利度         | 模型反演           |
 | 集聚效应的强度和空间范围         | 柏林自然实验 + GMM |
 
+: 模型对象与量化依据 {#tbl-evidence-quantification-sources}
+
 因此，QSM 的量化过程其实可以拆成几个很明确的步骤：
 
 $$
@@ -308,7 +309,7 @@ $$
 \text{Estimation}
 \rightarrow
 \text{Inversion}.
-$$
+$$ {#eq-evidence-quantification}
 
 真正关系到论文核心问题的参数，才需要重点识别。
 
@@ -324,7 +325,7 @@ $$
 A_{i}
 =
 a_{i}\Upsilon_{i}^{\lambda},
-$$
+$$ {#eq-evidence-productivity-elasticity}
 
 其中 $a_{i}$ 是当地自身的生产基本面，$\Upsilon_{i}$ 是周边可达就业密度，$\lambda$ 则表示集聚效应有多强。
 
@@ -338,7 +339,7 @@ $$
 
 $$
 \widehat{\lambda}=0.071.
-$$
+$$ {#eq-evidence-estimated-elasticity}
 
 也就是说，周边可达就业密度提高 10%，当地生产率大约提高 0.7%。
 
@@ -364,7 +365,7 @@ $$
 \tau_{ij}
 \rightarrow
 \tau_{ij}^{CF}.
-$$
+$$ {#eq-evidence-transport-policy}
 
 新的交通条件改变居民在哪里住、在哪里工作；人口和就业重新分布以后，又会改变生产率和居住便利度；工资和房价随之调整，居民和企业进一步重新选择，一直到整个系统达到新的均衡。
 
@@ -379,7 +380,7 @@ H^{M,CF},
 A^{CF},
 B^{CF}
 \}.
-$$
+$$ {#eq-evidence-counterfactual-variables}
 
 论文得到的结果是：在这一反事实中，柏林总就业大约下降 14%，产出下降约 12%，平均建筑面积价格下降约 20%。
 
@@ -429,7 +430,7 @@ $$
 +
 \text{counterfactual}
 }
-$$
+$$ {#eq-evidence-model-components}
 
 在 Berlin Wall 中，节点是城市街区，连接它们的是通勤时间；换一个研究问题以后，节点可以变成州、工厂、银行和地区，连接方式也可以从地理距离扩展为企业内部网络、资金流或其他经济联系。
 
@@ -461,7 +462,7 @@ $$
 \text{firms}
 \rightarrow
 \text{locations}
-$$
+$$ {#eq-evidence-firm-network}
 
 变成：
 
@@ -473,7 +474,7 @@ $$
 \text{borrowers}
 \rightarrow
 \text{regions}.
-$$
+$$ {#eq-evidence-bank-network}
 
 但方法上的核心问题十分相似：一个地区或一家银行受到冲击以后，这个冲击怎样沿着相互连接的市场传播，其他地区怎样调整，最后整个系统停在哪里？
 
@@ -491,7 +492,7 @@ $$
 \text{quantification}
 \rightarrow
 \text{new equilibrium}.
-$$
+$$ {#eq-evidence-research-workflow}
 
 ## 9. 结语
 
@@ -521,4 +522,4 @@ Ahlfeldt et al. (2015) 最值得学习的地方就在这里。作者没有停留
 
 ## 从这个案例带走什么
 
-读完后可以回到[两地区模型](laboratory.ipynb)，逐项比较：简单模型省略了哪些机制，论文为什么必须加入它们，新增机制又要求什么数据和参数。后续的通勤扩展将放在两地区模型与本章之间。
+读完后可以回到[两地区模型](m1-baseline.ipynb)，逐项比较：简单模型省略了哪些机制，论文为什么必须加入它们，新增机制又要求什么数据和参数。后续的通勤扩展将放在两地区模型与本章之间。

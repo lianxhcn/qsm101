@@ -5,29 +5,36 @@ project:
     - index.qmd
     - site/pages/foundations.qmd
     - site/pages/reading.qmd
-    - site/pages/laboratory.qmd
-    - site/pages/commuting.ipynb
+    - site/pages/m1-baseline.qmd
+    - site/pages/m2-commuting.ipynb
+    - site/pages/m3-transport-policy.ipynb
     - site/pages/evidence.qmd
     - site/pages/faq.qmd
     - site/pages/updates.qmd
     - site/pages/about.qmd
+    - site/pages/agent-guide.qmd
   resources:
-    - site/pages/laboratory.ipynb
-    - site/pages/commuting.ipynb
+    - site/pages/m1-baseline.ipynb
+    - site/pages/m2-commuting.ipynb
+    - site/pages/m3-transport-policy.ipynb
     - articles/p05-commuting-qsm/code/*.py
     - articles/p05-commuting-qsm/data/*.csv
     - articles/p05-commuting-qsm/results/reference/*
     - articles/p05-commuting-qsm/prompts/*.md
+    - articles/p05-commuting-qsm/models/*.md
     - articles/p05-commuting-qsm/*.md
     - articles/p05-commuting-qsm/requirements.txt
     - articles/p05-commuting-qsm/downloads/*.zip
     - articles/p05-commuting-qsm/downloads/*.ipynb
+    - articles/p06-transport-qsm/**
     - figs/raw/*
     - articles/**/figures/*
+    - articles/p04-minimal-qsm/downloads/*
     - articles/p04-minimal-qsm/code/*.py
     - articles/p04-minimal-qsm/data/*.csv
     - articles/p04-minimal-qsm/results/reference/*
     - articles/p04-minimal-qsm/prompts/*.txt
+    - articles/p04-minimal-qsm/prompts/*.md
 
 website:
   title: "QSM 基础"
@@ -46,11 +53,19 @@ website:
       - text: "学习路线"
         href: site/pages/reading.qmd
       - text: "两地区模型"
-        href: site/pages/laboratory.qmd
+        href: site/pages/m1-baseline.qmd
       - text: "顶刊案例"
         href: site/pages/evidence.qmd
-      - text: "常见问题"
-        href: site/pages/faq.qmd
+      - text: "网站说明"
+        menu:
+          - text: "Agent 提示词指南"
+            href: site/pages/agent-guide.qmd
+          - text: "常见问题"
+            href: site/pages/faq.qmd
+          - text: "更新记录"
+            href: site/pages/updates.qmd
+          - text: "关于本站"
+            href: site/pages/about.qmd
     right:
       - text: "课程主页 ↗"
         href: https://www.lianxh.cn/qsm.html
@@ -60,26 +75,30 @@ website:
   sidebar:
     style: floating
     contents:
-      - text: "学习起点"
+      - text: "从这里开始"
         href: index.qmd
-      - section: "建立基础"
+      - section: "QSM 基础"
         contents:
-          - text: "什么是 QSM"
+          - text: "什么是 QSM？"
             href: site/pages/foundations.qmd
-          - text: "文献与学习路线"
+          - text: "如何学习 QSM？"
             href: site/pages/reading.qmd
       - section: "两地区模型"
         contents:
-          - text: "搭建、校准与求解"
-            href: site/pages/laboratory.qmd
-          - text: "居住、就业与通勤"
-            href: site/pages/commuting.ipynb
-      - section: "进入论文"
+          - text: "M1：无通勤基准模型"
+            href: site/pages/m1-baseline.qmd
+          - text: "M2：加入跨地区通勤"
+            href: site/pages/m2-commuting.ipynb
+          - text: "M3：通勤成本变化"
+            href: site/pages/m3-transport-policy.ipynb
+      - section: "顶刊案例"
         contents:
           - text: "柏林墙研究"
             href: site/pages/evidence.qmd
-      - section: "使用本站"
+      - section: "网站说明"
         contents:
+          - text: "Agent 提示词指南"
+            href: site/pages/agent-guide.qmd
           - text: "常见问题"
             href: site/pages/faq.qmd
           - text: "更新记录"
@@ -92,6 +111,8 @@ website:
 
 format:
   html:
+    code-fold: true
+    code-summary: "查看或复制 Python 代码"
     theme: cosmo
     fontsize: 18px
     grid:
@@ -107,6 +128,12 @@ format:
     toc-depth: 3
     html-math-method: mathjax
     lang: zh-CN
+    crossref:
+      fig-title: 图
+      tbl-title: 表
+      fig-prefix: 图
+      tbl-prefix: 表
+      eq-prefix: 式
 
 execute:
   enabled: false

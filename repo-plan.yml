@@ -1,34 +1,28 @@
-project_title: "qsm101：QSM 课程预习站"
+project_title: "qsm101：两地区模型与 Agent 实践讲义"
 repository_mode: series
 recommendation: series
-decision_reason: "P01–P04 共用一个系列入口、代码和复现资料；沿用现有 qsm101 仓库发布轻量阅读站。"
+decision_reason: "沿用现有 QSM 系列仓库与统一网站，发布 M1/M2/M3、Agent 指南和同步练习包。"
 confidence: high
-
-local_root: "D:/github_lianxh"
-project_path: "D:/github_lianxh/qsm101"
-work_scope: "完整课程预习讲义、内容台账、两地区模型分章、通勤扩展接口、顶刊案例、FAQ、图片清单与质量检查"
+local_root: "."
+project_path: "."
+work_scope: "网站源码与构建检查、M1/M2/M3 下载材料、P06 文章和模型附件、教学图片、维护与质量文档"
 series_key: qsm101
-
 repository_name: qsm101
 remote_owner: lianxhcn
 visibility: public
 license: "代码 MIT；有权授权的原创图文 CC BY 4.0；第三方素材按来源说明"
-
 github_pages:
   required: true
-  source: "GitHub Actions 构建 _site"
+  source: "GitHub Actions 从 main 构建 _site 并部署"
   expected_url: "https://lianxhcn.github.io/qsm101/"
-
 preflight:
   readme_required: true
   ignore_checked: true
   sensitive_content_checked: true
   large_files_checked: true
-  minimal_verification: "quarto render；检查页面、公式、图片及站内链接"
-
+  minimal_verification: "Quarto 构建；strict 零缺口；23 项工具测试；手机与桌面；三套离线 Notebook 实际执行"
 approval:
   create_remote: false
   commit: true
   push: true
-
-notes: "远程仓库已存在；用户同意更新并发布网站。原稿继续保留，公开网页按学习任务整合，不显示管理编号；通勤扩展完成前只保留接口规划。"
+notes: "2026-10-08 用户明确要求提交并发布；沿用现有仓库。排除 Task、runs、.work 和本地构建缓存。发布后保持 M1/M2/M3 URL 稳定。Git 状态、具体路径和本次提交清单保存在本地发布记录。"

@@ -1,6 +1,6 @@
 # qsm101：从第一个模型开始学习 QSM
 
-这里整理连享会 QSM 系列推文的正文、配图、模型说明、教学数据、代码与参考结果。读者可以先建立空间均衡的直觉，再完成一个两地区模型的估计、校准和反事实计算。后续文章将逐步加入通勤等机制。
+这里整理连享会 QSM 系列推文的正文、配图、模型说明、教学数据、代码与参考结果。读者可以先建立空间均衡的直觉，再完成一个两地区模型的估计、校准和反事实计算。目前已包含无通勤基准、跨地区通勤和通勤成本政策三个递进模型，并提供可迁移的 Agent 提示词。
 
 课程预习入口：[QSM 基础网站](https://lianxhcn.github.io/qsm101/)。课程安排与报名见[连享会 QSM 课程主页](https://www.lianxh.cn/qsm.html)。网站按学习主题整合原始文章；完整代码、数据与版本历史仍在本仓库。
 
@@ -12,7 +12,8 @@
 | P02 | [从 DID 到 QSM：柏林墙研究](articles/p02-qsm-mechanisms/article.md) | 理解因果识别与结构反事实的联系 |
 | P03 | [QSM 怎么学](articles/p03-learning-roadmap/article.md) | 选择综述、讲义和适合的工具包 |
 | P04 | [第一次动手做 QSM](articles/p04-minimal-qsm/article.md) | 运行参考代码，再用 Codex 按提示词实现 |
-| P05 | [两地区 QSM：加入通勤](articles/p05-commuting-qsm/article.md) | [完整 Notebook](site/pages/commuting.ipynb)：区分居民、就业与通勤，估计、校准并求解住房政策 |
+| P05 | [两地区 QSM：加入通勤](articles/p05-commuting-qsm/article.md) | [完整 Notebook](site/pages/m2-commuting.ipynb)：区分居民、就业与通勤，估计、校准并求解住房政策 |
+| P06 | [通勤成本下降](articles/p06-transport-qsm/article.md) | [完整 Notebook](site/pages/m3-transport-policy.ipynb)：在非对称基准中区分居民、就业和价格反馈 |
 
 完整目录见 [文章索引](articles/INDEX.md)。P01–P03 为作者确认稿；P04 参考程序与原始提示词的独立实现均已完成数值和经济条件核验；实际环境问题及处理见 [试跑记录](docs/agent-workflow.md)。
 

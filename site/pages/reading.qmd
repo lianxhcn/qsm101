@@ -1,13 +1,12 @@
 ---
-title: "QSM 怎么学：从读懂模型到复现论文，再到自己的研究"
-description: "一条可以执行的学习路线，以及论文、课程、代码和求解工具各自承担的任务。"
+title: "如何学习 QSM？"
 ---
 
-::: {.callout-note title="阅读提示" icon=false}
+<div class="page-intro">
 
-这份路线不要求把书目从头读到尾。更有效的做法是先建立模型地图，亲手完成一个小模型，再带着具体问题进入经典论文、教学工具包和复现材料。
+从读懂模型到复现论文，再到自己的研究。沿着这条路线，选择合适的文献、课程与计算工具。
 
-:::
+</div>
 
 想学数量空间模型 (Quantitative Spatial Models, QSM)，常见的困惑是：综述能看懂，论文公式也能跟下来，但打开复现代码以后，仍然不知道数据怎样进入模型、均衡怎样求解，以及政策变化怎样转化为反事实结果。
 
@@ -15,16 +14,17 @@ QSM 把不同地点的经济主体选择与市场清算联系起来。交通、�
 
 与已有成熟估计命令的实证方法相比，QSM 的程序更依赖具体模型设定。理解识别假设、样本和推断方法仍是使用 DID、IV 等工具的前提；进入 QSM，还需要掌握均衡条件与反事实求解。下面按学习环节整理资源，不把任何一个工具包视为通用解决方案。
 
+实践时可以沿两条路径推进：展开 Python 代码，核对公式怎样变成算法；或使用模型页中随读的 Agent 卡片，练习描述任务与检查结果。浅紫色卡片服务于讲义练习，浅蓝色卡片帮助你填写自己的研究设定。开始前阅读[提示词使用指南](agent-guide.qmd)，尤其留意输入材料与适用条件。
+
 学习 QSM 比较合适的顺序是：
 
-<div class="qsm-callout" style="margin: 16px 0; padding: 14px 18px; border-left: 4px solid #397b88; background: #f2f7f8; color: #243746; line-height: 1.8;">
+<div class="qsm-callout">
 <strong>学习顺序</strong><br>
 理解基本框架 → 跑通简单模型 → 复现经典论文 → 专题扩展 → 自己的研究
 </div>
 
-![图 1：QSM 学习路线。先完成一个简单模型，再进入论文复现与专题扩展。](https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/qsm-roadmap-fig01-learning-path-20261003-010924.png)
+![QSM 学习路线。先完成一个简单模型，再进入论文复现与专题扩展。教学示意。](https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/qsm-roadmap-fig01-learning-path-20261003-010924.png){#fig-reading-learning-path fig-alt="QSM 学习路线。先完成一个简单模型，再进入论文复现与专题扩展" .dense-figure}
 
-图 1：QSM 学习路线。先完成一个简单模型，再进入论文复现与专题扩展。
 
 下面沿着这条路线介绍综述、课程、论文与代码资源。资源核查日期 (retrieved_date)：2026-10-03。本文是学习路线导读，未执行各工具包或论文的完整复现。
 
@@ -42,7 +42,7 @@ QSM 把不同地点的经济主体选择与市场清算联系起来。交通、�
 
 $$
 F(x;\theta,z)=0,
-$$
+$$ {#eq-reading-equilibrium-system}
 
 其中，$x$ 表示工资、人口、价格、贸易流量等内生变量，$\theta$ 表示结构参数，$z$ 表示模型设定为外生的地点基本面、交通网络或政策条件。
 
@@ -50,7 +50,7 @@ $$
 
 学习 QSM 时，需要逐渐看清下面这条链条：
 
-<div class="qsm-callout" style="margin: 16px 0; padding: 14px 18px; border-left: 4px solid #397b88; background: #f2f7f8; color: #243746; line-height: 1.8;">
+<div class="qsm-callout">
 <strong>从数据到反事实</strong><br>
 观察数据 → 估计或设定结构参数 → 反演地点基本面 → 匹配基准均衡 → 施加政策冲击 → 求解反事实均衡
 </div>
@@ -94,6 +94,8 @@ Redding & Rossi-Hansberg (2017) 的综述帮助我们拆解和比较 QSM 的模�
 | 土地与住房 | 住房与土地供给 | 租金、地价 |
 | 集聚 | 外部经济 | 密度、生产率 |
 
+: 空间模型的模块与数据 {#tbl-reading-modules-data}
+
 以后每读一篇论文，都可以问：这篇文章保留了哪些模块，又增加了哪些机制？
 
 ### 2.3 统一区域框架 {#allen-arkolakis-2025统一的区域经济框架}
@@ -127,6 +129,8 @@ Allen & Arkolakis (2025) 提供了理解区域经济模型的统一框架。
 | [Ahlfeldt et al.](https://doi.org/10.3982/ECTA10876) ([2015](https://scholar.google.com/scholar?q=The+Economics+of+Density+Evidence+from+the+Berlin+Wall)) | 城市内部居住、工作、通勤、土地市场和集聚 |
 | [Monte et al.](https://doi.org/10.1257/aer.20151507) ([2018](https://scholar.google.com/scholar?q=Commuting+Migration+and+Local+Employment+Elasticities)) | 贸易、通勤和迁移如何共同连接地区 |
 
+: 论文阅读路线 {#tbl-reading-core-papers}
+
 这四篇分别展示贸易、劳动流动、城市内部结构和多种空间联系，可按研究兴趣调整阅读顺序。
 
 [Eaton & Kortum](https://doi.org/10.1111/1468-0262.00352) ([2002](https://scholar.google.com/scholar?q=Technology+Geography+and+Trade+Eaton+Kortum)) 可以帮助理解后来 QSM 中反复出现的引力结构。[Allen & Arkolakis](https://doi.org/10.1093/qje/qju016) ([2014](https://scholar.google.com/scholar?q=Trade+and+the+Topography+of+the+Spatial+Economy)) 把贸易和劳动流动进一步放进空间均衡。[Ahlfeldt et al.](https://doi.org/10.3982/ECTA10876) ([2015](https://scholar.google.com/scholar?q=The+Economics+of+Density+Evidence+from+the+Berlin+Wall)) 把空间尺度缩小到城市内部。[Monte et al.](https://doi.org/10.1257/aer.20151507) ([2018](https://scholar.google.com/scholar?q=Commuting+Migration+and+Local+Employment+Elasticities)) 再把商品市场和劳动力市场中的多种空间联系放到同一个框架中。
@@ -146,6 +150,8 @@ Allen & Arkolakis (2025) 提供了理解区域经济模型的统一框架。
 | 动态空间经济 | [Kleinman et al.](https://doi.org/10.3982/ECTA20273) ([2023](https://scholar.google.com/scholar?q=Dynamic+Spatial+General+Equilibrium)) | 迁移、资本和过渡路径 |
 | 细粒度空间数据 | [Dingel & Tintelnot](https://doi.org/10.3982/ECTA19350) ([2026](https://scholar.google.com/scholar?q=Spatial+Economics+for+Granular+Settings)) | 细粒度数据下的校准 |
 
+: 按研究方向选择论文 {#tbl-reading-research-fields}
+
 这里没有必要全部读完，重点说明如下：
 
 - 研究**地方税收**，可以直接进入 [Fajgelbaum et al.](https://doi.org/10.1093/restud/rdy050) ([2019](https://scholar.google.com/scholar?q=State+Taxes+and+Spatial+Misallocation))。该文把美国州级企业税和个人所得税放入空间均衡模型，分析税收对企业和劳动者区位选择以及空间错配的影响。
@@ -155,9 +161,8 @@ Allen & Arkolakis (2025) 提供了理解区域经济模型的统一框架。
 
 近年的研究还开始关注更细的空间数据。[Dingel & Tintelnot](https://doi.org/10.3982/ECTA19350) ([2026](https://scholar.google.com/scholar?q=Spatial+Economics+for+Granular+Settings)) 指出，在居住地—工作地组合很多、但每个细分单元中实际人数有限的情况下，直接令观察份额等于模型中的选择概率可能造成明显的校准问题。该文正式发表于 2026 年的 *Econometrica*, 94(2), 407–464。
 
-![图 2：论文阅读路径。左侧提供共同基础，右侧按研究问题分流，无须全部读完。](https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/qsm-roadmap-fig02-reading-path-20261003-010924.png)
+![论文阅读路径。左侧提供共同基础，右侧按研究问题分流，无须全部读完。教学示意。](https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/qsm-roadmap-fig02-reading-path-20261003-010924.png){#fig-reading-reading-path fig-alt="论文阅读路径。左侧提供共同基础，右侧按研究问题分流，无须全部读完" .dense-figure}
 
-图 2：论文阅读路径。左侧提供共同基础，右侧按研究问题分流，无须全部读完。
 
 ## 3. 教学工具包 {#从教学工具包开始动手}
 
@@ -173,7 +178,7 @@ Allen & Arkolakis (2025) 提供了理解区域经济模型的统一框架。
 
 这个案例很适合第一次观察完整的 QSM 计算流程：
 
-<div class="qsm-callout" style="margin: 16px 0; padding: 14px 18px; border-left: 4px solid #397b88; background: #f2f7f8; color: #243746; line-height: 1.8;">
+<div class="qsm-callout">
 <strong>教学模型的计算环节</strong><br>
 给定模型与基本面 → 求解基准均衡 → 用模型生成的数据练习反演 → 改变外生条件并求解反事实
 </div>
@@ -188,7 +193,7 @@ Ahlfeldt 后来把原始复现代码重新整理成教学版 ARSW2015 toolkit。
 
 作者建议把三类材料放在一起阅读：
 
-<div class="qsm-callout" style="margin: 16px 0; padding: 14px 18px; border-left: 4px solid #397b88; background: #f2f7f8; color: #243746; line-height: 1.8;">
+<div class="qsm-callout">
 <strong>论文与程序对照</strong><br>
 论文方程 ↔ Codebook 中的伪代码 ↔ MATLAB 程序
 </div>
@@ -221,9 +226,8 @@ Ahlfeldt 与 Tobias Seidel 整理的 [MRRH2018 toolkit](https://github.com/Ahlfe
 
 学习 QSM 时，一个常见困惑是网上代码很多，但不知道哪些适合学习，哪些只是用来复现论文。
 
-![图 3：代码资源的四种类型。教学工具包、论文复现材料、专用软件与数值求解器承担不同任务。](https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/qsm-roadmap-fig03-code-resources-20261003-010924.png)
+![代码资源的四种类型。教学工具包、论文复现材料、专用软件与数值求解器承担不同任务。教学示意。](https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/qsm-roadmap-fig03-code-resources-20261003-010924.png){#fig-reading-code-resources fig-alt="代码资源的四种类型。教学工具包、论文复现材料、专用软件与数值求解器承担不同任务" .dense-figure}
 
-图 3：代码资源的四种类型。教学工具包、论文复现材料、专用软件与数值求解器承担不同任务。
 
 图中的专用软件仍需满足各自的数据和模型要求，不能仅凭输入数据就认定估计与一般均衡分析已经完成。可以把现有资源分成四类。
 
@@ -233,6 +237,8 @@ Ahlfeldt 与 Tobias Seidel 整理的 [MRRH2018 toolkit](https://github.com/Ahlfe
 | 复现材料 | 论文官方复现文件 | 重现论文结果 |
 | 专用软件包 | `GEGravity`、`gegravity` | 求解某一类标准化模型 |
 | 数值求解器 | `fsolve`、`scipy.optimize`、`NonlinearSolve.jl` | 求解自己写出的方程组 |
+
+: 代码资源的类型与用途 {#tbl-reading-code-resources}
 
 教学工具包适合第一次学习。作者通常会删掉大量与主模型关系不大的数据处理和制图程序，并增加注释、伪代码和简单反事实。
 
@@ -250,7 +256,7 @@ Ahlfeldt 与 Tobias Seidel 整理的 [MRRH2018 toolkit](https://github.com/Ahlfe
 
 一个典型练习可以写成：
 
-<div class="qsm-callout" style="margin: 16px 0; padding: 14px 18px; border-left: 4px solid #397b88; background: #f2f7f8; color: #243746; line-height: 1.8;">
+<div class="qsm-callout">
 <strong>结构引力练习</strong><br>
 双边贸易数据 → 在识别假设下估计成本相关参数 → 设定贸易弹性与闭合条件 → 校准基准均衡 → 施加政策冲击 → 联立求解新的多边阻力、价格与贸易流量
 </div>
@@ -281,6 +287,8 @@ Ahlfeldt 与 Tobias Seidel 整理的 [MRRH2018 toolkit](https://github.com/Ahlfe
 | Julia | 大规模稀疏方程组、自动微分和高性能计算 |
 | R | 引力模型估计、空间数据处理和中小型数值问题 |
 
+: 专用软件与求解工具 {#tbl-reading-solvers}
+
 第一次复现论文时，尽量使用作者原来的语言。例如 ARSW toolkit 使用 MATLAB，直接跟着作者代码运行，可以把精力集中在模型本身。
 
 理解模型以后，可以再用自己熟悉的语言写一个简化版本。下面用伪代码说明残差函数的接口；它未指定具体模型，不能直接运行：
@@ -295,7 +303,7 @@ Ahlfeldt 与 Tobias Seidel 整理的 [MRRH2018 toolkit](https://github.com/Ahlfe
 
 $$
 F(x)=0.
-$$
+$$ {#eq-reading-root-system}
 
 经济模型决定 $F(x)$ 怎样写。[`scipy.optimize.root()`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.root.html)、MATLAB [`fsolve`](https://www.mathworks.com/help/optim/ug/fsolve.html) 或 Julia [`NonlinearSolve.jl`](https://docs.sciml.ai/NonlinearSolve/stable/) 负责寻找让这些方程同时接近 0 的 $x$。
 
@@ -311,7 +319,7 @@ $$
 
 $$
 \max_{j}|F_{j}(x^{*})|.
-$$
+$$ {#eq-reading-residual}
 
 比较残差前，应按各条方程的经济规模进行标准化，或报告相对残差，并记录容差。人口、货币和份额方程的单位不同，直接比较原始残差的最大值可能误导判断。标准化后的残差足够小，才表明候选解在所采用的精度下满足均衡条件。
 
@@ -345,6 +353,8 @@ $$
 | 第 8 周 | [Monte et al.](https://doi.org/10.1257/aer.20151507) ([2018](https://scholar.google.com/scholar?q=Commuting+Migration+and+Local+Employment+Elasticities)) | 理解贸易、通勤、迁移如何共同进入模型 |
 | 第 9–10 周 | 专题论文 | 能说明相对基准模型增加了哪个调整机制 |
 
+: 分阶段学习计划 {#tbl-reading-study-plan}
+
 这条路线的完成标准可以落在一项具体能力上：拿到一套均衡条件后，能够解释数据怎样进入模型，哪些参数需要估计，哪些基本面需要反演，程序怎样求解均衡，以及政策改变某个外生条件以后为什么需要重新计算整个系统。
 
 达到这个程度以后，再读新的 QSM 论文会容易很多。
@@ -357,7 +367,7 @@ $$
 
 修改以后，重新梳理：
 
-<div class="qsm-callout" style="margin: 16px 0; padding: 14px 18px; border-left: 4px solid #397b88; background: #f2f7f8; color: #243746; line-height: 1.8;">
+<div class="qsm-callout">
 <strong>追踪政策传导</strong><br>
 外生条件变化 → 主体行为调整 → 市场重新清算 → 新的均衡结果
 </div>
@@ -427,4 +437,4 @@ $$
 
 ## 下一步：把路线变成一次完整计算
 
-进入[两地区模型](laboratory.ipynb)。这一章本身就是一份可运行的 Notebook：网页上可以顺着讲义阅读，也可以下载后从头执行。
+进入[两地区模型](m1-baseline.ipynb)。这一章本身就是一份可运行的 Notebook：网页上可以顺着讲义阅读，也可以下载后从头执行。

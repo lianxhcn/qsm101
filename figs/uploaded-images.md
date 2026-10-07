@@ -13,4 +13,19 @@
 - 两地区住房政策结果：![B 地区住房扩建后的均衡](https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/qsm-site-fig01-housing-equilibrium-20261005-162814.png)
 - 参数敏感性：![选择敏感度和生产弹性下的人口响应](https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/qsm-site-fig02-housing-sensitivity-20261005-162814.png)
 
-两图插入 `site/pages/counterfactual.qmd`，原始结果图仍保存在文章目录；`figs/raw/` 保存本次采用唯一名称的上传副本。
+两图插入 `site/pages/m1-baseline.qmd`，原始结果图仍保存在文章目录；`figs/raw/` 保存本次采用唯一名称的上传副本。
+
+![qsm-p06-fig01-model-evolution-20261006-212958](https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/qsm-p06-fig01-model-evolution-20261006-212958.png)
+
+![qsm-p06-fig01-model-evolution-mobile-20261006-212958](https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/qsm-p06-fig01-model-evolution-mobile-20261006-212958.png)
+
+![qsm-p06-fig01-model-evolution-20261006-214500](https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/qsm-p06-fig01-model-evolution-20261006-214500.png)
+
+![qsm-p06-fig01-model-evolution-mobile-20261006-214500](https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/qsm-p06-fig01-model-evolution-mobile-20261006-214500.png)
+
+
+P06 修订说明：20261006-212958 两图为已停用初版；20261006-214500 两图为历史修订版，现已停用。P04 反馈指向区位选择，固定住房供给不受反馈改变。旧本地文件保存在 runs/p06-figure-revision-20261006。
+![qsm-transport-fig01-model-evolution-20261006-221849](https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/qsm-transport-fig01-model-evolution-20261006-221849.png)
+
+
+当前采用 `qsm-transport-fig01-model-evolution-20261006-221849.png`。已插入 `articles/p06-transport-qsm/article.md` 与 `site/pages/m3-transport-policy.ipynb` 第 1 节；图下注明对称与非对称基准，手机页面支持逐栏横向查看。线上正文使用上列图床链接，离线包有同名本地副本。更新日期：2026-10-06。

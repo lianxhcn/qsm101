@@ -1,3 +1,12 @@
 
 # Preserve exact fixed-input bytes used by Notebook SHA256 checks.
-/articles/p05-commuting-qsm/data/*.csv -text
+/articles/p05-commuting-qsm/data/*.csv -text whitespace=cr-at-eol
+
+# Fixed inputs and generated downloads must match their hashes/archive entries
+# on Windows worktrees and Linux Pages builds alike.
+/articles/*/data/*.csv -text whitespace=cr-at-eol
+/articles/*/downloads/*.ipynb -text whitespace=cr-at-eol
+/articles/*/prompts/guided-prompts.md -text whitespace=cr-at-eol
+/articles/*/prompts/usage-guide.md -text whitespace=cr-at-eol
+/articles/*/models/*.md -text whitespace=cr-at-eol
+

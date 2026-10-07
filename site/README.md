@@ -1,32 +1,105 @@
-# QSM 学习网站维护说明
+# QSM 网站维护说明
 
-改版前先读[网站内容与更新台账](../docs/site-content-ledger.md)：其中记录网站定位、原稿对应关系、P05 的插入位置和发布前核对项。
+修改前阅读[统一规范](../docs/site-standards.md)和[内容台账](../docs/site-content-ledger.md)。原推文在 `articles/*/article.md` 保留出版格式；网站章节单独适配，去除作者、邮箱、Title 和 Keywords。
 
-网站用 Quarto 构建。公开页面是 `index.qmd` 与 `site/pages/*.qmd`，按学习主题组织；`articles/*/article.md` 保留原始推文，不直接作为网站章节渲染。两地区模型以 `site/pages/laboratory.ipynb` 为可下载主文件；修改后先从头执行，再用 `quarto convert site/pages/laboratory.ipynb --output site/pages/laboratory.qmd` 更新网页源，并删除转换产生的 `#| execution:` 时间元数据。新增内容先核对模型与数据性质，再加入对应主题，并在 `site/pages/updates.qmd` 记录变化。
+## 内容来源与网址
 
-课程主页固定入口配置在 `_quarto.yml` 的导航和页脚；首页以学习与模型实践为入口。课程日期、报名和费用以 <https://www.lianxh.cn/qsm.html> 为准，不在本网站复制易变信息。
+| 章节 | 唯一内容源 | 渲染入口 | 下载文件 |
+|---|---|---|---|
+| M1：无通勤基准模型 | site/pages/m1-baseline.ipynb | 生成的 m1-baseline.qmd | articles/p04-minimal-qsm/downloads/baseline.ipynb |
+| M2：加入跨地区通勤 | site/pages/m2-commuting.ipynb | 同源 Notebook | articles/p05-commuting-qsm/downloads/commuting.ipynb |
+| M3：通勤成本变化 | site/pages/m3-transport-policy.ipynb | 同源 Notebook | articles/p06-transport-qsm/downloads/transport.ipynb |
 
-新页面应使用稳定英文 slug。加入导航时更新 `_quarto.yml`；若替换已有公开 URL，更新 `site/build_legacy.py` 的跳转表，避免旧链接失效。图标与封面原文件保存在 `figs/raw/`，上传结果记录在 `figs/uploaded-images.md`；再次生成或上传须采用新时间戳，不覆盖同名对象。
+本次网站尚未公布，直接改为上述顺序语义 URL，不生成旧页面或跳转。统一发布后保持网址稳定。下载文件名不承担网站排序任务，维持简短功能名称。
+
+## 修改与构建
 
 在仓库根目录运行：
 
 ```text
+python site/prepare_site.py
 quarto render
-python site/build_legacy.py
-python site/check_site.py
+python -B site/check_site.py --prompt-contract strict
 ```
 
-GitHub Actions 在推送到 main 后执行同样的构建与检查，再发布 `_site/`。实验室的模拟结果不代表真实城市估计；通勤等后续机制应另写模型约定和核验，不直接改动现有两地区参考结果。
+`prepare_site.py` 不执行数值计算。它读取三个主 Notebook，为计算结果表添加语义标题与锚点，同步离线 Notebook 和完整 ZIP，并通过 Quarto convert 生成 M1 QMD。M1 网页沿用讲义表格和上传图，Notebook 另外保留完整执行输出。M2/M3 网页直接呈现执行输出。仅修改排版时核对公式、代码与数值；改计算后必须从头执行再同步。
+
+离线副本将本章资源转换为包内相对路径，其他章节链接指向最终公开网址；不要要求网页与下载文件逐字节相同。检查代码、公式与数值，并单独检查路径转换。完整包包括固定数据、模型和依赖说明；新增或调整离线结构时必须在新解压目录执行。输入包与含答案的完整包分别维护。
+
+GitHub Actions 渲染并运行只读检查器；它不生成旧链接兼容页。发布前先在本地运行同步脚本，确保待提交下载包已更新。提交、推送和发布须另获用户授权。
+
+## 图式与阅读交互
+
+公式使用 `eq-` 语义标签，图形使用 `fig-` 标签及图注、替代文本。Quarto 负责页内自动编号。多行方程组默认一个编号；不要手写显示序号。输出图在代码单元顶部通过 `#| label`、`#| fig-cap` 配置，多图还使用 `fig-subcap`。
+
+Markdown 表格后添加图注语法 `: 表名 {#tbl-语义标签}`。Notebook 输出表的单元元数据 `qsm_tables` 按输出顺序列出语义 `id` 与标题，由同步脚本写入 HTML caption。Quarto 自动按整页顺序编号，共享阅读脚本把表内滚动交给外层容器。新增表格必须通过检查器和浏览器核验。
+
+桌面正文净宽 800 px、字号 18 px；手机正文 17 px。标题上下各约半行留白。代码默认折叠，入口文字与箭头用深绿色，保留键盘焦点。Agent 提示词保留复制功能。密集图与正文同宽；小幅计算图按实际分辨率展示。所有教学图点击进入同一 lightbox，支持 Esc 关闭和焦点返回，不以原图下载作为默认行为。
+
+每轮验收覆盖全站链接、公式图表标签、展开操作、图片点击不下载、实际表格行宽、390 px 手机阅读及下载同步。检查器只读；用户提出评估任务时，不借检查之名写入网页或发布资源。
 
 
-通勤章节以 `site/pages/commuting.ipynb` 为唯一网页与下载源，直接由 Quarto 渲染已执行输出，不另维护手写 qmd。离线包在 `articles/p05-commuting-qsm/downloads/commuting-workbook.zip`，包含 Notebook、两份固定 CSV、依赖说明和许可。修改后从头执行 Notebook、与参考 CSV 对照，再重新打包和渲染。所有网页与下载 Notebook 均不署名，也不显示邮箱；用户许可的远程发布另行执行。
+## 随读提示词组件 v2
 
-通勤 Notebook 下载副本位于 `articles/p05-commuting-qsm/downloads/commuting.ipynb`，仅从已执行的网页源文件逐字节复制。重新执行后须同步该副本及 ZIP；站点检查会阻止不同步的下载文件。
+三个模型页采用两类随读卡片，统一指南已加入网站说明导航。规则来源见 [长期规范第 11–13 节](../docs/site-standards.md)，配色与分类值见 prompt-contract.json。
 
-Callout 采用 Quarto 原生 note/tip/warning 三类，提示词额外使用 agent-prompt 类。site/callout-copy.html 为纯文本提示词增加复制按钮，site/styles.css 管理手机换行与按钮焦点。只改 Markdown 排版时核对代码单元及已有输出保持不变即可，不必重复计算模型。
+卡片在主 Notebook 中编写，保留稳定 id，新增 `data-prompt-kind="exercise"` 或 `data-prompt-kind="transfer"`。summary 同时包含 Agent、中文类型与任务；不放复制按钮或链接，不设置 open。复制按钮在展开区域内，分别关联 task 与 example；aria-controls 指向各自文本块，复制失败时选中对应文字。
 
-## 阅读版式
+```html
+<details class="agent-prompt" id="agent-章节-任务" data-prompt-kind="transfer">
+<summary><span class="agent-prompt-toggle" aria-hidden="true"></span><span>Agent · 迁移到我的研究：具体任务</span></summary>
+<div class="agent-prompt-body">
+<div data-prompt-role="materials">
 
-讲义使用浮动侧栏和 Quarto 网格，桌面正文净宽 800 px、正文 18 px；手机正文保持 17 px，首页另用宽布局。单行公式去掉 MathJax 与外层叠加边距，多行公式保留更多空间；超宽公式提供滚动提示和键盘焦点。示意图上限 640 px、通勤计算图 540 px；原本小字较多的无通勤统计图及论文多面板图上限为 720 px。图片均保留纵横比，并可点击放大。图片中的文字无法在所有终端与正文严格等大，密集图应在放大视图检查细节。
+说明 {模型说明材料} 应填写已上传的文件名或粘贴的设定。
 
-左右栏宽度为 240/220 px，顶部菜单内容居中且最大 1360 px。Agent 提示词使用正文字体，桌面 17 px、手机 16 px，标题分别为 18/17 px。章节标题优先表达主题，解释移入导语；改标题须保留原有锚点。辅助运行步骤保留正文标题但不进入右侧目录。Markdown 排版变更同步 Notebook 下载副本和离线包，核对代码单元、输出及执行次数未变。
+</div>
+<div data-prompt-role="scope">
+
+说明什么时候使用，以及需要核对的模型条件。
+
+</div>
+<div data-prompt-role="task">
+
+使用一个 text 围栏存放可复制任务，包含 {模型说明材料}。
+
+</div>
+<div data-prompt-role="example">
+
+使用另一个 text 围栏给出教材填写示例，与模板分别复制。
+
+</div>
+<div data-prompt-role="checks">
+
+说明拿到回复后检查哪些方程、输出或执行证据。
+
+</div>
+</div>
+</details>
+```
+
+上面是结构示意，不是可直接提交的完整卡片。task 必须有且仅有一个非空 text 围栏；渲染后为 pre。迁移类 example 同样使用单独围栏。讲义练习可以省略 example，但 materials 必须有明确材料链接。角色区内不嵌套 details，保持渲染、复制与导出结构清晰。所有占位符在 materials 区逐项说明，示例不算占位符说明。
+
+prepare_site.py 从角色区导出两类内容及指南，保留任务与示例的独立区块。指南由 offline_guide_text 作固定的离线路径转换；不要手工编辑生成副本。通勤练习包还同步无通勤模型说明至 models/no-commuting-model.md，供扩展练习对照。源稿、渲染 HTML、下载 Notebook 的任务内容应相同；外围材料链接允许明确的离线路径转换。input-only 包不加入参考程序、Notebook 或答案。
+
+## 检查工具与迁移状态
+
+```text
+python -B site/check_site.py
+python -B site/check_site.py --prompt-contract audit
+python -B site/check_prompt_contract.py --audit --json
+python -B site/check_site.py --prompt-contract strict
+python -B -m unittest discover -s site/tests -p "test_prompt_contract.py" -v
+```
+
+- 默认命令检查既有页面并明确提示 v2 尚未检查。
+- audit 返回缺口列表，缺口本身不改变退出状态；PENDING 绝不是验收通过。原有页面检查失败仍返回非零。
+- strict 在所有静态要求满足前返回非零。CI 已使用 strict，不能用 audit 放行发布。修改工作流本身不代表已经发布。
+- 检查工具仅用 Python 标准库；-B 避免导入时写入缓存。不会联网、写站点或运行模型。JSON 只输出到标准输出，日志保存由调用者显式重定向。
+- 配色检查核对 CSS 变量声明及声明色值的对比度；实际选择器是否应用、状态颜色、复制行为、材料充分性与经济含义仍需浏览器和人工核验。
+- 不设置每章两类卡片的最低数量；也不把出现关键词当作经济学正确的证明。
+
+实施顺序：使用指南 → 三章卡片 → 共享配色与复制逻辑 → 下载和导出 → FAQ/学习路线 → strict 与浏览器/人工审阅 → 获授权后发布。新规范先经过规则与工具阶段；本次已完成本地页面迁移，模型代码、数据和参考输出保持不变。
+
+
+2026-10-08 调整：Agent 讲义练习为浅紫底与书本图标，迁移任务为浅蓝底与向外箭头。既有 aria-hidden 的装饰 span 承载固定类别图标，summary 右侧 CSS 箭头表示开合；图标由共享 CSS 内联矢量定义，不依赖外部资源。模板结构和复制规则不变。

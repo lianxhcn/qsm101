@@ -1,0 +1,67 @@
+{
+  "version": 2,
+  "status": "implemented-local",
+  "guide": "site/pages/agent-guide.html",
+  "guide_source": "site/pages/agent-guide.qmd",
+  "offline_guide": "prompts/usage-guide.md",
+  "kinds": {
+    "exercise": "讲义练习",
+    "transfer": "迁移到我的研究"
+  },
+  "roles": [
+    "materials",
+    "scope",
+    "task",
+    "checks"
+  ],
+  "transfer_roles": [
+    "example"
+  ],
+  "colors": {
+    "body": {
+      "foreground": "#102A43",
+      "background": "#FFFEFA"
+    },
+    "muted": {
+      "foreground": "#55707E",
+      "background": "#FFFEFA"
+    },
+    "note": {
+      "foreground": "#34566B",
+      "background": "#F0F4F7"
+    },
+    "action": {
+      "foreground": "#176A72",
+      "background": "#EDF5F3"
+    },
+    "exercise": {
+      "foreground": "#71528C",
+      "background": "#F7F3FA"
+    },
+    "transfer": {
+      "foreground": "#245D83",
+      "background": "#EDF4FA"
+    },
+    "warning": {
+      "foreground": "#875A24",
+      "background": "#FBF4E8"
+    },
+    "error": {
+      "foreground": "#983E46",
+      "background": "#FAEFF0"
+    }
+  },
+  "focus": "#176A72",
+  "manual_checks": [
+    "每张卡片仅提供其声明的材料，在新会话中是否可理解任务。",
+    "特殊方程、参数、校准规则及检验结论的适用条件是否准确。",
+    "实际复制目标、成功和拒绝剪贴板反馈、键盘操作及焦点可见性。",
+    "实际计算样式、390px手机展开布局、图表与全文阅读协调性。",
+    "记录是否实际运行Agent独立实现；内容审阅不得代替运行证据。"
+  ],
+  "markers": {
+    "exercise": "book-open",
+    "transfer": "arrow-up-right",
+    "disclosure": "right-chevron"
+  }
+}

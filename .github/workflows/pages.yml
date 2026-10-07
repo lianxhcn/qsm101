@@ -37,10 +37,8 @@ jobs:
           version: 1.6.39
       - name: Render website
         run: quarto render
-      - name: Preserve old public URLs
-        run: python3 site/build_legacy.py
       - name: Check pages, links, figures, and course entry
-        run: python3 site/check_site.py
+        run: python3 -B site/check_site.py --prompt-contract strict
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

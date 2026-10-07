@@ -1,29 +1,50 @@
 ---
-title: 两地区 QSM：校准与求解
+title: M1：无通勤基准模型
 jupyter: python3
 ---
 
 
-[在线章节](https://lianxhcn.github.io/qsm101/site/pages/laboratory.html) · [QSM 基础首页](https://lianxhcn.github.io/qsm101/) · [课程主页](https://www.lianxh.cn/qsm.html) · [GitHub 仓库](https://github.com/lianxhcn/qsm101)
+<div class="page-intro">
 
-本 Notebook 既是在线讲义，也是可以独立运行的练习。它不依赖仓库中的参考程序：模型函数、数据读取、参数估计、校准、均衡求解和核验代码都写在这里。本地存在配套 CSV 时优先读取本地文件；找不到时会从 GitHub 直接读取。
+本章从一个最简单的两地区空间均衡模型开始：工人住在哪里，就在哪里工作，城市的总工人数固定。我们考察 B 地区增加住房后，人口选择、工资和房租如何共同调整，并依次完成参数估计、基准校准与均衡求解。后两章将在这套市场关系上加入跨地区通勤，再用非对称基准分析通勤成本下降。
 
-::: {.callout-note title="开始之前" icon=false}
+</div>
 
-**适合读者：** 已了解回归或因果推断，希望第一次亲手完成空间一般均衡计算的研究者与学生。<br>
-**先修要求：** Python 基础、对数与概率的基本知识；不要求已有结构估计经验。
+**两种实践方式：** 展开绿色 Python 代码，理解公式与算法；使用浅紫色的讲义练习完成当前任务，或用浅蓝色的迁移模板描述自己的研究。两类卡片均默认收起。开始前请读[提示词使用指南](agent-guide.qmd)，按卡片准备材料；迁移模板中的 `{……}` 需要替换。
+
+::: {.model-path}
+
+**M1 无通勤 (本章)** → [M2 加入通勤](m2-commuting.html) → [M3 通勤成本变化](m3-transport-policy.html)
 
 :::
 
-完成本章后，你应该能够：
+[下载本章 Notebook](../../articles/p04-minimal-qsm/downloads/baseline.ipynb) · [下载基准数据](../../articles/p04-minimal-qsm/data/teaching-baseline.csv) · [下载模拟选择数据](../../articles/p04-minimal-qsm/data/synthetic-choice-tasks.csv) · [下载离线练习包](../../articles/p04-minimal-qsm/downloads/baseline-workbook.zip)
 
-- 说明哪些量来自数据，哪些量需要估计、校准或反演；
-- 把居民选择、企业工资和住房市场写成一个闭合的两地区模型；
-- 估计区位选择敏感度，复原基准均衡并求住房政策反事实；
-- 区分局部固定价格计算与完整一般均衡结果；
-- 用残差、零冲击、解析解和共同冲击性质检查程序。
+::: {.callout-note title="开始之前" icon=false}
 
-**阅读顺序：** 住房政策问题 → 经济设定 → 固定数据 → 参数估计 → 基准反演 → 均衡求解 → 结果解释 → 核验与敏感性分析。
+适合已了解回归分析、希望入门空间均衡的读者。需要 Python 数组、对数与概率的基础知识，无须先有结构估计经验。
+
+:::
+
+完成本章后，你应能：
+
+- 区分给定参数、模拟估计与基准反演。
+- 把居民选择、企业工资与住房市场写成闭合模型。
+- 比较固定价格预测与住房扩建后的一般均衡。
+- 用人口总量、市场残差与共同冲击检验结果。
+
+::: {.callout-tip title="离线运行" icon=false}
+
+Notebook 包含全部模型函数，可独立运行，不调用仓库中的参考脚本。解压离线练习包后，保留 Notebook 与 `data/` 的相对位置；在已有 Python 环境中执行 `python -X utf8 -m pip install -r requirements.txt`，再用 Jupyter 打开并从头运行。网页保留结果，便于先读模型再下载练习。
+
+:::
+
+::: {.callout-note title="本章设定" icon=false}
+
+城市由两个地区组成，总工人数固定，不与城外交换人口。工人具有相同的收入和消费规则，但对区位有个体偏好；居住地与工作地必须相同，收入仅来自工资。普通商品价格为 1，住房和固定生产要素由区外所有者持有。政策只把 B 地区住房存量增加 20%，每个情景内住房供给固定。
+
+:::
+
 
 
 
@@ -37,6 +58,8 @@ jupyter: python3
 | 月工资 (元/工人) | 10,000 | 8,000 |
 | 同质住房月租金 (元/平方米) | 100 | 80 |
 
+: 两地区教学基准 {#tbl-m1-baseline-teaching-baseline}
+
 这些数值便于计算，未对应任何真实城市。房租表示同等质量住房服务的单位价格，不能与住房售价混用。本文用 $N_{i}$ 表示地区 $i$ 的工人数。因为居住地与工作地相同，基础章节中的居民数 $R_{i}$ 和就业数 $L_{i}$ 在这里满足 $N_{i}=R_{i}=L_{i}$。普通商品可无成本交易；这里没有双边贸易或通勤流量方程。
 
 政府在 B 地区扩建住房，使当地有效住房服务存量增加 20%。如果工资和人口都固定，新增住房会使单位房租从 80 元降至 $80/1.2=66.67$ 元，降幅为 16.67%。但是，较低房租会吸引人口迁入，住房需求随之增加；迁入人口还会改变当地劳动供给，从而影响工资。房租和工资需要重新调整。
@@ -48,7 +71,7 @@ jupyter: python3
 - [基准人口、工资与租金 CSV](https://raw.githubusercontent.com/lianxhcn/qsm101/main/articles/p04-minimal-qsm/data/teaching-baseline.csv)
 - [8,000 条模拟选址任务 CSV](https://raw.githubusercontent.com/lianxhcn/qsm101/main/articles/p04-minimal-qsm/data/synthetic-choice-tasks.csv)
 
-下面的函数依次检查当前目录、仓库根目录和常见下载位置；都找不到时才读取公开网址。需要完全离线运行时，把两个 CSV 放到 Notebook 同目录的 data 子目录。
+运行前按本页离线说明准备两份 CSV；读入后核对地区标签、单位和样本量。
 
 ```{python}
 from pathlib import Path
@@ -100,7 +123,7 @@ print("输入校验通过。")
 
 $$
 U_{ni}=\ln B_{i}+(1-\alpha)\ln c+\alpha\ln h+\varepsilon_{ni},\qquad c+r_{i}h=w_{i}.
-$$
+$$ {#eq-m1-baseline-utility}
 
 其中，$B_{i}$ 是地区的居住便利度，$w_{i}$ 是工资，$\varepsilon_{ni}$ 是工人 $n$ 对地区 $i$ 的个人偏好。本文设 $\alpha=0.25$，即居民把工资收入的 25% 用于住房。这里没有储蓄和其他收入，工资收入全部用于消费。
 
@@ -110,7 +133,7 @@ $$
 
 $$
 s_{i}=\frac{(B_{i}w_{i}/r_{i}^{\alpha})^{\theta}}{\sum_{j\in\{A,B\}}(B_{j}w_{j}/r_{j}^{\alpha})^{\theta}},\qquad N_{i}=Ns_{i}.
-$$
+$$ {#eq-m1-baseline-choice}
 
 $\theta>0$ 衡量居民对地区吸引力差异的敏感程度。$\theta$ 越大，同样的工资或房租差异引起的人口重新配置越强。即使两个地区工资和房租相同，个人偏好也可以使居民选择不同地区。
 
@@ -122,7 +145,7 @@ $\theta>0$ 衡量居民对地区吸引力差异的敏感程度。$\theta$ 越大
 
 $$
 Y_{i}=Z_{i}N_{i}^{\beta},\qquad w_{i}=\beta Z_{i}N_{i}^{\beta-1},\qquad 0<\beta<1.
-$$
+$$ {#eq-m1-baseline-production}
 
 本文设劳动产出弹性 $\beta=0.90$。在其他条件固定时，劳动投入增加 1%，工资约下降 0.10%。居民迁入 B 地区，会增加当地劳动供给；在这个没有生产集聚外部性的模型中，工资随之下降。A 地区人口流出，则会提高留在当地工人的工资。
 
@@ -134,7 +157,7 @@ $$
 
 $$
 r_{i}H_{i}=\alpha w_{i}N_{i},\qquad r_{i}=\frac{\alpha w_{i}N_{i}}{H_{i}}.
-$$
+$$ {#eq-m1-baseline-housing}
 
 住房扩建直接增加 $H_{B}$。居民迁入又增加当地工资总额和住房需求，部分抵消新增供给带来的房租下降。
 
@@ -143,6 +166,92 @@ $$
 ### 把经济条件写成程序 {.unlisted}
 
 下面的函数分别对应参数估计、基准反演、给定人口时的价格与选择，以及一维均衡求解。代码完整写在 Notebook 内，不导入仓库中的参考程序。
+
+<details class="agent-prompt" id="agent-m1-equations" data-prompt-kind="exercise">
+<summary><span class="agent-prompt-toggle" aria-hidden="true"></span><span>Agent · 讲义练习：先把经济设定对应到函数</span></summary>
+<div class="agent-prompt-body">
+<div data-prompt-role="materials">
+
+**准备材料：** 下载并交给 Agent：[模型说明](../../articles/p04-minimal-qsm/model.md)。
+
+</div>
+<div data-prompt-role="scope">
+
+**适用条件：** 只讨论无通勤、总人口固定的两地区模型；居民与就业相同，不能套用到跨地区通勤情形。
+
+</div>
+<div data-prompt-role="task">
+
+**练习任务**
+
+```text
+我提供了无通勤两地区住房政策模型的设定与此任务所需的输入材料。
+请先阅读 model.md，把无通勤两地区模型整理成方程与函数的对应说明。
+逐项列出居民选择、工资、住房出清的输入、输出、单位和依赖关系。
+解释为什么居住人口与就业人数相同，以及为什么一个人口比就足以表示未知量。
+区分给定参数、需要估计的参数、反演基本面与均衡未知量。
+先用自然语言写计算顺序和残差含义，不编程、不补设定、不填入政策答案。
+遇到缺失条件请明确列出，不用默认假设替我决定。
+若材料缺失，请列明缺口；需要运行却无法运行时，区分拟执行步骤与已完成结果。
+```
+
+</div>
+<div data-prompt-role="checks">
+
+**拿到回复后看什么：** 人口比怎样连到工资、房租与选择概率；政策情景内固定什么。
+
+</div>
+</div>
+</details>
+
+<details class="agent-prompt" id="agent-m1-model-plan" data-prompt-kind="transfer">
+<summary><span class="agent-prompt-toggle" aria-hidden="true"></span><span>Agent · 迁移到我的研究：把自己的模型整理成计算任务</span></summary>
+<div class="agent-prompt-body">
+<div data-prompt-role="materials">
+
+**准备材料：** `{研究问题}`：用一两句话写要解释的现象；`{模型说明材料}`：已上传的文件名或粘贴的设定，尚不完整时说明缺口。
+
+</div>
+<div data-prompt-role="scope">
+
+**适用条件：** 适用于准备实现的静态均衡模型；如果涉及动态决策、随机状态或多部门，应先补充相应设定，不能默认采用两地区算法。
+
+</div>
+<div data-prompt-role="task">
+
+**任务模板**
+
+```text
+我的研究问题是：{研究问题}。模型设定见：{模型说明材料}。
+请先列出主体、选择、约束、市场条件和收入归属，暂不写代码。
+将每个符号对应到含义、单位、数据来源或待确定条件。
+区分外生给定量、需估计的参数、需反演的基本面与均衡未知量。
+整理方程与函数的对应表，说明输入、输出、依赖顺序和残差的经济含义。
+检查未知量、归一化及闭合条件是否齐全；方程数量相等本身不能证明可解或唯一。
+缺失或冲突的假设单独列出，给出可讨论的选择，不自行替我决定。
+交付设定摘要、计算步骤和待确认清单；这一轮只讨论模型。
+```
+
+</div>
+<div data-prompt-role="example">
+
+**填写示例：** 以下是使用讲义材料的示范。先提供示例提到的材料，再单独复制；不要与上面的模板一起发送。
+
+```text
+我提供无通勤两地区住房政策模型的说明文件，想理解住房扩建怎样影响人口与价格。
+请只整理设定与计算步骤，不编程。说明居民数为何等于就业数，并区分给定参数、校准基本面和人口份额未知量。
+将住房出清、工资条件和居民选择对应到函数，列出缺失信息供我确认。
+```
+
+</div>
+<div data-prompt-role="checks">
+
+**拿到回复后看什么：** 是否说明了计算依赖、收入去向与缺失条件，是否把教材的未知量维度直接套到你的模型。
+
+</div>
+</div>
+</details>
+
 
 ```{python}
 def estimate_theta(data, alpha=ALPHA):
@@ -272,6 +381,8 @@ QSM 中有些量直接来自数据，有些是行为参数，有些需要在给�
 | $\theta$：区位选择敏感度 | 在模拟选址样本上估计 | 需要观察备选地区、属性和选择，并有可信的属性变化；两行地区汇总数据不足以识别 |
 | $H_{i},Z_{i},B_{i}$：地区特征 | 给定参数后从基准反演 | 可结合独立住房存量数据核查；反演值是依赖模型条件的量 |
 
+: 数据、参数与识别要求 {#tbl-m1-baseline-data-identification}
+
 国内可以从 [国家统计局的劳动工资统计说明](https://www.stats.gov.cn/zs/tjws/zytjzbqs/dwjyry/202411/t20241128_1957598.html) 和 [CFPS 数据申请入口](https://www.isss.pku.edu.cn/cfps/sjzx/index.htm) 开始整理数据。劳动工资统计有特定覆盖范围，不能把单位就业人员平均工资直接当作全体居民收入。使用 CFPS 时，需要按相应年份的问卷、样本量及公开权限核查实际变量和地理信息。
 
 如果希望练习公开微观数据处理，可以查看美国 [ACS PUMS](https://www.census.gov/programs-surveys/acs/microdata.html)。其公开记录包括个人和住房单元，最细公开地理单元为 PUMA。选择地区边界时应尊重这一层级；住房单元租金也不能在缺少面积和质量信息时直接当作每平方米租金。
@@ -292,14 +403,14 @@ QSM 中有些量直接来自数据，有些是行为参数，有些需要在给�
 
 $$
 \Pr(y_{n}=1)=\Lambda\left[\delta+\theta\left(\ln\frac{w_{Bn}}{w_{An}}-\alpha\ln\frac{r_{Bn}}{r_{An}}\right)\right],\qquad \Lambda(x)=\frac{1}{1+e^{-x}}.
-$$
+$$ {#eq-m1-baseline-binary-logit}
 
 具体的样本生成规则如下。令 $\Delta\ln w_{n}=\ln(w_{Bn}/w_{An})$，$\Delta\ln r_{n}=\ln(r_{Bn}/r_{An})$，分别独立取自以下均匀分布：
 
 $$
 \Delta\ln w_{n}\sim\operatorname{Uniform}(-0.35,0.35),\qquad
 \Delta\ln r_{n}\sim\operatorname{Uniform}(-0.40,0.40).
-$$
+$$ {#eq-m1-baseline-simulated-attributes}
 
 再设模拟真值 $\delta=0.12$、$\theta=4$，按上面的概率抽取二元选择 $y_{n}$。参考程序使用 `numpy.random.default_rng(20261004)`，先生成全部 8,000 个工资差，再生成全部房租差，最后抽取全部二元选择。随机数生成器和抽样顺序也是复现约定，不能只记录种子。
 
@@ -315,7 +426,7 @@ $$
 
 $$
 H_{i}=\frac{\alpha w_{i}^{0}N_{i}^{0}}{r_{i}^{0}},\qquad Z_{i}=\frac{w_{i}^{0}(N_{i}^{0})^{1-\beta}}{\beta}.
-$$
+$$ {#eq-m1-baseline-calibration}
 
 代入 A 地区数据，得到 $H_{A}=0.25\times10000\times60000/100=150$ 万平方米；B 地区为 100 万平方米。这两个量是为了匹配基准而反演的有效住房服务存量，未经过独立的实际建筑面积核验。
 
@@ -323,7 +434,7 @@ $$
 
 $$
 \frac{B_{B}}{B_{A}}=\left(\frac{N_{B}^{0}}{N_{A}^{0}}\right)^{1/\theta}\frac{w_{A}^{0}}{w_{B}^{0}}\left(\frac{r_{B}^{0}}{r_{A}^{0}}\right)^{\alpha}.
-$$
+$$ {#eq-m1-baseline-amenities}
 
 本次得到 $B_{B}/B_{A}=1.0661$。模型需要用略高的相对便利度，解释 B 地区在工资较低的条件下仍吸引 40% 工人的事实。这个残差还可能吸收遗漏的区位特征和测量误差，不能直接解释为 B 地区公共服务比 A 地区好 6.61%。
 
@@ -354,9 +465,25 @@ display(calibration.style.format({"有效住房服务 H":"{:,.0f}","生产率复
 
 下面这段提示词使用仓库内的固定样本，可以直接交给 Codex。运行环境和输入文件要同时提供。
 
-::: {.callout-note .agent-prompt title="Agent 提示词：生成实现" icon=false}
+<details class="agent-prompt" id="agent-m1-implement" data-prompt-kind="exercise">
+<summary><span class="agent-prompt-toggle" aria-hidden="true"></span><span>Agent · 讲义练习：把完整设定实现为程序</span></summary>
+<div class="agent-prompt-body">
+<div data-prompt-role="materials">
+
+**准备材料：** 下载并交给 Agent：[模型说明](../../articles/p04-minimal-qsm/model.md) · [synthetic-choice-tasks.csv](../../articles/p04-minimal-qsm/data/synthetic-choice-tasks.csv) · [teaching-baseline.csv](../../articles/p04-minimal-qsm/data/teaching-baseline.csv)。
+
+</div>
+<div data-prompt-role="scope">
+
+**适用条件：** 从零独立实现该无通勤特例。先创建新目录和新会话，仅提供模型与固定 CSV；首次实现结束前不提供参考程序或 Notebook。在本地项目中，将两个 CSV 放在 data/ 下，模型说明放在项目根目录；网页聊天可直接上传，并说明文件对应关系。
+
+</div>
+<div data-prompt-role="task">
+
+**练习任务**
 
 ```text
+我提供了无通勤两地区住房政策模型的设定与此任务所需的输入材料。
 请用 Python 实现一个两地区 QSM 教学模型。
 
 输入：当前项目的 model.md、data/teaching-baseline.csv 和
@@ -398,7 +525,15 @@ x1=x0+theta/D*(alpha*log(Hhat_B/Hhat_A)
 若缺少输入或遇到不一致，请说明具体原因，不调整参数来匹配预期结果。
 ```
 
-:::
+</div>
+<div data-prompt-role="checks">
+
+**拿到回复后看什么：** 函数是否对应方程；是否实际运行并报告基准误差。不要只看代码生成完毕。
+
+</div>
+</div>
+</details>
+
 
 这段提示词和固定样本存放在 [配套练习说明](../../articles/p04-minimal-qsm/prompts/README.md) 中。`model.md` 给出完整模型约定，其中包括收入归属、解析解和核验条件。让 Codex 只拿到这些输入，再记录它实际需要哪些补充说明，可以帮助我们改进面向初学者的任务提示。
 
@@ -409,6 +544,9 @@ x1=x0+theta/D*(alpha*log(Hhat_B/Hhat_A)
 算法思路很简单：给定一个人口比，计算工资和租金，再用选择公式得到期望人口比；调整人口比，直到实际人口比与期望人口比相等。我们用 $x=\ln(N_{B}/N_{A})$ 表示待求变量，这样计算得到的两地人口始终为正。
 
 以下是附件求解器的核心部分。`params` 已包含前一步校准的参数；代码省略了输入检查和结果导出。
+
+<details class="code-fold">
+<summary>查看或复制 Python 代码</summary>
 
 ```python
 import numpy as np
@@ -451,6 +589,8 @@ solution = brentq(
 )
 ```
 
+</details>
+
 应重点看 `return x - desired_log_odds` 这一行。它要求程序给定的人口比，与居民在相应工资和租金下愿意选择的人口比一致。仅从住房公式算出一个新房租，还没有完成这一步。
 
 ### 4.3 运行与检查 {#运行附件并检查输出}
@@ -480,6 +620,8 @@ python articles/p04-minimal-qsm/code/qsm_demo.py --output runs/p04-first-run --n
 | `sensitivity-results.csv` | 改变参数、重新校准后的政策结果 |
 | `verification.json` | 经济条件残差、软件版本和输入文件校验值 |
 
+: 独立实现需要核对的文件 {#tbl-m1-baseline-verification-files}
+
 在结果表中，`scenario=B_housing_plus20_GE` 的两行是本文的政策均衡。名称含 `NOT_GE` 的两行只是固定价格下的选择预测。仓库保存的 `results/reference/` 用于对照，自己的运行结果写入 `runs/`，便于追溯本次运行使用的输入和环境。
 
 ### 直接求基准与政策均衡 {.unlisted}
@@ -506,7 +648,9 @@ print("政策均衡最大核验误差：",f"{max(policy['checks'].values()):.3e}
 | 月租金 (元/平方米) | 100 → 97.14 | 80 → 69.51 |
 | 有效住房存量 (万平方米) | 150 → 150 | 100 → 120 |
 
-![B 地区住房扩建后，两个地区的人口、工资和租金变化](https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/qsm-site-fig01-housing-equilibrium-20261005-162814.png)
+: 住房扩建前后的均衡结果 {#tbl-m1-baseline-housing-results}
+
+![B 地区住房扩建后，两个地区的人口、工资和租金变化。教学算例，B 地区住房扩建 20%；变化相对于各自基准。](https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/qsm-site-fig01-housing-equilibrium-20261005-162814.png){#fig-m1-baseline-housing-results fig-alt="B 地区住房扩建后，两个地区的人口、工资和租金变化" .dense-figure}
 
 图示结果来自教学数据的模型计算。B 地区住房增加 20%，其劳动人口增加约 4.75%，月工资下降约 0.46%，单位房租下降约 13.11%。
 
@@ -520,7 +664,7 @@ A 地区也发生了调整。人口流出降低住房需求，单位房租由 10
 
 $$
 W=\left[\sum_{i\in\{A,B\}}(B_{i}w_{i}/r_{i}^{\alpha})^{\theta}\right]^{1/\theta}.
-$$
+$$ {#eq-m1-baseline-welfare}
 
 ::: {.callout-warning title="福利指标的解释边界" icon=false}
 
@@ -561,9 +705,25 @@ print(f"工人事前福利指数变化：{welfare_change:.5f}%")
 
 可以把下面这段核验提示词交给 Codex。
 
-::: {.callout-note .agent-prompt title="Agent 提示词：核验结果" icon=false}
+<details class="agent-prompt" id="agent-m1-verify" data-prompt-kind="exercise">
+<summary><span class="agent-prompt-toggle" aria-hidden="true"></span><span>Agent · 讲义练习：结果算出来后，检查经济条件</span></summary>
+<div class="agent-prompt-body">
+<div data-prompt-role="materials">
+
+**准备材料：** 下载并交给 Agent：[模型说明](../../articles/p04-minimal-qsm/model.md) · [synthetic-choice-tasks.csv](../../articles/p04-minimal-qsm/data/synthetic-choice-tasks.csv) · [teaching-baseline.csv](../../articles/p04-minimal-qsm/data/teaching-baseline.csv)。 实现或复查时另提供已有程序、校准结果和本次输出；可用[教学 Notebook](../../articles/p04-minimal-qsm/downloads/baseline.ipynb)作参考。
+
+</div>
+<div data-prompt-role="scope">
+
+**适用条件：** 核验已实现的无通勤特例，解析解及共同冲击性质依赖模型说明中的收入归属、固定人口和函数形式。
+
+</div>
+<div data-prompt-role="task">
+
+**练习任务**
 
 ```text
+我提供了无通勤两地区住房政策模型的设定与此任务所需的输入材料。
 请核验现有 QSM 程序，不改变模型设定。
 逐项检查：人口总量、居民选择概率、工资等于劳动边际产出、住房出清。
 验证零冲击返回基准，并把数值结果与本模型的解析解对照。
@@ -574,9 +734,66 @@ print(f"工人事前福利指数变化：{welfare_change:.5f}%")
 是否同乘以 1.10、福利指数是否同乘以 1.10**(1-alpha)。
 保存实际运行命令、输入校验值、环境版本和残差。
 发现不一致时定位方程或代码，不要通过调整参数消除差异。
+若材料缺失，请列明缺口；需要运行却无法运行时，区分拟执行步骤与已完成结果。
 ```
 
-:::
+</div>
+<div data-prompt-role="checks">
+
+**拿到回复后看什么：** 每项条件的误差与阈值，以及失败项的具体原因。
+
+</div>
+</div>
+</details>
+
+<details class="agent-prompt" id="agent-m1-validation-plan" data-prompt-kind="transfer">
+<summary><span class="agent-prompt-toggle" aria-hidden="true"></span><span>Agent · 迁移到我的研究：为自己的程序设计核验清单</span></summary>
+<div class="agent-prompt-body">
+<div data-prompt-role="materials">
+
+**准备材料：** `{模型说明材料}`：完整方程、变量口径与归一化；`{程序与运行输出}`：脚本和本次结果或报错；`{误差标准}`：已有尺度与阈值，未确定时填请先提出建议及理由。
+
+</div>
+<div data-prompt-role="scope">
+
+**适用条件：** 适用于已有实现的模型。对称性、共同冲击不变性和解析解只在模型满足相应条件时使用。
+
+</div>
+<div data-prompt-role="task">
+
+**任务模板**
+
+```text
+请依据 {模型说明材料} 独立复核 {程序与运行输出}。
+误差标准是：{误差标准}。先说明各条件采用绝对误差、相对误差还是份额误差。
+从最终输出重算守恒关系、行为方程与市场条件，不只读取求解器成功标志或程序自带检查。
+列出零冲击、标签互换、特殊极限与多个初值中哪些检验适用，解释理论预期；不适用的项目说明原因。
+若模型存在已知解析解，再进行数值与解析解对照；不要为完成清单而编造解析解。
+实际运行可执行的检查，逐项输出误差、阈值和通过状态，保留失败项。
+没有运行环境或材料不全时说明缺口，不把拟执行步骤写成已通过。
+不通过调参、替换输入或放宽阈值隐藏错误；数值检验不作为一般唯一性证明。
+```
+
+</div>
+<div data-prompt-role="example">
+
+**填写示例：** 以下是使用讲义材料的示范。先提供示例提到的材料，再单独复制；不要与上面的模板一起发送。
+
+```text
+我提供无通勤两地区住房政策模型、程序和本次输出。按模型说明规定的相对误差或份额误差 1e-8 进行核验。
+请重算居民选择、工资和住房出清，检查零冲击，并与该特例给出的解析解比较。
+共同住房冲击的检验必须说明不变性依赖的假设；保留误差与运行记录，不修改参数迎合答案。
+```
+
+</div>
+<div data-prompt-role="checks">
+
+**拿到回复后看什么：** 检查是否由最终结果重算，阈值是否与单位和尺度匹配，特殊检验是否有理论依据。
+
+</div>
+</div>
+</details>
+
 
 ### 6.2 参数敏感性 {#改变参数时重新校准}
 
@@ -584,27 +801,19 @@ print(f"工人事前福利指数变化：{welfare_change:.5f}%")
 
 我们还改变 $\theta$ 和 $\beta$，比较同一住房政策下 B 地区的人口增幅。每组参数都重新反演地区特征，以便复原同一份基准数据。
 
-![选择敏感度和生产函数劳动弹性变化时，B 地区人口增幅的变化](https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/qsm-site-fig02-housing-sensitivity-20261005-162814.png)
+![选择敏感度和生产函数劳动弹性变化时，B 地区人口增幅的变化。教学算例，B 地区住房扩建 20%；变化相对于各自基准。](https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/qsm-site-fig02-housing-sensitivity-20261005-162814.png){#fig-m1-baseline-housing-sensitivity fig-alt="选择敏感度和生产函数劳动弹性变化时，B 地区人口增幅的变化" .dense-figure}
 
 图中的横轴是区位选择敏感度 $\theta$，三条线对应不同的劳动产出弹性 $\beta$。$\theta$ 越大，居民越容易响应房租下降；$\beta$ 越接近 1，迁入带来的工资下降越弱，B 地区吸引的人口越多。这些曲线是参数情景比较，不是统计置信区间。
 
 这个两地区特例可以解析求解，因而适合检查 Codex 实现的程序。它没有通勤、搬迁成本、失业、住房质量差异和集聚外部性。进入真实研究时，需要围绕实际政策逐项增加必要机制，并保留可复核的数据口径、参数依据和市场出清检查。
 
-### 6.3 运行与排错 {#从本地试跑中补充使用提示}
+### 6.3 运行与排错
 
-复现参考代码，与按提示词独立写出代码，是两项不同练习。前者检查程序在自己的环境中能否运行；后者检查模型说明和提示词是否足以指导 Agent 完成工作。配套任务书要求在新会话中保留输入、原始提示词、实际运行命令和结果，再将经过定位、修改与复测的问题写入使用说明。
+解压练习包后从第一个单元运行，并保留 `data/` 目录。若安装依赖时出现编码错误，使用 `python -X utf8 -m pip install -r requirements.txt`。字体警告与数值求解分开检查；更多排错见[常见问题](faq.qmd#代码运行与排错)。
 
-2026-10-05，原始提示词在独立目录和桌面版 Codex 新会话中完成了实际实现与运行。固定输入未改，模拟样本的估计值为 $\hat\theta=3.924220149$，IID 标准误为 0.122802775；B 地区住房增加 20% 后，人口为 41,900.6076 人，月工资为 7,962.9494 元，月租金为 69.5109 元/平方米，工人事前福利指数提高 1.88395%。基准、零冲击、市场出清、边际产出、解析解、共同冲击和 231 组敏感性检查均通过，最大误差为 $2.99\times10^{-14}$，低于 $10^{-8}$。这些是模拟教学结果，不代表真实城市政策收益。
+### 6.4 扩展到通勤模型
 
-实际试跑先遇到两类工具环境问题：旧版 Codex CLI 0.144.6 默认模型在执行前返回版本兼容错误，显式指定另一个模型又返回账号不支持；改用桌面版新会话后，默认 Windows 沙箱启动命令失败。该会话按环境补充改用授权执行，随后读取同一份固定输入、独立编写程序并复测通过。实现提示词本身没有改动；补充的是执行环境处理方法。
-
-本地参考复现中，pip 24.0 按 GBK 读取带中文注释的 UTF-8 依赖文件，触发 `UnicodeDecodeError`。使用 `python -X utf8 -m pip install -r articles/p04-minimal-qsm/requirements.txt` 后安装成功，依赖一致性与参考数值复测均通过。这是已验证的环境处理方法。独立实现使用另一 Python 3.11.14 环境，numpy 2.4.2、scipy 1.15.3、pandas 2.3.3；数值对照在任务书容差内。
-
-### 6.4 扩展到通勤模型 {#下一篇加入通勤引力方程}
-
-本文让居住地与工作地相同，可以先用一维求根看清校准和价格反馈。下一篇计划允许工人住在 B 地区、到 A 地区工作，用居住地—工作地组合的选择形成通勤流量，并引入通勤成本及相应的引力关系。
-
-届时，居民数决定住房需求，就业数决定劳动边际产出，二者需要分开统计和求解。继续使用“B 地区住房增加 20%”这一政策问题，可以比较新增通勤机制如何改变就业、居住和房租的调整。后续通勤扩展需要自己的通勤数据约定、参数校准及重新计算的结果；本文数值不能直接沿用。
+[M2：加入跨地区通勤](m2-commuting.ipynb) 将居住地与工作地分开，并继续考察住房扩建。居民数决定住房需求，就业数决定劳动边际产出，二者需要分别统计。M2 使用独立的对称教学基准，比较机制时应在该章内部保持基准一致。
 
 ### 固定价格计算与一般均衡 {.unlisted}
 
@@ -657,6 +866,44 @@ print("基准复原、共同住房冲击、共同生产率冲击：全部通过�
 
 下面保留一个答案脚手架。把 None 替换为政策倍率；运行后检查最大误差仍小于 $10^{-8}$。
 
+<details class="agent-prompt" id="agent-m1-change" data-prompt-kind="exercise">
+<summary><span class="agent-prompt-toggle" aria-hidden="true"></span><span>Agent · 讲义练习：把住房扩建改成 10%</span></summary>
+<div class="agent-prompt-body">
+<div data-prompt-role="materials">
+
+**准备材料：** 下载并交给 Agent：[模型说明](../../articles/p04-minimal-qsm/model.md) · [synthetic-choice-tasks.csv](../../articles/p04-minimal-qsm/data/synthetic-choice-tasks.csv) · [teaching-baseline.csv](../../articles/p04-minimal-qsm/data/teaching-baseline.csv)。 实现或复查时另提供已有程序、校准结果和本次输出；可用[教学 Notebook](../../articles/p04-minimal-qsm/downloads/baseline.ipynb)作参考。
+
+</div>
+<div data-prompt-role="scope">
+
+**适用条件：** 只改变 B 地住房扩建力度，保留无通勤模型机制和原基准。
+
+</div>
+<div data-prompt-role="task">
+
+**练习任务**
+
+```text
+我提供了无通勤两地区住房政策模型的设定与此任务所需的输入材料。
+请阅读所提供无通勤模型的 model.md 和已有程序，只把 B 地区住房扩建幅度从 20% 改为 10%。
+保持原基准、行为参数、生产率、便利度及 A 地区住房不变；不要按政策结果重新校准。
+先指出需要修改的政策参数与相关输出，再修改并实际运行。
+分别报告固定价格预测与一般均衡下的 B 人口、工资、租金和工人事前福利变化。
+复查基准、零冲击、人口守恒和市场残差，保留原 20% 情景作对照。
+结果写入新目录，不覆盖原结果，也不按预期方向调参。
+若材料缺失，请列明缺口；需要运行却无法运行时，区分拟执行步骤与已完成结果。
+```
+
+</div>
+<div data-prompt-role="checks">
+
+**拿到回复后看什么：** 是否只改了住房倍率；新结果与旧结果是否来自同一基准。
+
+</div>
+</div>
+</details>
+
+
 ```{python}
 exercise_multiplier=None
 if exercise_multiplier is None:
@@ -678,7 +925,7 @@ else:
 
 ## 下载、复用与后续扩展
 
-- [下载本 Notebook](https://github.com/lianxhcn/qsm101/raw/main/site/pages/laboratory.ipynb)
+- [下载本 Notebook](../../articles/p04-minimal-qsm/downloads/baseline.ipynb)
 - [下载基准数据](https://raw.githubusercontent.com/lianxhcn/qsm101/main/articles/p04-minimal-qsm/data/teaching-baseline.csv)
 - [下载模拟选址任务](https://raw.githubusercontent.com/lianxhcn/qsm101/main/articles/p04-minimal-qsm/data/synthetic-choice-tasks.csv)
 - [查看完整模型约定](https://github.com/lianxhcn/qsm101/blob/main/articles/p04-minimal-qsm/model.md)
@@ -692,4 +939,7 @@ else:
 - 字体警告不影响数值。中文标签显示为方框时，可安装微软雅黑或 Noto Sans CJK SC。
 - 求解器报告成功只说明达到停止条件。仍须核对居民选择、总人口、住房市场、工资条件、零冲击和解析解。
 
-下一章将把居住地与工作地分开，加入通勤成本和双边流量。它会沿用本章写法：背景和方程之后立即进入数据、代码、结果与核验，并提供独立可运行的 Notebook。完成前，本站只保留规划，不预先填写未经计算的结果。
+继续阅读 [M2：加入跨地区通勤](m2-commuting.ipynb)，再用 [M3：通勤成本变化](m3-transport-policy.ipynb) 练习交通反事实。
+
+[下载本章随读提示词](../../articles/p04-minimal-qsm/prompts/guided-prompts.md)。短卡片用于当前步骤；完整实现任务书用于从零实现练习。
+

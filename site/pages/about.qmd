@@ -2,7 +2,11 @@
 title: "关于本站"
 ---
 
+<div class="page-intro">
+
 本站为连享会 QSM 课程提供公开的基础预习材料。内容由既有推文、模型约定、教学数据与复现记录整合而成，按问题和练习重新编排；课程开始后会继续补充公开内容。
+
+</div>
 
 两地区模型用于教学，模拟输入和参考结果不代表真实城市估计。原始文章、程序、固定输入与变更历史保存在[公开仓库](https://github.com/lianxhcn/qsm101)。代码使用 [MIT 许可](https://github.com/lianxhcn/qsm101/blob/main/LICENSE-CODE)；有权授权的原创图文使用 [CC BY 4.0](https://github.com/lianxhcn/qsm101/blob/main/LICENSE-CONTENT.md)。论文图等第三方素材不纳入本站原创内容许可，来源见仓库各图目录的说明。网站封面和小图标为本站新制作的视觉素材。
 

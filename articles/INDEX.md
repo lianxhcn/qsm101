@@ -6,6 +6,7 @@
 | P02 | [从 DID 到 QSM：柏林墙研究如何连接因果识别与空间均衡](p02-qsm-mechanisms/article.md) | [配图](p02-qsm-mechanisms/figures/) | 论文讲解，未运行论文工具包 |
 | P03 | [QSM 怎么学？从读懂模型到复现论文，再到自己的研究](p03-learning-roadmap/article.md) | [配图](p03-learning-roadmap/figures/) | 学习路线，第三方工具以原项目说明为准 |
 | P04 | [第一次动手做 QSM：用 Codex 搭建、校准与求解两地区模型](p04-minimal-qsm/article.md) | [运行说明](p04-minimal-qsm/README.md)、[模型](p04-minimal-qsm/model.md) | 参考程序与独立提示词实现均已运行并通过数值及经济条件核验 |
-| P05 | [两地区 QSM：加入通勤](p05-commuting-qsm/article.md) | [模型与附件](p05-commuting-qsm/README.md)、[Notebook](../site/pages/commuting.ipynb) | 参考与独立实现已核验；网站讲义本地构建准备 |
+| P05 | [两地区 QSM：加入通勤](p05-commuting-qsm/article.md) | [模型与附件](p05-commuting-qsm/README.md)、[Notebook](../site/pages/m2-commuting.ipynb) | 参考与独立实现已核验；网站讲义与离线练习包已核验 |
+| P06 | [交通更方便，工作会更靠近中心还是更分散？](p06-transport-qsm/article.md) | [模型与附件](p06-transport-qsm/README.md)、[Notebook](../site/pages/m3-transport-policy.ipynb) | 数值与独立实现通过核验；网站讲义及离线包同步提供 |
 
 P01–P03 作者为茅靓化 (连享会)，保留原稿署名。P04 作者为茅靓化 (连享会)。系列继续扩展时，在本表添加新编号及实际入口，不为尚未完成的文章建立空链接。

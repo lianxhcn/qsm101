@@ -16,7 +16,7 @@ format:
     <p>从一个地方的变化为何影响别处开始，亲手搭建两地区模型，再读懂顶刊论文怎样把因果证据、经济机制和政策反事实连接起来。</p>
     <div class="qsm-actions">
       <a class="qsm-button qsm-button--primary" href="site/pages/foundations.html">开始学习</a>
-      <a class="qsm-button qsm-button--outline" href="site/pages/laboratory.html">动手做模型</a>
+      <a class="qsm-button qsm-button--outline" href="site/pages/m1-baseline.html">动手做模型</a>
     </div>
   </div>
 </section>
@@ -28,7 +28,7 @@ format:
 
 ## 从入门到模型实践
 
-本站面向第一次接触或刚开始学习 QSM 的读者。主线从经济直觉和学习资料出发，用一个连续章节完成最小模型的设定、校准、求解与核验，再增加通勤机制，最后回到柏林墙研究。两地区模型和通勤扩展均提供可下载、可独立运行的 Notebook。
+本站面向第一次接触或刚开始学习 QSM 的读者。主线从经济直觉和学习资料出发，用一个连续章节完成最小模型的设定、校准、求解与核验，再增加通勤机制、考察通勤成本下降，最后回到柏林墙研究。三个模型章节均提供可下载、可独立运行的 Notebook。
 
 </div>
 
@@ -36,31 +36,37 @@ format:
 <div class="qsm-card-grid qsm-card-grid--lessons">
   <a class="qsm-card" href="site/pages/foundations.html">
     <span class="qsm-card__number">第 1 章 · 建立直觉</span>
-    <h3>什么是 QSM</h3>
+    <h3>什么是 QSM？</h3>
     <p>从地区冲击、主体选择和价格反馈理解空间均衡，分清数据、参数、反演和反事实。</p>
     <span class="qsm-card__link">开始阅读 →</span>
   </a>
   <a class="qsm-card" href="site/pages/reading.html">
     <span class="qsm-card__number">第 2 章 · 规划路线</span>
-    <h3>文献、工具和学习顺序</h3>
+    <h3>如何学习 QSM？</h3>
     <p>选择入门综述、专题论文与教学工具包，理解教学代码和论文复现材料的区别。</p>
     <span class="qsm-card__link">查看学习路线 →</span>
   </a>
-  <a class="qsm-card" href="site/pages/laboratory.html">
+  <a class="qsm-card" href="site/pages/m1-baseline.html">
     <span class="qsm-card__number">第 3 章 · 完成一次计算</span>
-    <h3>两地区 QSM：校准与求解</h3>
+    <h3>M1：无通勤基准模型</h3>
     <p>从住房政策问题进入居民、企业和住房市场，边写设定边估计参数、反演地区特征、求解均衡并核验结果。网页直接呈现可执行 Notebook，也提供下载。</p>
     <span class="qsm-card__link">进入在线 Notebook →</span>
   </a>
-  <a class="qsm-card" href="site/pages/commuting.html">
+  <a class="qsm-card" href="site/pages/m2-commuting.html">
     <span class="qsm-card__number">第 4 章 · 区分居住与就业</span>
-    <h3>两地区 QSM：加入通勤</h3>
+    <h3>M2：加入跨地区通勤</h3>
     <p>用四种居住与工作组合形成通勤流量，估计、校准并求解住房政策，比较居民与就业的不同调整。提供可独立运行的 Notebook 与离线练习包。</p>
     <span class="qsm-card__link">进入通勤扩展 →</span>
   </a>
+  <a class="qsm-card" href="site/pages/m3-transport-policy.html">
+    <span class="qsm-card__number">第 5 章 · 比较交通政策</span>
+    <h3>M3：通勤成本变化</h3>
+    <p>从就业中心与居住区的非对称基准出发，先看固定价格下的选择，再计算工资和房租反馈。提供分步 Notebook 与离线练习包。</p>
+    <span class="qsm-card__link">进入交通政策练习 →</span>
+  </a>
   <a class="qsm-card" href="site/pages/evidence.html">
-    <span class="qsm-card__number">第 5 章 · 阅读顶刊</span>
-    <h3>柏林墙、历史冲击与结构模型</h3>
+    <span class="qsm-card__number">第 6 章 · 阅读顶刊</span>
+    <h3>柏林墙研究</h3>
     <p>理解经验设计、通勤与集聚参数、模型反演和未发生政策的反事实如何衔接。</p>
     <span class="qsm-card__link">阅读研究案例 →</span>
   </a>

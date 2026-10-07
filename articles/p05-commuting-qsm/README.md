@@ -1,6 +1,6 @@
 # 两地区模型的通勤扩展
 
-[正式正文](article.md) · [可执行 Notebook](../../site/pages/commuting.ipynb) · [离线练习包](downloads/commuting-workbook.zip) · [模型说明](model.md)
+[正式正文](article.md) · [可执行 Notebook](../../site/pages/m2-commuting.ipynb) · [离线练习包](downloads/commuting-workbook.zip) · [模型说明](model.md)
 
 本文区分居住地与工作地，比较 B 地区住房增加 20% 后居民、就业、工资、租金和通勤流量的调整。全部数据为教学构造，不对应真实城市；福利仅为工人事前指数，不包含住房或交通建设成本。
 

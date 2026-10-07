@@ -1,21 +1,26 @@
 <script>
-// 纯文本提示词没有 Quarto 原生代码复制按钮，在标题栏提供键盘可用的入口。
+// 每个任务与填写示例各有复制入口，只复制对应文本块。
 document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".agent-prompt").forEach((box) => {
-    const code = box.querySelector("pre code");
-    const header = box.querySelector(".callout-header");
-    if (!code || !header || header.querySelector(".prompt-copy-button")) return;
+  document.querySelectorAll(".agent-prompt [data-prompt-role='task'], .agent-prompt [data-prompt-role='example']").forEach((part, index) => {
+    const code = part.querySelector("pre code");
+    if (!code || part.querySelector(".prompt-copy-button")) return;
+    code.id = code.id || `agent-copy-text-${index}`;
+    const header = document.createElement("div");
+    header.className = "agent-prompt-toolbar";
     const button = document.createElement("button");
     button.type = "button";
     button.className = "prompt-copy-button";
-    button.textContent = "复制提示词";
+    const label = part.dataset.promptRole === "example" ? "复制填写示例" : "复制任务";
+    button.textContent = label;
     button.setAttribute("aria-live", "polite");
+    button.setAttribute("aria-controls", code.id);
+    let reset;
     button.addEventListener("click", async () => {
+      window.clearTimeout(reset);
       try {
         await navigator.clipboard.writeText(code.textContent);
         button.textContent = "已复制";
       } catch (_) {
-        // 不把剪贴板失败当作成功；选中文字供读者手动复制。
         const range = document.createRange();
         range.selectNodeContents(code);
         const selection = window.getSelection();
@@ -23,9 +28,10 @@ document.addEventListener("DOMContentLoaded", () => {
         selection.addRange(range);
         button.textContent = "已选中，请手动复制";
       }
-      window.setTimeout(() => { button.textContent = "复制提示词"; }, 2500);
+      reset = window.setTimeout(() => { button.textContent = label; }, 2500);
     });
     header.appendChild(button);
+    code.closest("pre").before(header);
   });
 });
 </script>
@@ -58,5 +64,54 @@ window.addEventListener("load", () => {
       update();
     });
   });
+});
+</script>
+<script>
+// Table layout and numbering cover both Markdown tables and executed Notebook HTML.
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('main table').forEach((table, i) => {
+    const float = table.closest('div.quarto-float');
+    const caption = table.caption || float?.querySelector('figcaption');
+    if (!caption) { table.dataset.qsmMissingCaption = 'true'; return; }
+    // Quarto may copy the table id to its enclosing float; keep one target.
+    if (float && table.id === float.id) table.removeAttribute('id');
+    const rows = [...table.tBodies].flatMap(body => [...body.rows]);
+    const indexCells = rows.map(row => row.querySelector(':scope > th:first-child, :scope > td[data-quarto-table-cell-role=th]:first-child'));
+    const head = table.tHead?.rows[table.tHead.rows.length - 1]?.cells[0];
+    // Blank index heading plus integer row labels denotes a pandas display index.
+    if (head && !head.textContent.trim() && indexCells.length && indexCells.every(cell => cell && /^\d+$/.test(cell.textContent.trim()))) {
+      head.classList.add('qsm-auto-index');
+      indexCells.forEach(cell => cell.classList.add('qsm-auto-index'));
+    }
+    const count = Math.max(0, ...rows.map(row => row.cells.length));
+    for (let col = 0; col < count; col++) {
+      const cells = rows.map(row => row.cells[col]).filter(Boolean);
+      const isNumeric = cells.length && cells.every(cell => /^[-+−]?[\d,.]+(?:\s*%|\s*[eE][-+]?\d+)?$/.test(cell.textContent.trim()));
+      const style = isNumeric ? 'qsm-numeric' : 'qsm-text';
+      cells.forEach(cell => cell.classList.add(style));
+      table.tHead && [...table.tHead.rows].forEach(row => row.cells[col]?.classList.add(style));
+    }
+    const wrap = document.createElement('div');
+    wrap.className = 'qsm-table-scroll';
+    wrap.setAttribute('role', 'region');
+    wrap.setAttribute('aria-label', caption.textContent);
+    table.before(wrap); wrap.append(table);
+    const resize = () => {
+      if (wrap.scrollWidth > wrap.clientWidth + 1) wrap.tabIndex = 0;
+      else wrap.removeAttribute('tabindex');
+    };
+    new ResizeObserver(resize).observe(wrap); resize();
+  });
+  // Native lightbox keyboard focus returns to the figure that opened it.
+  let trigger = null, wasOpen = false;
+  document.addEventListener('click', event => {
+    const link = event.target.closest('a.lightbox');
+    if (link) trigger = link;
+  }, true);
+  new MutationObserver(() => {
+    const open = document.body.classList.contains('glightbox-open');
+    if (wasOpen && !open && trigger?.isConnected) trigger.focus({preventScroll: true});
+    wasOpen = open;
+  }).observe(document.body, {attributes: true, attributeFilter: ['class']});
 });
 </script>

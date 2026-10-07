@@ -15,7 +15,7 @@ h1 { font-weight: 760; }
 h2 { font-weight: 720; margin-top: 2.5rem; }
 a { color: #176a72; }
 a:hover { color: #104f58; }
-a:focus-visible, button:focus-visible { outline: 3px solid #c57a41; outline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--qsm-focus); outline-offset: 3px; }
 .navbar { background: #fffefa !important; border-bottom: 1px solid #e5e8e6; }
 .navbar-brand { font-weight: 760; letter-spacing: .02em; }
 .navbar-logo { width: 32px !important; height: 32px !important; min-width: 32px; max-height: 32px !important; object-fit: contain; }
@@ -127,7 +127,7 @@ div.sourceCode { border-radius: .55rem; }
   cursor: pointer;
 }
 .prompt-copy-button:hover { background: #eef5fa; }
-.prompt-copy-button:focus-visible { outline: 3px solid #276b8e; outline-offset: 2px; }
+.prompt-copy-button:focus-visible { outline: 3px solid var(--qsm-focus); outline-offset: 2px; }
 
 /* 讲义阅读尺度：网格宽度由 Quarto 管理，正文、目录随网格一起居中。 */
 #quarto-sidebar, #quarto-margin-sidebar { font-size: 15px; }
@@ -172,7 +172,7 @@ div.sourceCode { border-radius: .55rem; }
 
 .math-scroll-hint { display: block; margin-top: .2em; font-size: 12px; color: #55707e; }
 .math-scroll-hint[hidden] { display: none; }
-.math.display:focus-visible { outline: 2px solid #276b8e; outline-offset: 2px; }
+.math.display:focus-visible { outline: 2px solid var(--qsm-focus); outline-offset: 2px; }
 
 /* 顶部菜单居中，与讲义网格保持相近宽度。 */
 .navbar > .container-fluid { max-width: 1360px; margin-inline: auto; width: 100%; }
@@ -188,3 +188,145 @@ div.sourceCode { border-radius: .55rem; }
   .callout.agent-prompt pre, .callout.agent-prompt pre code { font-size: 16px; }
   .callout.agent-prompt .callout-title-container { font-size: 17px; }
 }
+
+/* 全站章节头部：短标题上下各留约半行正文高度，导语保持自然换行。 */
+#title-block-header.quarto-title-block {
+  margin-block: 0;
+  padding-block: .9rem;
+}
+#title-block-header .quarto-title .title {
+  margin-block: 0;
+  line-height: 1.35;
+}
+.page-intro {
+  margin: 0 0 1.4rem;
+  color: var(--qsm-muted);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+.page-intro p { margin-block: 0; }
+/* 分组通过字重区分层级，不往导航标签里插入 Markdown 星号。 */
+#quarto-sidebar .sidebar-item-section > .sidebar-item-container > .sidebar-item-text {
+  font-weight: 700;
+  color: var(--qsm-navy);
+}
+
+/* 代码入口保留原生箭头与键盘操作，颜色和字重共同区分正文。 */
+details.code-fold > summary {
+  color: #176a72 !important; font-weight: 650; padding-block: .35rem;
+}
+details.code-fold > summary::marker { color: #176a72; }
+details.code-fold > summary::-webkit-details-marker { color: #176a72; }
+summary:focus-visible { outline: 3px solid var(--qsm-focus); outline-offset: 3px; }
+.model-path { padding: .65rem .85rem; margin-block: 0 1.2rem; background: #eef5f3; border-radius: .4rem; }
+.model-path p { margin: 0; }
+#quarto-document-content img.dense-figure { width: 100%; max-width: 100%; }
+/* 表格维持 table 布局；滚动仅交给外层，避免外框全宽而数据行很窄。 */
+#quarto-document-content table { display: table; width: 100%; max-width: none; overflow: visible; }
+.qsm-table-scroll { max-width: 100%; overflow-x: auto; margin-block: .75rem 1.25rem; }
+.qsm-table-scroll:focus-visible { outline: 2px solid var(--qsm-focus); outline-offset: 2px; }
+#quarto-document-content table th, #quarto-document-content table td { padding: .5rem .65rem; vertical-align: middle; }
+#quarto-document-content table th { white-space: normal; overflow-wrap: anywhere; }
+#quarto-document-content table .qsm-numeric { text-align: right; font-variant-numeric: tabular-nums; }
+#quarto-document-content table .qsm-text { text-align: left; }
+#quarto-document-content table caption { caption-side: top; color: #314b58; font-size: .9rem; text-align: left; padding-bottom: .5rem; }
+#quarto-document-content table .qsm-auto-index { display: none; }
+@media (max-width: 640px) {
+  #quarto-document-content table { min-width: 560px; font-size: .88rem; }
+  #quarto-document-content table th, #quarto-document-content table td { padding: .45rem .55rem; }
+}
+
+
+/* 语义色：与 prompt-contract.json 同步，颜色由用途决定。 */
+:root {
+  --qsm-body-fg: #102A43;
+  --qsm-body-bg: #FFFEFA;
+  --qsm-muted-fg: #55707E;
+  --qsm-muted-bg: #FFFEFA;
+  --qsm-note-fg: #34566B;
+  --qsm-note-bg: #F0F4F7;
+  --qsm-action-fg: #176A72;
+  --qsm-action-bg: #EDF5F3;
+  --qsm-exercise-fg: #71528C;
+  --qsm-exercise-bg: #F7F3FA;
+  --qsm-transfer-fg: #245D83;
+  --qsm-transfer-bg: #EDF4FA;
+  --qsm-warning-fg: #875A24;
+  --qsm-warning-bg: #FBF4E8;
+  --qsm-error-fg: #983E46;
+  --qsm-error-bg: #FAEFF0;
+  --qsm-focus: #176A72;
+}
+
+body { color: var(--qsm-body-fg); background: var(--qsm-body-bg); }
+.page-intro, .math-scroll-hint { color: var(--qsm-muted-fg); }
+main a:not(.qsm-button):not(.qsm-card) { color: var(--qsm-action-fg); text-decoration: underline; text-underline-offset: .15em; }
+details.code-fold > summary { color: var(--qsm-action-fg) !important; }
+details.code-fold > summary::marker { color: var(--qsm-action-fg); }
+.callout { --callout-fg: var(--qsm-note-fg); --callout-bg: var(--qsm-note-bg); }
+.callout.callout-tip { --callout-fg: var(--qsm-action-fg); --callout-bg: var(--qsm-action-bg); }
+.callout.callout-warning { --callout-fg: var(--qsm-warning-fg); --callout-bg: var(--qsm-warning-bg); }
+.callout.callout-caution { --callout-fg: var(--qsm-error-fg); --callout-bg: var(--qsm-error-bg); }
+div.callout { border: 1px solid #dce3e8; border-left: 4px solid var(--callout-fg); background: #fff; border-radius: .45rem; }
+div.callout.callout-style-default > .callout-header { background: var(--callout-bg); color: var(--callout-fg); padding: .55rem .8rem; }
+div.callout .callout-title-container { color: var(--callout-fg); }
+div.callout .callout-body { color: var(--qsm-body-fg); padding: .5rem .8rem; }
+.qsm-callout { margin: 1rem 0; padding: .85rem 1.1rem; border-left: 4px solid var(--qsm-note-fg); background: var(--qsm-note-bg); color: var(--qsm-body-fg); }
+.chapter-lead, .model-path { border-color: var(--qsm-action-fg); background: var(--qsm-action-bg); }
+details.agent-prompt {
+  --agent-fg: var(--qsm-exercise-fg); --agent-bg: var(--qsm-exercise-bg);
+  margin-block: 1.15rem 1.4rem; border: 1px solid #dcd0e4;
+  border-left: 4px solid var(--agent-fg); border-radius: .45rem;
+  background: var(--agent-bg); scroll-margin-top: 6rem;
+}
+details.agent-prompt[data-prompt-kind="transfer"] { --agent-fg: var(--qsm-transfer-fg); --agent-bg: var(--qsm-transfer-bg); }
+details.agent-prompt > summary {
+  display: flex; align-items: flex-start; gap: .6rem; list-style: none;
+  min-height: 48px; padding: .65rem .85rem; cursor: pointer;
+  color: var(--agent-fg); font-weight: 650; font-size: 1rem; line-height: 1.6;
+}
+details.agent-prompt > summary::-webkit-details-marker { display: none; }
+details.agent-prompt > summary::marker { content: ''; }
+details.agent-prompt > summary:hover { box-shadow: inset 0 0 0 1px var(--agent-fg); }
+/* 左侧固定表示任务类别，右侧单独表示展开状态。 */
+.agent-prompt-toggle { flex: 0 0 1.35rem; width: 1.35rem; height: 1.35rem; margin-top: .16rem; }
+.agent-prompt-toggle::before {
+  content: ''; display: block; width: 100%; height: 100%; background: currentColor;
+  -webkit-mask: var(--agent-icon) center / contain no-repeat;
+  mask: var(--agent-icon) center / contain no-repeat;
+}
+details.agent-prompt { --agent-icon: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M12%206C9%204%206%204%203%205v14c3-1%206-1%209%201%203-2%206-2%209-1V5c-3-1-6-1-9%201v14%22/%3E%3C/g%3E%3C/svg%3E"); }
+details.agent-prompt[data-prompt-kind="transfer"] { --agent-icon: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M7%2017%2019%205M9%205h10v10%22/%3E%3Cpath%20d%3D%22M5%208v12h12%22/%3E%3C/g%3E%3C/svg%3E"); border-color: #c9ddeb; border-left-color: var(--agent-fg); }
+details.agent-prompt > summary > span:last-child { flex: 1; min-width: 0; }
+details.agent-prompt > summary::after {
+  content: ''; flex: 0 0 .5rem; width: .5rem; height: .5rem;
+  margin: .45rem .15rem 0 .4rem; border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor; transform: rotate(45deg);
+}
+details.agent-prompt[open] > summary::after { transform: rotate(225deg); margin-top: .65rem; }
+details.agent-prompt[open] > summary { border-bottom: 1px solid #dcd0e4; }
+.agent-prompt-body { padding: .9rem 1rem .3rem; background: #fff; border-radius: 0 0 .4rem .4rem; color: var(--qsm-body-fg); }
+.agent-prompt-body > div { margin-bottom: 1rem; }
+.agent-prompt-body p { margin-bottom: .7rem; }
+.agent-prompt-toolbar { display: flex; justify-content: flex-end; margin-bottom: .5rem; }
+details.agent-prompt .prompt-copy-button { border-color: var(--agent-fg); color: var(--agent-fg); }
+details.agent-prompt .prompt-copy-button:hover { background: var(--agent-bg); }
+details.agent-prompt pre, details.agent-prompt pre code {
+  font-family: var(--bs-body-font-family); font-size: 17px; line-height: 1.8;
+  white-space: pre-wrap; overflow-wrap: anywhere; word-break: normal;
+}
+details.agent-prompt pre { padding: .8rem; background: #f5f6f7; color: var(--qsm-body-fg); }
+/* 所有可操作元素使用同一焦点色；重要提示仍靠文本表达用途。 */
+a:focus-visible, button:focus-visible, summary:focus-visible,
+.prompt-copy-button:focus-visible, .math.display:focus-visible, .qsm-table-scroll:focus-visible {
+  outline: 3px solid var(--qsm-focus); outline-offset: 3px;
+}
+@media (max-width: 640px) {
+  details.agent-prompt > summary { padding: .65rem .6rem; font-size: 16px; }
+  .agent-prompt-body { padding: .8rem .65rem .2rem; }
+  details.agent-prompt pre, details.agent-prompt pre code { font-size: 16px; }
+}
+
+/* 行内文件名和占位符沿用语义色，避免主题默认亮紫干扰阅读。 */
+main :not(pre) > code { color: var(--qsm-body-fg); background: #f1f3f4; }
+.agent-prompt :not(pre) > code { color: var(--agent-fg); background: var(--agent-bg); }
